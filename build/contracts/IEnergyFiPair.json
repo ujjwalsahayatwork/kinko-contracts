@@ -1,0 +1,1078 @@
+{
+  "contractName": "IPancakePair",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "factory",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token0",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token1",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"factory\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token0\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token1\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"A parital interface of the energyFi pair to get token and factory addresses. The original code can be found on https://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakePair.sol\",\"kind\":\"dev\",\"methods\":{\"balanceOf(address)\":{\"details\":\"Returns the amount of tokens owned by `owner`.\",\"params\":{\"owner\":\"the address off the account owning tokens\"}},\"factory()\":{\"returns\":{\"_0\":\"address of the related energyFi factory\"}},\"mint(address)\":{\"details\":\"This low-level function should be called from a contract which performs important safety checks\",\"params\":{\"to\":\"address to mint the tokens to\"},\"returns\":{\"_0\":\"the minted liquidity amount of tokens\"}},\"token0()\":{\"details\":\"The order of the tokens may switch on pair creation. TokenA on creation has not to be token0 inside the pair contract.\",\"returns\":{\"_0\":\"address of the first token of the pair (token0)\"}},\"token1()\":{\"details\":\"The order of the tokens may switch on pair creation. TokenB on creation has not to be token1 inside the pair contract.\",\"returns\":{\"_0\":\"address of the second token of the pair (token1)\"}}},\"title\":\"Interface of Pancake pair\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"factory()\":{\"notice\":\"Returns the address of the pairs energyFi factory\"},\"mint(address)\":{\"notice\":\"Mints an amount of token to the given address\"},\"token0()\":{\"notice\":\"Returns the address of the first token of the pair\"},\"token1()\":{\"notice\":\"Returns the address of the second token of the pair\"}},\"notice\":\"This is an interface of the PancakeSwap pair\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/energyFi/IPancakePair.sol\":\"IPancakePair\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/energyFi/IPancakePair.sol\":{\"keccak256\":\"0xd57097bcbda128708a9ac3125e16cf8bf63e3bef2de305cb5415232d4f6ab9f4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://09a4bad2c3a4057f95ecf60e033d754937e8f7f769f2788e761fcbc272f2f1ac\",\"dweb:/ipfs/QmZsGeKVr92S72p2WiPfPMkozDPwURgucBhqZSwabPSXnS\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.12;\n\n/**\n *@title Interface of Pancake pair\n *@notice This is an interface of the PancakeSwap pair\n *@dev A parital interface of the energyFi pair to get token and factory addresses. The original code can be found on\n *https://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakePair.sol\n */\ninterface IPancakePair {\n    /**\n     *@notice Returns the address of the pairs energyFi factory\n     *@return address of the related energyFi factory\n     */\n    function factory() external view returns (address);\n\n    /**\n     *@notice Returns the address of the first token of the pair\n     *@dev The order of the tokens may switch on pair creation. TokenA on creation has not to be token0\n     *inside the pair contract.\n     *@return address of the first token of the pair (token0)\n     */\n    function token0() external view returns (address);\n\n    /**\n     *@notice Returns the address of the second token of the pair\n     *@dev The order of the tokens may switch on pair creation. TokenB on creation has not to be token1\n     *inside the pair contract.\n     *@return address of the second token of the pair (token1)\n     */\n    function token1() external view returns (address);\n\n    /**\n     *@notice Mints an amount of token to the given address\n     *@dev This low-level function should be called from a contract which performs important safety checks\n     *@param to address to mint the tokens to\n     *@return the minted liquidity amount of tokens\n     */\n    function mint(address to) external returns (uint256);\n\n    /**\n     *@dev Returns the amount of tokens owned by `owner`.\n     *@param owner the address off the account owning tokens\n     */\n    function balanceOf(address owner) external view returns (uint256);\n}\n",
+  "sourcePath": "/Users/apple/Downloads/kinko-ilo-contracts-main/interfaces/energyFi/IPancakePair.sol",
+  "ast": {
+    "absolutePath": "project:/interfaces/energyFi/IPancakePair.sol",
+    "exportedSymbols": {
+      "IPancakePair": [
+        9887
+      ]
+    },
+    "id": 9888,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9851,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:27"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 9852,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:321:27",
+          "text": "@title Interface of Pancake pair\n@notice This is an interface of the PancakeSwap pair\n@dev A parital interface of the energyFi pair to get token and factory addresses. The original code can be found on\nhttps://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakePair.sol"
+        },
+        "fullyImplemented": false,
+        "id": 9887,
+        "linearizedBaseContracts": [
+          9887
+        ],
+        "name": "IPancakePair",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 9853,
+              "nodeType": "StructuredDocumentation",
+              "src": "409:129:27",
+              "text": "@notice Returns the address of the pairs energyFi factory\n@return address of the related energyFi factory"
+            },
+            "functionSelector": "c45a0155",
+            "id": 9858,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "factory",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9854,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "559:2:27"
+            },
+            "returnParameters": {
+              "id": 9857,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9856,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9858,
+                  "src": "585:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9855,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "585:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "584:9:27"
+            },
+            "scope": 9887,
+            "src": "543:51:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 9859,
+              "nodeType": "StructuredDocumentation",
+              "src": "600:274:27",
+              "text": "@notice Returns the address of the first token of the pair\n@dev The order of the tokens may switch on pair creation. TokenA on creation has not to be token0\ninside the pair contract.\n@return address of the first token of the pair (token0)"
+            },
+            "functionSelector": "0dfe1681",
+            "id": 9864,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "token0",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9860,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "894:2:27"
+            },
+            "returnParameters": {
+              "id": 9863,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9862,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9864,
+                  "src": "920:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9861,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "920:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "919:9:27"
+            },
+            "scope": 9887,
+            "src": "879:50:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 9865,
+              "nodeType": "StructuredDocumentation",
+              "src": "935:276:27",
+              "text": "@notice Returns the address of the second token of the pair\n@dev The order of the tokens may switch on pair creation. TokenB on creation has not to be token1\ninside the pair contract.\n@return address of the second token of the pair (token1)"
+            },
+            "functionSelector": "d21220a7",
+            "id": 9870,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "token1",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9866,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1231:2:27"
+            },
+            "returnParameters": {
+              "id": 9869,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9868,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9870,
+                  "src": "1257:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9867,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1257:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1256:9:27"
+            },
+            "scope": 9887,
+            "src": "1216:50:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 9871,
+              "nodeType": "StructuredDocumentation",
+              "src": "1272:276:27",
+              "text": "@notice Mints an amount of token to the given address\n@dev This low-level function should be called from a contract which performs important safety checks\n@param to address to mint the tokens to\n@return the minted liquidity amount of tokens"
+            },
+            "functionSelector": "6a627842",
+            "id": 9878,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9874,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9873,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9878,
+                  "src": "1567:10:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9872,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1567:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1566:12:27"
+            },
+            "returnParameters": {
+              "id": 9877,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9876,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9878,
+                  "src": "1597:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9875,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1597:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1596:9:27"
+            },
+            "scope": 9887,
+            "src": "1553:53:27",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 9879,
+              "nodeType": "StructuredDocumentation",
+              "src": "1612:130:27",
+              "text": "@dev Returns the amount of tokens owned by `owner`.\n@param owner the address off the account owning tokens"
+            },
+            "functionSelector": "70a08231",
+            "id": 9886,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9882,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9881,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9886,
+                  "src": "1766:13:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9880,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1766:7:27",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1765:15:27"
+            },
+            "returnParameters": {
+              "id": 9885,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9884,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9886,
+                  "src": "1804:7:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9883,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1804:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1803:9:27"
+            },
+            "scope": 9887,
+            "src": "1747:66:27",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 9888,
+        "src": "379:1436:27"
+      }
+    ],
+    "src": "32:1784:27"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/interfaces/energyFi/IPancakePair.sol",
+      "exportedSymbols": {
+        "IPancakePair": [
+          9887
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 9851,
+        "name": "PragmaDirective",
+        "src": "32:23:27"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            9887
+          ],
+          "name": "IPancakePair",
+          "scope": 9888
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": "@title Interface of Pancake pair\n@notice This is an interface of the PancakeSwap pair\n@dev A parital interface of the energyFi pair to get token and factory addresses. The original code can be found on\nhttps://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakePair.sol"
+            },
+            "id": 9852,
+            "name": "StructuredDocumentation",
+            "src": "57:321:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "c45a0155",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "factory",
+              "overrides": null,
+              "scope": 9887,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice Returns the address of the pairs energyFi factory\n@return address of the related energyFi factory"
+                },
+                "id": 9853,
+                "name": "StructuredDocumentation",
+                "src": "409:129:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9854,
+                "name": "ParameterList",
+                "src": "559:2:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 9858,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9855,
+                        "name": "ElementaryTypeName",
+                        "src": "585:7:27"
+                      }
+                    ],
+                    "id": 9856,
+                    "name": "VariableDeclaration",
+                    "src": "585:7:27"
+                  }
+                ],
+                "id": 9857,
+                "name": "ParameterList",
+                "src": "584:9:27"
+              }
+            ],
+            "id": 9858,
+            "name": "FunctionDefinition",
+            "src": "543:51:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "0dfe1681",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "token0",
+              "overrides": null,
+              "scope": 9887,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice Returns the address of the first token of the pair\n@dev The order of the tokens may switch on pair creation. TokenA on creation has not to be token0\ninside the pair contract.\n@return address of the first token of the pair (token0)"
+                },
+                "id": 9859,
+                "name": "StructuredDocumentation",
+                "src": "600:274:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9860,
+                "name": "ParameterList",
+                "src": "894:2:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 9864,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9861,
+                        "name": "ElementaryTypeName",
+                        "src": "920:7:27"
+                      }
+                    ],
+                    "id": 9862,
+                    "name": "VariableDeclaration",
+                    "src": "920:7:27"
+                  }
+                ],
+                "id": 9863,
+                "name": "ParameterList",
+                "src": "919:9:27"
+              }
+            ],
+            "id": 9864,
+            "name": "FunctionDefinition",
+            "src": "879:50:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "d21220a7",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "token1",
+              "overrides": null,
+              "scope": 9887,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice Returns the address of the second token of the pair\n@dev The order of the tokens may switch on pair creation. TokenB on creation has not to be token1\ninside the pair contract.\n@return address of the second token of the pair (token1)"
+                },
+                "id": 9865,
+                "name": "StructuredDocumentation",
+                "src": "935:276:27"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9866,
+                "name": "ParameterList",
+                "src": "1231:2:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 9870,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9867,
+                        "name": "ElementaryTypeName",
+                        "src": "1257:7:27"
+                      }
+                    ],
+                    "id": 9868,
+                    "name": "VariableDeclaration",
+                    "src": "1257:7:27"
+                  }
+                ],
+                "id": 9869,
+                "name": "ParameterList",
+                "src": "1256:9:27"
+              }
+            ],
+            "id": 9870,
+            "name": "FunctionDefinition",
+            "src": "1216:50:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "6a627842",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "mint",
+              "overrides": null,
+              "scope": 9887,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice Mints an amount of token to the given address\n@dev This low-level function should be called from a contract which performs important safety checks\n@param to address to mint the tokens to\n@return the minted liquidity amount of tokens"
+                },
+                "id": 9871,
+                "name": "StructuredDocumentation",
+                "src": "1272:276:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "to",
+                      "overrides": null,
+                      "scope": 9878,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9872,
+                        "name": "ElementaryTypeName",
+                        "src": "1567:7:27"
+                      }
+                    ],
+                    "id": 9873,
+                    "name": "VariableDeclaration",
+                    "src": "1567:10:27"
+                  }
+                ],
+                "id": 9874,
+                "name": "ParameterList",
+                "src": "1566:12:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 9878,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 9875,
+                        "name": "ElementaryTypeName",
+                        "src": "1597:7:27"
+                      }
+                    ],
+                    "id": 9876,
+                    "name": "VariableDeclaration",
+                    "src": "1597:7:27"
+                  }
+                ],
+                "id": 9877,
+                "name": "ParameterList",
+                "src": "1596:9:27"
+              }
+            ],
+            "id": 9878,
+            "name": "FunctionDefinition",
+            "src": "1553:53:27"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "70a08231",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "balanceOf",
+              "overrides": null,
+              "scope": 9887,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@dev Returns the amount of tokens owned by `owner`.\n@param owner the address off the account owning tokens"
+                },
+                "id": 9879,
+                "name": "StructuredDocumentation",
+                "src": "1612:130:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "owner",
+                      "overrides": null,
+                      "scope": 9886,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9880,
+                        "name": "ElementaryTypeName",
+                        "src": "1766:7:27"
+                      }
+                    ],
+                    "id": 9881,
+                    "name": "VariableDeclaration",
+                    "src": "1766:13:27"
+                  }
+                ],
+                "id": 9882,
+                "name": "ParameterList",
+                "src": "1765:15:27"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 9886,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 9883,
+                        "name": "ElementaryTypeName",
+                        "src": "1804:7:27"
+                      }
+                    ],
+                    "id": 9884,
+                    "name": "VariableDeclaration",
+                    "src": "1804:7:27"
+                  }
+                ],
+                "id": 9885,
+                "name": "ParameterList",
+                "src": "1803:9:27"
+              }
+            ],
+            "id": 9886,
+            "name": "FunctionDefinition",
+            "src": "1747:66:27"
+          }
+        ],
+        "id": 9887,
+        "name": "ContractDefinition",
+        "src": "379:1436:27"
+      }
+    ],
+    "id": 9888,
+    "name": "SourceUnit",
+    "src": "32:1784:27"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.6",
+  "updatedAt": "2022-05-02T08:04:48.280Z",
+  "devdoc": {
+    "details": "A parital interface of the energyFi pair to get token and factory addresses. The original code can be found on https://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakePair.sol",
+    "kind": "dev",
+    "methods": {
+      "balanceOf(address)": {
+        "details": "Returns the amount of tokens owned by `owner`.",
+        "params": {
+          "owner": "the address off the account owning tokens"
+        }
+      },
+      "factory()": {
+        "returns": {
+          "_0": "address of the related energyFi factory"
+        }
+      },
+      "mint(address)": {
+        "details": "This low-level function should be called from a contract which performs important safety checks",
+        "params": {
+          "to": "address to mint the tokens to"
+        },
+        "returns": {
+          "_0": "the minted liquidity amount of tokens"
+        }
+      },
+      "token0()": {
+        "details": "The order of the tokens may switch on pair creation. TokenA on creation has not to be token0 inside the pair contract.",
+        "returns": {
+          "_0": "address of the first token of the pair (token0)"
+        }
+      },
+      "token1()": {
+        "details": "The order of the tokens may switch on pair creation. TokenB on creation has not to be token1 inside the pair contract.",
+        "returns": {
+          "_0": "address of the second token of the pair (token1)"
+        }
+      }
+    },
+    "title": "Interface of Pancake pair",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "factory()": {
+        "notice": "Returns the address of the pairs energyFi factory"
+      },
+      "mint(address)": {
+        "notice": "Mints an amount of token to the given address"
+      },
+      "token0()": {
+        "notice": "Returns the address of the first token of the pair"
+      },
+      "token1()": {
+        "notice": "Returns the address of the second token of the pair"
+      }
+    },
+    "notice": "This is an interface of the PancakeSwap pair",
+    "version": 1
+  }
+}

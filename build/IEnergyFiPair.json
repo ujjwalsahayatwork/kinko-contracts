@@ -1,0 +1,98 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "factory",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token0",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token1",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "evm": {
+    "bytecode": {
+      "linkReferences": {},
+      "object": "",
+      "opcodes": "",
+      "sourceMap": ""
+    },
+    "deployedBytecode": {
+      "immutableReferences": {},
+      "linkReferences": {},
+      "object": "",
+      "opcodes": "",
+      "sourceMap": ""
+    }
+  },
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"factory\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token0\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token1\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"A parital interface of the energyFi pair to get token and factory addresses. The original code can be found on https://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakePair.sol\",\"kind\":\"dev\",\"methods\":{\"balanceOf(address)\":{\"details\":\"Returns the amount of tokens owned by `owner`.\",\"params\":{\"owner\":\"the address off the account owning tokens\"}},\"factory()\":{\"returns\":{\"_0\":\"address of the related energyFi factory\"}},\"mint(address)\":{\"details\":\"This low-level function should be called from a contract which performs important safety checks\",\"params\":{\"to\":\"address to mint the tokens to\"},\"returns\":{\"_0\":\"the minted liquidity amount of tokens\"}},\"token0()\":{\"details\":\"The order of the tokens may switch on pair creation. TokenA on creation has not to be token0 inside the pair contract.\",\"returns\":{\"_0\":\"address of the first token of the pair (token0)\"}},\"token1()\":{\"details\":\"The order of the tokens may switch on pair creation. TokenB on creation has not to be token1 inside the pair contract.\",\"returns\":{\"_0\":\"address of the second token of the pair (token1)\"}}},\"title\":\"Interface of Pancake pair\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"factory()\":{\"notice\":\"Returns the address of the pairs energyFi factory\"},\"mint(address)\":{\"notice\":\"Mints an amount of token to the given address\"},\"token0()\":{\"notice\":\"Returns the address of the first token of the pair\"},\"token1()\":{\"notice\":\"Returns the address of the second token of the pair\"}},\"notice\":\"This is an interface of the PancakeSwap pair\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"interfaces/energyFi/IPancakePair.sol\":\"IPancakePair\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"interfaces/energyFi/IPancakePair.sol\":{\"keccak256\":\"0xd57097bcbda128708a9ac3125e16cf8bf63e3bef2de305cb5415232d4f6ab9f4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://09a4bad2c3a4057f95ecf60e033d754937e8f7f769f2788e761fcbc272f2f1ac\",\"dweb:/ipfs/QmZsGeKVr92S72p2WiPfPMkozDPwURgucBhqZSwabPSXnS\"]}},\"version\":1}",
+  "bytecode": ""
+}

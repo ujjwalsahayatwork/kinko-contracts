@@ -1,0 +1,1822 @@
+{
+  "contractName": "ILaunchpadSettings",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getBaseFeeReceiver",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getGlmrCreationFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMaxLaunchpadLength",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMinLockingDuration",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getReferralFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRound1Length",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getSaleFeeReceiver",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTokenFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_referrer",
+          "type": "address"
+        }
+      ],
+      "name": "referrerIsValid",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "userHoldsSufficientRound1Token",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getBaseFeeReceiver\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getGlmrCreationFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMaxLaunchpadLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMinLockingDuration\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReferralFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRound1Length\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getSaleFeeReceiver\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTokenFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_referrer\",\"type\":\"address\"}],\"name\":\"referrerIsValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"userHoldsSufficientRound1Token\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"referrerIsValid(address)\":{\"params\":{\"_referrer\":\"address of the checked referrer\"}},\"userHoldsSufficientRound1Token(address)\":{\"params\":{\"_user\":\"address of the user to be checked\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getBaseFeeReceiver()\":{\"notice\":\"returns the address of the base fee receiver\"},\"getGlmrCreationFee()\":{\"notice\":\"returns the absolute fee in BNB for launchpad creation\"},\"getMaxLaunchpadLength()\":{\"notice\":\"returns the maximum duration of a launchpad in seconds\"},\"getMinLockingDuration()\":{\"notice\":\"returns the minimum duration of the lp locking period in seconds\"},\"getReferralFee()\":{\"notice\":\"returns the relative referral fee charged on base and sale token fee in parts per 1000\"},\"getRound1Length()\":{\"notice\":\"returns the duration of round 1 in seconds\"},\"getSaleFeeReceiver()\":{\"notice\":\"returns the sale token fee receiver address\"},\"getTokenFee()\":{\"notice\":\"returns the relative sale token fee in parts per 1000\"},\"referrerIsValid(address)\":{\"notice\":\"returns if a given referrer is valid\"},\"userHoldsSufficientRound1Token(address)\":{\"notice\":\"returns if a given user has sufficient balance of early access tokens registered in the EARLY_ACCESS_TOKENS set to participate in round 1\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/ILaunchpadSettings.sol\":\"ILaunchpadSettings\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/ILaunchpadSettings.sol\":{\"keccak256\":\"0x81c3c9b042c9019c32c5299f870f32825a4ab8618a2fc3d8ec35b9d63da8ef4e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://27f43e2d4ea185b66e56591ea12370ce43268f16362a49d28436acd501b62af1\",\"dweb:/ipfs/QmU7HtNJ85wrK2mxang8HwWd5neQ1GPjw93nFDAhVkAXYu\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\n/**\n * @title Settings Interface of Pancake launchpad enviroment\n * @dev This Interface holds getter functions for getting the current general settings\n * of the launchpad. General settings are fees, fee receiver, launchpad length limitations,\n * allowed referrers and early access token to participate on round 1.\n */\n\npragma solidity 0.6.12;\n\ninterface ILaunchpadSettings {\n    /**\n     * @notice returns the address of the base fee receiver\n     */\n    function getBaseFeeReceiver() external view returns (address payable);\n\n    /**\n     * @notice returns the absolute fee in BNB for launchpad creation\n     */\n    function getGlmrCreationFee() external view returns (uint256);\n\n    /**\n     * @notice returns the maximum duration of a launchpad in seconds\n     */\n    function getMaxLaunchpadLength() external view returns (uint256);\n\n    /**\n     * @notice returns the minimum duration of the lp locking period in seconds\n     */\n    function getMinLockingDuration() external view returns (uint256);\n\n    /**\n     * @notice returns the relative referral fee charged on base and sale token fee in parts per 1000\n     */\n    function getReferralFee() external view returns (uint256);\n\n    /**\n     * @notice returns the duration of round 1 in seconds\n     */\n    function getRound1Length() external view returns (uint256);\n\n    /**\n     * @notice returns the sale token fee receiver address\n     */\n    function getSaleFeeReceiver() external view returns (address payable);\n\n    /**\n     * @notice returns the relative sale token fee in parts per 1000\n     */\n    function getTokenFee() external view returns (uint256);\n\n    /**\n     * @notice returns if a given referrer is valid\n     * @param _referrer address of the checked referrer\n     */\n    function referrerIsValid(address _referrer) external view returns (bool);\n\n    /**\n     * @notice returns if a given user has sufficient balance of early access tokens\n     * registered in the EARLY_ACCESS_TOKENS set to participate in round 1\n     * @param _user address of the user to be checked\n     */\n    function userHoldsSufficientRound1Token(address _user)\n        external\n        view\n        returns (bool);\n}\n",
+  "sourcePath": "/Users/apple/Downloads/kinko-ilo-contracts-main/interfaces/ILaunchpadSettings.sol",
+  "ast": {
+    "absolutePath": "project:/interfaces/ILaunchpadSettings.sol",
+    "exportedSymbols": {
+      "ILaunchpadSettings": [
+        6257
+      ]
+    },
+    "id": 6258,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6192,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "354:23:18"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6257,
+        "linearizedBaseContracts": [
+          6257
+        ],
+        "name": "ILaunchpadSettings",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 6193,
+              "nodeType": "StructuredDocumentation",
+              "src": "414:71:18",
+              "text": " @notice returns the address of the base fee receiver"
+            },
+            "functionSelector": "146c4be7",
+            "id": 6198,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBaseFeeReceiver",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6194,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "517:2:18"
+            },
+            "returnParameters": {
+              "id": 6197,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6196,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6198,
+                  "src": "543:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 6195,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "543:15:18",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "542:17:18"
+            },
+            "scope": 6257,
+            "src": "490:70:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6199,
+              "nodeType": "StructuredDocumentation",
+              "src": "566:82:18",
+              "text": " @notice returns the absolute fee in BNB for launchpad creation"
+            },
+            "functionSelector": "3b107d97",
+            "id": 6204,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGlmrCreationFee",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6200,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "680:2:18"
+            },
+            "returnParameters": {
+              "id": 6203,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6202,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6204,
+                  "src": "706:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6201,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "706:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "705:9:18"
+            },
+            "scope": 6257,
+            "src": "653:62:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6205,
+              "nodeType": "StructuredDocumentation",
+              "src": "721:81:18",
+              "text": " @notice returns the maximum duration of a launchpad in seconds"
+            },
+            "functionSelector": "cef6fc0b",
+            "id": 6210,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMaxLaunchpadLength",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6206,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "837:2:18"
+            },
+            "returnParameters": {
+              "id": 6209,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6208,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6210,
+                  "src": "863:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6207,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "863:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "862:9:18"
+            },
+            "scope": 6257,
+            "src": "807:65:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6211,
+              "nodeType": "StructuredDocumentation",
+              "src": "878:91:18",
+              "text": " @notice returns the minimum duration of the lp locking period in seconds"
+            },
+            "functionSelector": "be413054",
+            "id": 6216,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMinLockingDuration",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6212,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1004:2:18"
+            },
+            "returnParameters": {
+              "id": 6215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6214,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6216,
+                  "src": "1030:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6213,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1030:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1029:9:18"
+            },
+            "scope": 6257,
+            "src": "974:65:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6217,
+              "nodeType": "StructuredDocumentation",
+              "src": "1045:113:18",
+              "text": " @notice returns the relative referral fee charged on base and sale token fee in parts per 1000"
+            },
+            "functionSelector": "f6c0812f",
+            "id": 6222,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getReferralFee",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6218,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1186:2:18"
+            },
+            "returnParameters": {
+              "id": 6221,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6220,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6222,
+                  "src": "1212:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6219,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1212:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1211:9:18"
+            },
+            "scope": 6257,
+            "src": "1163:58:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6223,
+              "nodeType": "StructuredDocumentation",
+              "src": "1227:69:18",
+              "text": " @notice returns the duration of round 1 in seconds"
+            },
+            "functionSelector": "aac91216",
+            "id": 6228,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRound1Length",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6224,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1325:2:18"
+            },
+            "returnParameters": {
+              "id": 6227,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6226,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6228,
+                  "src": "1351:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6225,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1351:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1350:9:18"
+            },
+            "scope": 6257,
+            "src": "1301:59:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6229,
+              "nodeType": "StructuredDocumentation",
+              "src": "1366:70:18",
+              "text": " @notice returns the sale token fee receiver address"
+            },
+            "functionSelector": "47a2085f",
+            "id": 6234,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSaleFeeReceiver",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6230,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1468:2:18"
+            },
+            "returnParameters": {
+              "id": 6233,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6232,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6234,
+                  "src": "1494:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 6231,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1494:15:18",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1493:17:18"
+            },
+            "scope": 6257,
+            "src": "1441:70:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6235,
+              "nodeType": "StructuredDocumentation",
+              "src": "1517:80:18",
+              "text": " @notice returns the relative sale token fee in parts per 1000"
+            },
+            "functionSelector": "35546850",
+            "id": 6240,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenFee",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6236,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1622:2:18"
+            },
+            "returnParameters": {
+              "id": 6239,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6238,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6240,
+                  "src": "1648:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6237,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1648:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1647:9:18"
+            },
+            "scope": 6257,
+            "src": "1602:55:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6241,
+              "nodeType": "StructuredDocumentation",
+              "src": "1663:119:18",
+              "text": " @notice returns if a given referrer is valid\n @param _referrer address of the checked referrer"
+            },
+            "functionSelector": "0b9714ca",
+            "id": 6248,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "referrerIsValid",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6244,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6243,
+                  "mutability": "mutable",
+                  "name": "_referrer",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6248,
+                  "src": "1812:17:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6242,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1812:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1811:19:18"
+            },
+            "returnParameters": {
+              "id": 6247,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6246,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6248,
+                  "src": "1854:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6245,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1854:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1853:6:18"
+            },
+            "scope": 6257,
+            "src": "1787:73:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6249,
+              "nodeType": "StructuredDocumentation",
+              "src": "1866:225:18",
+              "text": " @notice returns if a given user has sufficient balance of early access tokens\n registered in the EARLY_ACCESS_TOKENS set to participate in round 1\n @param _user address of the user to be checked"
+            },
+            "functionSelector": "4a6da481",
+            "id": 6256,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "userHoldsSufficientRound1Token",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6252,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6251,
+                  "mutability": "mutable",
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6256,
+                  "src": "2136:13:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6250,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2136:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2135:15:18"
+            },
+            "returnParameters": {
+              "id": 6255,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6254,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6256,
+                  "src": "2198:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6253,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2198:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2197:6:18"
+            },
+            "scope": 6257,
+            "src": "2096:108:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6258,
+        "src": "379:1827:18"
+      }
+    ],
+    "src": "354:1853:18"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/interfaces/ILaunchpadSettings.sol",
+      "exportedSymbols": {
+        "ILaunchpadSettings": [
+          6257
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 6192,
+        "name": "PragmaDirective",
+        "src": "354:23:18"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            6257
+          ],
+          "name": "ILaunchpadSettings",
+          "scope": 6258
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "146c4be7",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getBaseFeeReceiver",
+              "overrides": null,
+              "scope": 6257,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice returns the address of the base fee receiver"
+                },
+                "id": 6193,
+                "name": "StructuredDocumentation",
+                "src": "414:71:18"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6194,
+                "name": "ParameterList",
+                "src": "517:2:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 6198,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address payable",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "payable",
+                          "type": "address payable"
+                        },
+                        "id": 6195,
+                        "name": "ElementaryTypeName",
+                        "src": "543:15:18"
+                      }
+                    ],
+                    "id": 6196,
+                    "name": "VariableDeclaration",
+                    "src": "543:15:18"
+                  }
+                ],
+                "id": 6197,
+                "name": "ParameterList",
+                "src": "542:17:18"
+              }
+            ],
+            "id": 6198,
+            "name": "FunctionDefinition",
+            "src": "490:70:18"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "3b107d97",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getGlmrCreationFee",
+              "overrides": null,
+              "scope": 6257,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice returns the absolute fee in BNB for launchpad creation"
+                },
+                "id": 6199,
+                "name": "StructuredDocumentation",
+                "src": "566:82:18"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6200,
+                "name": "ParameterList",
+                "src": "680:2:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 6204,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6201,
+                        "name": "ElementaryTypeName",
+                        "src": "706:7:18"
+                      }
+                    ],
+                    "id": 6202,
+                    "name": "VariableDeclaration",
+                    "src": "706:7:18"
+                  }
+                ],
+                "id": 6203,
+                "name": "ParameterList",
+                "src": "705:9:18"
+              }
+            ],
+            "id": 6204,
+            "name": "FunctionDefinition",
+            "src": "653:62:18"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "cef6fc0b",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getMaxLaunchpadLength",
+              "overrides": null,
+              "scope": 6257,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice returns the maximum duration of a launchpad in seconds"
+                },
+                "id": 6205,
+                "name": "StructuredDocumentation",
+                "src": "721:81:18"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6206,
+                "name": "ParameterList",
+                "src": "837:2:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 6210,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6207,
+                        "name": "ElementaryTypeName",
+                        "src": "863:7:18"
+                      }
+                    ],
+                    "id": 6208,
+                    "name": "VariableDeclaration",
+                    "src": "863:7:18"
+                  }
+                ],
+                "id": 6209,
+                "name": "ParameterList",
+                "src": "862:9:18"
+              }
+            ],
+            "id": 6210,
+            "name": "FunctionDefinition",
+            "src": "807:65:18"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "be413054",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getMinLockingDuration",
+              "overrides": null,
+              "scope": 6257,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice returns the minimum duration of the lp locking period in seconds"
+                },
+                "id": 6211,
+                "name": "StructuredDocumentation",
+                "src": "878:91:18"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6212,
+                "name": "ParameterList",
+                "src": "1004:2:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 6216,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6213,
+                        "name": "ElementaryTypeName",
+                        "src": "1030:7:18"
+                      }
+                    ],
+                    "id": 6214,
+                    "name": "VariableDeclaration",
+                    "src": "1030:7:18"
+                  }
+                ],
+                "id": 6215,
+                "name": "ParameterList",
+                "src": "1029:9:18"
+              }
+            ],
+            "id": 6216,
+            "name": "FunctionDefinition",
+            "src": "974:65:18"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "f6c0812f",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getReferralFee",
+              "overrides": null,
+              "scope": 6257,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice returns the relative referral fee charged on base and sale token fee in parts per 1000"
+                },
+                "id": 6217,
+                "name": "StructuredDocumentation",
+                "src": "1045:113:18"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6218,
+                "name": "ParameterList",
+                "src": "1186:2:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 6222,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6219,
+                        "name": "ElementaryTypeName",
+                        "src": "1212:7:18"
+                      }
+                    ],
+                    "id": 6220,
+                    "name": "VariableDeclaration",
+                    "src": "1212:7:18"
+                  }
+                ],
+                "id": 6221,
+                "name": "ParameterList",
+                "src": "1211:9:18"
+              }
+            ],
+            "id": 6222,
+            "name": "FunctionDefinition",
+            "src": "1163:58:18"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "aac91216",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getRound1Length",
+              "overrides": null,
+              "scope": 6257,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice returns the duration of round 1 in seconds"
+                },
+                "id": 6223,
+                "name": "StructuredDocumentation",
+                "src": "1227:69:18"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6224,
+                "name": "ParameterList",
+                "src": "1325:2:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 6228,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6225,
+                        "name": "ElementaryTypeName",
+                        "src": "1351:7:18"
+                      }
+                    ],
+                    "id": 6226,
+                    "name": "VariableDeclaration",
+                    "src": "1351:7:18"
+                  }
+                ],
+                "id": 6227,
+                "name": "ParameterList",
+                "src": "1350:9:18"
+              }
+            ],
+            "id": 6228,
+            "name": "FunctionDefinition",
+            "src": "1301:59:18"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "47a2085f",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getSaleFeeReceiver",
+              "overrides": null,
+              "scope": 6257,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice returns the sale token fee receiver address"
+                },
+                "id": 6229,
+                "name": "StructuredDocumentation",
+                "src": "1366:70:18"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6230,
+                "name": "ParameterList",
+                "src": "1468:2:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 6234,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address payable",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "payable",
+                          "type": "address payable"
+                        },
+                        "id": 6231,
+                        "name": "ElementaryTypeName",
+                        "src": "1494:15:18"
+                      }
+                    ],
+                    "id": 6232,
+                    "name": "VariableDeclaration",
+                    "src": "1494:15:18"
+                  }
+                ],
+                "id": 6233,
+                "name": "ParameterList",
+                "src": "1493:17:18"
+              }
+            ],
+            "id": 6234,
+            "name": "FunctionDefinition",
+            "src": "1441:70:18"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "35546850",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getTokenFee",
+              "overrides": null,
+              "scope": 6257,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice returns the relative sale token fee in parts per 1000"
+                },
+                "id": 6235,
+                "name": "StructuredDocumentation",
+                "src": "1517:80:18"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6236,
+                "name": "ParameterList",
+                "src": "1622:2:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 6240,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6237,
+                        "name": "ElementaryTypeName",
+                        "src": "1648:7:18"
+                      }
+                    ],
+                    "id": 6238,
+                    "name": "VariableDeclaration",
+                    "src": "1648:7:18"
+                  }
+                ],
+                "id": 6239,
+                "name": "ParameterList",
+                "src": "1647:9:18"
+              }
+            ],
+            "id": 6240,
+            "name": "FunctionDefinition",
+            "src": "1602:55:18"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "0b9714ca",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "referrerIsValid",
+              "overrides": null,
+              "scope": 6257,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice returns if a given referrer is valid\n @param _referrer address of the checked referrer"
+                },
+                "id": 6241,
+                "name": "StructuredDocumentation",
+                "src": "1663:119:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_referrer",
+                      "overrides": null,
+                      "scope": 6248,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 6242,
+                        "name": "ElementaryTypeName",
+                        "src": "1812:7:18"
+                      }
+                    ],
+                    "id": 6243,
+                    "name": "VariableDeclaration",
+                    "src": "1812:17:18"
+                  }
+                ],
+                "id": 6244,
+                "name": "ParameterList",
+                "src": "1811:19:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 6248,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 6245,
+                        "name": "ElementaryTypeName",
+                        "src": "1854:4:18"
+                      }
+                    ],
+                    "id": 6246,
+                    "name": "VariableDeclaration",
+                    "src": "1854:4:18"
+                  }
+                ],
+                "id": 6247,
+                "name": "ParameterList",
+                "src": "1853:6:18"
+              }
+            ],
+            "id": 6248,
+            "name": "FunctionDefinition",
+            "src": "1787:73:18"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "4a6da481",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "userHoldsSufficientRound1Token",
+              "overrides": null,
+              "scope": 6257,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice returns if a given user has sufficient balance of early access tokens\n registered in the EARLY_ACCESS_TOKENS set to participate in round 1\n @param _user address of the user to be checked"
+                },
+                "id": 6249,
+                "name": "StructuredDocumentation",
+                "src": "1866:225:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_user",
+                      "overrides": null,
+                      "scope": 6256,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 6250,
+                        "name": "ElementaryTypeName",
+                        "src": "2136:7:18"
+                      }
+                    ],
+                    "id": 6251,
+                    "name": "VariableDeclaration",
+                    "src": "2136:13:18"
+                  }
+                ],
+                "id": 6252,
+                "name": "ParameterList",
+                "src": "2135:15:18"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 6256,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 6253,
+                        "name": "ElementaryTypeName",
+                        "src": "2198:4:18"
+                      }
+                    ],
+                    "id": 6254,
+                    "name": "VariableDeclaration",
+                    "src": "2198:4:18"
+                  }
+                ],
+                "id": 6255,
+                "name": "ParameterList",
+                "src": "2197:6:18"
+              }
+            ],
+            "id": 6256,
+            "name": "FunctionDefinition",
+            "src": "2096:108:18"
+          }
+        ],
+        "id": 6257,
+        "name": "ContractDefinition",
+        "src": "379:1827:18"
+      }
+    ],
+    "id": 6258,
+    "name": "SourceUnit",
+    "src": "354:1853:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.6",
+  "updatedAt": "2022-06-25T06:55:47.765Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "referrerIsValid(address)": {
+        "params": {
+          "_referrer": "address of the checked referrer"
+        }
+      },
+      "userHoldsSufficientRound1Token(address)": {
+        "params": {
+          "_user": "address of the user to be checked"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getBaseFeeReceiver()": {
+        "notice": "returns the address of the base fee receiver"
+      },
+      "getGlmrCreationFee()": {
+        "notice": "returns the absolute fee in BNB for launchpad creation"
+      },
+      "getMaxLaunchpadLength()": {
+        "notice": "returns the maximum duration of a launchpad in seconds"
+      },
+      "getMinLockingDuration()": {
+        "notice": "returns the minimum duration of the lp locking period in seconds"
+      },
+      "getReferralFee()": {
+        "notice": "returns the relative referral fee charged on base and sale token fee in parts per 1000"
+      },
+      "getRound1Length()": {
+        "notice": "returns the duration of round 1 in seconds"
+      },
+      "getSaleFeeReceiver()": {
+        "notice": "returns the sale token fee receiver address"
+      },
+      "getTokenFee()": {
+        "notice": "returns the relative sale token fee in parts per 1000"
+      },
+      "referrerIsValid(address)": {
+        "notice": "returns if a given referrer is valid"
+      },
+      "userHoldsSufficientRound1Token(address)": {
+        "notice": "returns if a given user has sufficient balance of early access tokens registered in the EARLY_ACCESS_TOKENS set to participate in round 1"
+      }
+    },
+    "version": 1
+  }
+}
