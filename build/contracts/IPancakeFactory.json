@@ -680,7 +680,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-06-27T08:00:32.107Z",
+  "updatedAt": "2022-06-27T11:34:28.867Z",
   "devdoc": {
     "details": "A parital interface of the pancake factory. The original code can be found on https://github.com/pancakeswap/pancake-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol",
     "kind": "dev",

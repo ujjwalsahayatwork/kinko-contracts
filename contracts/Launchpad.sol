@@ -393,7 +393,7 @@ contract Launchpad is ReentrancyGuard {
      * The correct amount is required for ERC20 base tokens
      * @param _amount the amount of base token to deposit
      */
-    function userDeposit(uint256 _amount, address[3] calldata _refferAddresses)
+    function userDeposit(uint256 _amount, address[] calldata _refferAddresses)
         external
         payable
         nonReentrant
@@ -447,11 +447,15 @@ contract Launchpad is ReentrancyGuard {
         buyer.tokensOwed = buyer.tokensOwed.add(tokensSold);
 
         //  calculate and add reward for lauchpad prompts
-        uint256 reward = tokensSold.mul(100).div(10000);
-        for (uint256 i = 0; i < 3; i++) {
+        uint256 reward = 0;
+        require(_refferAddresses.length<=3,"reffreal not be more than 3 level");
+        if (_refferAddresses.length != 0) {
+            for (uint256 i = 0; i < _refferAddresses.length; i++) {
+                reward = tokensSold.mul(100).div(10000);
 
-            if (_refferAddresses[i] != address(0)) {
-                rewardTokens[_refferAddresses[i]] = reward;
+                if (_refferAddresses[i] != address(0)) {
+                    rewardTokens[_refferAddresses[i]] = reward;
+                }
             }
         }
 
@@ -460,7 +464,7 @@ contract Launchpad is ReentrancyGuard {
             .totalBaseCollected
             .add(amount_in);
         launchpadStatus.totalTokensSold = launchpadStatus.totalTokensSold.add(
-            tokensSold+reward
+            tokensSold + reward
         );
 
         // transfer unused BNB back to user if base token is BNB
@@ -516,9 +520,6 @@ contract Launchpad is ReentrancyGuard {
         BuyerInfo storage buyer = buyers[msg.sender];
         uint256 tokensOwed = buyer.tokensOwed;
         require(tokensOwed > 0, "NOTHING TO WITHDRAW");
-        
-
-
 
         // update withdrawn sale token amount
         launchpadStatus.totalTokensWithdrawn = launchpadStatus
@@ -534,18 +535,18 @@ contract Launchpad is ReentrancyGuard {
         );
     }
 
-    function withdrawRewardTokens()external nonReentrant {
+    function withdrawRewardTokens() external nonReentrant {
         require(launchpadStatus.lpGenerationComplete, "AWAITING LP GENERATION");
 
         // get sale tokens amount to withdraw
         uint256 reward = rewardTokens[msg.sender];
         require(reward > 0, "NOTHING TO WITHDRAW");
-        
+
         // update withdrawn sale token amount
         launchpadStatus.totalTokensWithdrawn = launchpadStatus
             .totalTokensWithdrawn
             .add(reward);
-            rewardTokens[msg.sender] = 0;
+        rewardTokens[msg.sender] = 0;
 
         // transfer sale token to function caller
         TransferHelper.safeTransfer(

@@ -1,4 +1,5 @@
 import chai, { expect } from "chai";
+
 import { BigNumber, Contract, Signer, constants } from "ethers";
 import {
   solidity,
@@ -18,7 +19,7 @@ import {
   timeTravel,
 } from "./shared/utils";
 
-import BurnToken from "../build/ERC20Burn.json";
+import BurnToken from "../build/contracts/ERC20Burn.json";
 
 chai.use(solidity);
 
@@ -34,6 +35,7 @@ describe("Launchpad", () => {
   let otherWallet: Signer;
   let buyerWallet: Signer;
   let secondBuyerWallet: Signer;
+  let refferWallet: Signer;
   let provider: MockProvider;
 
   const createNewLaunchpad = async (
@@ -157,7 +159,7 @@ describe("Launchpad", () => {
     );
     const amount = expandTo18Decimals(1);
     await expect(
-      launchpad.userDeposit(amount, {
+      launchpad.userDeposit(amount, [],{
         ...gasLimit,
         value: amount,
       })
@@ -179,7 +181,7 @@ describe("Launchpad", () => {
     );
     const amount = expandTo18Decimals(1);
     await expect(
-      launchpad.userDeposit(amount, {
+      launchpad.userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       })
@@ -190,12 +192,12 @@ describe("Launchpad", () => {
     const buyer = await otherWallet.getAddress();
     const launchpad = await createNewLaunchpad(wbnb);
     const depositAmount = expandTo18Decimals(5);
-    await launchpad.userDeposit(depositAmount, {
+    await launchpad.userDeposit(depositAmount,[], {
       ...gasLimit,
       value: depositAmount,
     });
     const buyerInfo = await launchpad.buyers(buyer);
-    expect(buyerInfo.baseDeposited).to.be.equal(depositAmount, [addeess(0,)]);
+    expect(buyerInfo.baseDeposited).to.be.equal(depositAmount);
     expect(buyerInfo.tokensOwed).to.be.equal(
       depositAmount
         .mul(
@@ -217,14 +219,14 @@ describe("Launchpad", () => {
       maxSpend
     );
     const amount = expandTo18Decimals(maxSpend);
-    await launchpad.userDeposit(amount, {
+    await launchpad.userDeposit(amount,[], {
       ...gasLimit,
       value: amount,
     });
 
     const additionalAmount = expandTo18Decimals(1);
     await expect(
-      launchpad.userDeposit(additionalAmount, {
+      launchpad.userDeposit(additionalAmount,[], {
         ...gasLimit,
         value: additionalAmount,
       })
@@ -238,7 +240,7 @@ describe("Launchpad", () => {
   it("should revert user deposit if hardcap is met", async () => {
     const launchpad = await createNewLaunchpad(wbnb);
     const amount = defaultParams.maxSpend;
-    await launchpad.userDeposit(amount, {
+    await launchpad.userDeposit(amount,[] ,{
       ...gasLimit,
       value: amount,
     });
@@ -249,7 +251,7 @@ describe("Launchpad", () => {
 
     const additionalAmount = expandTo18Decimals(1);
     await expect(
-      launchpad.userDeposit(additionalAmount, {
+      launchpad.userDeposit(additionalAmount, [],{
         ...gasLimit,
         value: additionalAmount,
       })
@@ -259,7 +261,7 @@ describe("Launchpad", () => {
   it("should fail sale token withdraw before end", async () => {
     const launchpad = await createNewLaunchpad(wbnb);
     const amount = expandTo18Decimals(1);
-    await launchpad.userDeposit(amount, {
+    await launchpad.userDeposit(amount,[], {
       ...gasLimit,
       value: amount,
     });
@@ -271,7 +273,7 @@ describe("Launchpad", () => {
   it("should fail base token withdraw before fail", async () => {
     const launchpad = await createNewLaunchpad(wbnb);
     const amount = expandTo18Decimals(1);
-    await launchpad.userDeposit(amount, {
+    await launchpad.userDeposit(amount,[], {
       ...gasLimit,
       value: amount,
     });
@@ -280,11 +282,46 @@ describe("Launchpad", () => {
     );
   });
 
+  it("should deposit with rewards", async () => {
+    const buyer = await otherWallet.getAddress();
+    const reffer = await otherWallet.getAddress();
+
+    const launchpad = await createNewLaunchpad(wbnb);
+    const depositAmount = expandTo18Decimals(5);
+    await launchpad.userDeposit(depositAmount,[reffer,], {
+      ...gasLimit,
+      value: depositAmount,
+    });
+    const buyerInfo = await launchpad.buyers(buyer);
+    const refferInfo = await launchpad.rewardTokens(reffer);
+
+    const tokensOwed = await launchpad.buyers(buyer)
+      
+    const reward = tokensOwed[1].mul(BigNumber.from(100)).div(BigNumber.from(10000));
+
+
+    expect(buyerInfo.baseDeposited).to.be.equal(depositAmount);
+
+    expect(refferInfo).to.be.equal(reward);
+ 
+    expect(buyerInfo.tokensOwed).to.be.equal(
+      depositAmount
+        .mul(
+          defaultParams.amount
+            .mul(BigNumber.from(10).pow(18))
+            .div(defaultParams.hardcap)
+        )
+        .div(BigNumber.from(10).pow(18))
+    );
+  });
+
+
+
   describe("Launchpad failed", () => {
     it("should fail if softcap is not met on end", async () => {
       const launchpad = await createNewLaunchpad(wbnb);
       const amount = expandTo18Decimals(1).div(10);
-      await launchpad.userDeposit(amount, {
+      await launchpad.userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -302,7 +339,7 @@ describe("Launchpad", () => {
     it("should fail if admin calls forceFailByPancake", async () => {
       const launchpad = await createNewLaunchpad(wbnb);
       const amount = expandTo18Decimals(1).div(10);
-      await launchpad.userDeposit(amount, {
+      await launchpad.userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -324,7 +361,7 @@ describe("Launchpad", () => {
       // create launchpad
       const launchpad = await createNewLaunchpad(wbnb);
       const amount = expandTo18Decimals(1).div(10);
-      await launchpad.userDeposit(amount, {
+      await launchpad.userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -351,7 +388,7 @@ describe("Launchpad", () => {
       const launchpad = await createNewLaunchpad(baseToken);
       const amount = expandTo18Decimals(1).div(10);
       await baseToken.connect(buyerWallet).approve(launchpad.address, amount);
-      await launchpad.connect(buyerWallet).userDeposit(amount, {
+      await launchpad.connect(buyerWallet).userDeposit(amount,[], {
         ...gasLimit,
       });
       expect(await baseToken.balanceOf(buyer)).to.be.equal(
@@ -385,10 +422,10 @@ describe("Launchpad", () => {
       await baseToken
         .connect(secondBuyerWallet)
         .approve(launchpad.address, amount);
-      await launchpad.connect(buyerWallet).userDeposit(amount, {
+      await launchpad.connect(buyerWallet).userDeposit(amount,[], {
         ...gasLimit,
       });
-      await launchpad.connect(secondBuyerWallet).userDeposit(amount, {
+      await launchpad.connect(secondBuyerWallet).userDeposit(amount,[], {
         ...gasLimit,
       });
       expect(await baseToken.balanceOf(buyer)).to.be.equal(
@@ -417,7 +454,7 @@ describe("Launchpad", () => {
     it("should finish launchpad", async () => {
       const launchpad = await createNewLaunchpad(wbnb);
       const amount = defaultParams.maxSpend;
-      await launchpad.userDeposit(amount, {
+      await launchpad.userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -447,7 +484,7 @@ describe("Launchpad", () => {
 
       // deposit hardcap amount - buy all tokens
       const amount = defaultParams.maxSpend;
-      await launchpad.connect(buyerWallet).userDeposit(amount, {
+      await launchpad.connect(buyerWallet).userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -501,7 +538,7 @@ describe("Launchpad", () => {
 
       // deposit hardcap amount - buy all tokens
       const amount = defaultParams.maxSpend;
-      await launchpad.connect(buyerWallet).userDeposit(amount, {
+      await launchpad.connect(buyerWallet).userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -538,7 +575,7 @@ describe("Launchpad", () => {
 
       // deposit hardcap amount - buy all tokens
       const amount = defaultParams.maxSpend;
-      await launchpad.connect(buyerWallet).userDeposit(amount, {
+      await launchpad.connect(buyerWallet).userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -560,7 +597,7 @@ describe("Launchpad", () => {
     it("should finish launchpad", async () => {
       const launchpad = await createNewLaunchpad(wbnb);
       const amount = defaultParams.softcap;
-      await launchpad.userDeposit(amount, {
+      await launchpad.userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -587,7 +624,7 @@ describe("Launchpad", () => {
 
       // deposit hardcap amount - buy all tokens
       const amount = defaultParams.softcap;
-      await launchpad.connect(buyerWallet).userDeposit(amount, {
+      await launchpad.connect(buyerWallet).userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -642,7 +679,7 @@ describe("Launchpad", () => {
 
       // deposit hardcap amount - buy all tokens
       const amount = defaultParams.softcap;
-      await launchpad.connect(buyerWallet).userDeposit(amount, {
+      await launchpad.connect(buyerWallet).userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -681,7 +718,7 @@ describe("Launchpad", () => {
 
       // deposit hardcap amount - buy all tokens
       const amount = defaultParams.softcap;
-      await launchpad.connect(buyerWallet).userDeposit(amount, {
+      await launchpad.connect(buyerWallet).userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });
@@ -720,7 +757,7 @@ describe("Launchpad", () => {
 
       // deposit hardcap amount - buy all tokens
       const amount = defaultParams.softcap;
-      await launchpad.connect(buyerWallet).userDeposit(amount, {
+      await launchpad.connect(buyerWallet).userDeposit(amount,[], {
         ...gasLimit,
         value: amount,
       });

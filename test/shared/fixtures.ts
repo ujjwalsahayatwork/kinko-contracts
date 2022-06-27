@@ -1,14 +1,14 @@
 import { Contract, Signer } from "ethers";
 import { deployContract } from "ethereum-waffle";
 
-import PancakeLocker from "../../build/PancakeLocker.json";
-import PancakeFactory from "../../build/PancakeFactory.json";
+import PancakeLocker from "../../build/contracts/PancakeLocker.json";
+import PancakeFactory from "../../build/contracts/PancakeFactory.json";
 
-import LaunchpadSettings from "../../build/LaunchpadSettings.json";
-import LaunchpadFactory from "../../build/LaunchpadFactory.json";
-import LaunchpadLockForwarder from "../../build/LaunchpadLockForwarder.json";
-import LaunchpadGenerator from "../../build/LaunchpadGenerator.json";
-import WBNB from "../../build/WBNB.json";
+import LaunchpadSettings from "../../build/contracts/LaunchpadSettings.json";
+import LaunchpadFactory from "../../build/contracts/LaunchpadFactory.json";
+import LaunchpadLockForwarder from "../../build/contracts/LaunchpadLockForwarder.json";
+import LaunchpadGenerator from "../../build/contracts/LaunchpadGenerator.json";
+import WBNB from "../../build/contracts/WBNB.json";
 
 interface Fixture {
   pancakeFactory: Contract;

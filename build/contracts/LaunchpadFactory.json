@@ -44,8 +44,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -115,8 +114,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -135,8 +133,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -149,8 +146,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -169,8 +165,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -183,8 +178,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"launchpadContract\",\"type\":\"address\"}],\"name\":\"launchpadRegistered\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_allow\",\"type\":\"bool\"}],\"name\":\"adminAllowLaunchpadGenerator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"launchpadAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"launchpadGeneratorAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"launchpadGeneratorsLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_launchpadAddress\",\"type\":\"address\"}],\"name\":\"launchpadIsRegistered\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"launchpadsLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_launchpadAddress\",\"type\":\"address\"}],\"name\":\"registerLaunchpad\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"adminAllowLaunchpadGenerator(address,bool)\":{\"params\":{\"_address\":\"address of the launchpad generator to be added\",\"_allow\":\"bool if the generator should be added(=true) or removed(=false)\"}},\"launchpadAtIndex(uint256)\":{\"params\":{\"_index\":\"index of the launchpads address set\"}},\"launchpadGeneratorAtIndex(uint256)\":{\"params\":{\"_index\":\"index of the launchpad generator address set\"}},\"launchpadIsRegistered(address)\":{\"params\":{\"_launchpadAddress\":\"address of the lauchpad to be checked\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"registerLaunchpad(address)\":{\"params\":{\"_launchpadAddress\":\"address of the launchpad to be added\"}},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"adminAllowLaunchpadGenerator(address,bool)\":{\"notice\":\"adds or removes a launchpad generator to the factory by owner\"},\"launchpadAtIndex(uint256)\":{\"notice\":\"returns the address of a launchpad at a given index\"},\"launchpadGeneratorAtIndex(uint256)\":{\"notice\":\"returns the address of a launchpad generator at a given index\"},\"launchpadGeneratorsLength()\":{\"notice\":\"returns the total number of registered launchpad generators\"},\"launchpadIsRegistered(address)\":{\"notice\":\"returns if a given address is registered as a launchpad\"},\"launchpadsLength()\":{\"notice\":\"returns the total number of registered launchpads\"},\"registerLaunchpad(address)\":{\"notice\":\"adds a launchpad to factory by generator\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/LaunchpadFactory.sol\":\"LaunchpadFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x15e2d5bd4c28a88548074c54d220e8086f638a71ed07e6b3ba5a70066fcf458d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://90faf5851c02f9bd42c5bfb54d4f0421a2612f50ab80b2c4fa24fa3792071cc2\",\"dweb:/ipfs/QmRGM4F2PcGVF85aTfaA9YBhCHHDqrMhRjyp6fGeBTtirb\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0x1562cd9922fbf739edfb979f506809e2743789cbde3177515542161c3d04b164\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4580d57781513d98870d9738c7d39094336e0a70cdb90d68dad549c6ced466ec\",\"dweb:/ipfs/Qmf9YZzzRFuvMnav9dgmeRUpdYMMECiZX8w25sHWVbA18V\"]},\"project:/contracts/LaunchpadFactory.sol\":{\"keccak256\":\"0x4e359d8ca99bdf9860abba7fecd3dc8a29d76ca372aecfa00c683910c8496b44\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1247357cdac13fab4e349409d5198a645135f9217f07dea06b7bbe5f36b29c9b\",\"dweb:/ipfs/QmVj7gwq7FFBM7L5Ydgip9kTdKMHWsysnoSbAQm7a74hJL\"]},\"project:/interfaces/ILaunchpadFactory.sol\":{\"keccak256\":\"0x09b598980892b4f983b812ad7ee5e529b323e6abd5315f96a4bd024d868e478c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a4c25debe545a2ddfe15ed704a1db5e593e2119a6a7a49797eed071085ac12f\",\"dweb:/ipfs/Qmbd4FSTEAHQuNBRicVAo4JKMQ92WdECzp9DnoxdoCErWG\"]}},\"version\":1}",
@@ -4151,17 +4145,9 @@
     "name": "solc",
     "version": "0.6.12+commit.27d51765.Emscripten.clang"
   },
-  "networks": {
-    "1656316344188": {
-      "events": {},
-      "links": {},
-      "address": "0x43ff6c2214970de26Ea533151f9337C57389AAfE",
-      "transactionHash": "0xd140cacbd2ae1b6e2e8f5ff837fa8f21c3743b43c953a17436925479d064b6dd"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-06-27T08:01:27.451Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-06-27T11:34:28.754Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

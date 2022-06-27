@@ -9,8 +9,8 @@ import {
 import { generalFixture } from "./shared/fixtures";
 import { expandTo18Decimals, gasLimit } from "./shared/utils";
 
-import BurnToken from "../build/ERC20Burn.json";
-import PancakePair from "../build/PancakePair.json";
+import BurnToken from "../build/contracts/ERC20Burn.json";
+import PancakePair from "../build/contracts/PancakePair.json";
 
 chai.use(solidity);
 

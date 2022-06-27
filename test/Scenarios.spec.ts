@@ -18,7 +18,7 @@ import {
   timeTravel,
 } from "./shared/utils";
 
-import BurnToken from "../build/ERC20Burn.json";
+import BurnToken from "../build/contracts/ERC20Burn.json";
 
 chai.use(solidity);
 
@@ -75,7 +75,7 @@ describe("Scenarios", () => {
   ) => {
     const buyer = await wallet.getAddress();
     const depositAmount = amount;
-    await launchpad.connect(wallet).userDeposit(depositAmount, {
+    await launchpad.connect(wallet).userDeposit(depositAmount,[], {
       ...gasLimit,
       value: depositAmount,
     });

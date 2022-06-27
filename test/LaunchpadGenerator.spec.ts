@@ -9,8 +9,8 @@ import {
 import { generalFixture } from "./shared/fixtures";
 import { defaultParams, gasLimit } from "./shared/utils";
 
-import BurnToken from "../build/ERC20Burn.json";
-import Launchpad from "../build/Launchpad.json";
+import BurnToken from "../build/contracts/ERC20Burn.json";
+import Launchpad from "../build/contracts/Launchpad.json";
 
 chai.use(solidity);
 

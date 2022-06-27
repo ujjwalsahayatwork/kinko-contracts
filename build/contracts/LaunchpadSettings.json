@@ -42,8 +42,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -56,8 +55,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -112,8 +110,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -260,8 +257,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -274,8 +270,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -288,8 +283,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -302,8 +296,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -327,8 +320,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -341,8 +333,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -355,8 +346,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -369,8 +359,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -389,8 +378,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -403,8 +391,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -417,8 +404,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -431,8 +417,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -451,8 +436,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -471,8 +455,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"EARLY_ACCESS_AMOUNTS\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"allowedReferrersLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"earlyAccessTokensLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_referrer\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_allow\",\"type\":\"bool\"}],\"name\":\"editAllowedReferrers\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_holdAmount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_allow\",\"type\":\"bool\"}],\"name\":\"editEarlyAccessTokens\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBaseFeeReceiver\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"getEarlyAccessTokenAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getGlmrCreationFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMaxLaunchpadLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMinLockingDuration\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReferralFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"getReferrerAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRound1Length\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getSaleFeeReceiver\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTokenFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_referrer\",\"type\":\"address\"}],\"name\":\"referrerIsValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_baseFeeReceiver\",\"type\":\"address\"},{\"internalType\":\"address payable\",\"name\":\"_tokenFeeReceiver\",\"type\":\"address\"}],\"name\":\"setFeeAddresses\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_creationFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_referralFee\",\"type\":\"uint256\"}],\"name\":\"setFees\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_maxLength\",\"type\":\"uint256\"}],\"name\":\"setMaxLaunchpadLength\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_minLength\",\"type\":\"uint256\"}],\"name\":\"setMinLockingDuration\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_round1Length\",\"type\":\"uint256\"}],\"name\":\"setRound1Length\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"settings\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"referralFee\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"baseFeeReceiver\",\"type\":\"address\"},{\"internalType\":\"address payable\",\"name\":\"tokenFeeReceiver\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"creationFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"round1Length\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxLaunchpadLength\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minLockingDuration\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"userHoldsSufficientRound1Token\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"Sets initial settings for launchpads\"},\"editAllowedReferrers(address,bool)\":{\"details\":\"referrers are checked in create function of generator\",\"params\":{\"_allow\":\"bool if the referrer should be added to (=true) or removed from (=false) the list\",\"_referrer\":\"address of the referrer to be changed\"}},\"editEarlyAccessTokens(address,uint256,bool)\":{\"params\":{\"_allow\":\"bool if the token should be added to (=true) or removed from (=false) the list\",\"_holdAmount\":\"the minimum amount of early acces token hold by user for early access\",\"_token\":\"address of the token to be changed for early access\"}},\"getEarlyAccessTokenAtIndex(uint256)\":{\"params\":{\"_index\":\"position of the early access token in the EARLY_ACCESS_TOKENS set\"}},\"getReferrerAtIndex(uint256)\":{\"params\":{\"_index\":\"position of the referrer in the ALLOWED_REFERRERS set\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"referrerIsValid(address)\":{\"params\":{\"_referrer\":\"address of the checked referrer\"}},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"setFeeAddresses(address,address)\":{\"params\":{\"_baseFeeReceiver\":\"address of the base token fee receiver\",\"_tokenFeeReceiver\":\"address of the sale token fee receiver\"}},\"setFees(uint256,uint256,uint256)\":{\"params\":{\"_creationFee\":\"absolute fee in BNB charged on launchpad creation\",\"_referralFee\":\"relative fee charged on base and sale tokens fee in parts per 1000\",\"_tokenFee\":\"relative fee charged on base and sale tokens in parts per 1000\"}},\"setMaxLaunchpadLength(uint256)\":{\"params\":{\"_maxLength\":\"duration in seconds (difference between start and end time)\"}},\"setMinLockingDuration(uint256)\":{\"params\":{\"_minLength\":\"locking duration in seconds\"}},\"setRound1Length(uint256)\":{\"params\":{\"_round1Length\":\"the duration of round 1 in seconds\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"},\"userHoldsSufficientRound1Token(address)\":{\"details\":\"we are aware of out of gas scenarios in for loop. It is intended to keep the early access tokens list very small (max. 5)\",\"params\":{\"_user\":\"address of the user to be checked\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"allowedReferrersLength()\":{\"notice\":\"returns total amount of allowed referrers\"},\"earlyAccessTokensLength()\":{\"notice\":\"returns total amount registered early access tokens\"},\"editAllowedReferrers(address,bool)\":{\"notice\":\"edits the list of allowed referrers by owner. Referrers can be added to or removed from the allowed referrers list.\"},\"editEarlyAccessTokens(address,uint256,bool)\":{\"notice\":\"edits the list of early access tokens by owner.\"},\"getBaseFeeReceiver()\":{\"notice\":\"returns the address of the base fee receiver\"},\"getEarlyAccessTokenAtIndex(uint256)\":{\"notice\":\"returns the address and holding amount of the early access token at given index\"},\"getGlmrCreationFee()\":{\"notice\":\"returns the absolute fee in BNB for launchpad creation\"},\"getMaxLaunchpadLength()\":{\"notice\":\"returns the maximum duration of a launchpad in seconds\"},\"getMinLockingDuration()\":{\"notice\":\"gets the minimum duration of locking lp tockens\"},\"getReferralFee()\":{\"notice\":\"returns the relative referral fee charged on base and sale token fee in parts per 1000\"},\"getReferrerAtIndex(uint256)\":{\"notice\":\"returns the address of the referrer at a given index\"},\"getRound1Length()\":{\"notice\":\"returns the duration of round 1 in seconds\"},\"getSaleFeeReceiver()\":{\"notice\":\"returns the sale token fee receiver address\"},\"getTokenFee()\":{\"notice\":\"returns the relative sale token fee in parts per 1000\"},\"referrerIsValid(address)\":{\"notice\":\"returns if a given referrer is valid\"},\"setFeeAddresses(address,address)\":{\"notice\":\"sets the fee receiver addresses for base token and sale token fees\"},\"setFees(uint256,uint256,uint256)\":{\"notice\":\"sets the fees for the launchpad by owner\"},\"setMaxLaunchpadLength(uint256)\":{\"notice\":\"sets the maximum duration of a launchpad by owner\"},\"setMinLockingDuration(uint256)\":{\"notice\":\"sets the minimum duration of locking lp tockens\"},\"setRound1Length(uint256)\":{\"notice\":\"set the duration of round 1 by owner\"},\"userHoldsSufficientRound1Token(address)\":{\"notice\":\"returns if a given user has sufficient balance of early access tokens registered in the EARLY_ACCESS_TOKENS set to participate in round 1\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/LaunchpadSettings.sol\":\"LaunchpadSettings\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x15e2d5bd4c28a88548074c54d220e8086f638a71ed07e6b3ba5a70066fcf458d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://90faf5851c02f9bd42c5bfb54d4f0421a2612f50ab80b2c4fa24fa3792071cc2\",\"dweb:/ipfs/QmRGM4F2PcGVF85aTfaA9YBhCHHDqrMhRjyp6fGeBTtirb\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0x1562cd9922fbf739edfb979f506809e2743789cbde3177515542161c3d04b164\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4580d57781513d98870d9738c7d39094336e0a70cdb90d68dad549c6ced466ec\",\"dweb:/ipfs/Qmf9YZzzRFuvMnav9dgmeRUpdYMMECiZX8w25sHWVbA18V\"]},\"project:/contracts/LaunchpadSettings.sol\":{\"keccak256\":\"0xbd9131f910fa48584e0255633185fe92ca89a3d24b255856b26ef3ec304d476e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2c080551fe5e277bd59e3d6c16b94039420e968a666c59abf5c667a9dea5b275\",\"dweb:/ipfs/QmSmNom8EnfpBBe7rpesZrL8i6eoKzUZ3G77Nn7a5Wm76N\"]},\"project:/interfaces/ILaunchpadSettings.sol\":{\"keccak256\":\"0x765722e926da9b3c48d510dcdf1b5542fe60e10bff8af3e0faea4822ea73e73e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a3eaf49a14c0082512eb7f43ec3a12d905703edb5adcf58da9ea3f56d0bb59b0\",\"dweb:/ipfs/QmU2AHmpdPPLTXCQnwZThwJ86HRaZUKXw6hkkmc48F2nDA\"]}},\"version\":1}",
@@ -11820,17 +11803,9 @@
     "name": "solc",
     "version": "0.6.12+commit.27d51765.Emscripten.clang"
   },
-  "networks": {
-    "1656316344188": {
-      "events": {},
-      "links": {},
-      "address": "0xf839EcC82dEce9036169036f64A99a5066dbd94c",
-      "transactionHash": "0x79a5c78fdc66a0f90836d7fa91c51de3f8258858c98ddb6bdcbd8935bc23ac75"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-06-27T08:01:27.441Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-06-27T11:34:28.767Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

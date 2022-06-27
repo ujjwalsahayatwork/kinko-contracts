@@ -98,8 +98,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -112,8 +111,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -166,8 +164,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -180,8 +177,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -194,8 +190,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -251,8 +246,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -303,8 +297,7 @@
       "name": "lockLPToken",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function",
-      "payable": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -416,8 +409,7 @@
       "name": "splitLock",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function",
-      "payable": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -605,8 +597,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -625,8 +616,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -639,8 +629,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -664,8 +653,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -719,8 +707,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -739,8 +726,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -764,8 +750,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -784,8 +769,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -804,8 +788,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -818,8 +801,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pancakeFactory\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"lpToken\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"lockDate\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"unlockDate\",\"type\":\"uint256\"}],\"name\":\"onDeposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"lpToken\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"onWithdraw\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"KINKO_FACTORY\",\"outputs\":[{\"internalType\":\"contract IPancakeFactory\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"devaddr\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"fees\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"bnbFee\",\"type\":\"uint256\"},{\"internalType\":\"contract IERC20Burn\",\"name\":\"secondaryFeeToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"secondaryTokenFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"secondaryTokenDiscount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"liquidityFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"referralPercent\",\"type\":\"uint256\"},{\"internalType\":\"contract IERC20Burn\",\"name\":\"referralToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"referralHold\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"referralDiscount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"getLockedTokenAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNumLockedTokens\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"}],\"name\":\"getNumLocksForToken\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"getUserLockForTokenAtIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"getUserLockedTokenAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"getUserNumLockedTokens\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"}],\"name\":\"getUserNumLocksForToken\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"getUserWhitelistStatus\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"getWhitelistedUserAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getWhitelistedUsersLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_lockID\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"incrementLock\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_unlockDate\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"_referral\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_feeInGlmr\",\"type\":\"bool\"},{\"internalType\":\"address payable\",\"name\":\"_withdrawer\",\"type\":\"address\"}],\"name\":\"lockLPToken\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_lockID\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"migrate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"migrator\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_lockID\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_unlockDate\",\"type\":\"uint256\"}],\"name\":\"relock\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"_devaddr\",\"type\":\"address\"}],\"name\":\"setDev\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_referralPercent\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_referralDiscount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_bnbFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_secondaryTokenFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_secondaryTokenDiscount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_liquidityFee\",\"type\":\"uint256\"}],\"name\":\"setFees\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_migrator\",\"type\":\"address\"}],\"name\":\"setMigrator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20Burn\",\"name\":\"_referralToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_hold\",\"type\":\"uint256\"}],\"name\":\"setReferralTokenAndHold\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_secondaryFeeToken\",\"type\":\"address\"}],\"name\":\"setSecondaryFeeToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_lockID\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"splitLock\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"tokenLocks\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"lockDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"initialAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"unlockDate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"lockID\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_lockID\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"transferLockOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_add\",\"type\":\"bool\"}],\"name\":\"whitelistFeeAccount\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_lockID\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"constructor\":{\"details\":\"sets initially contract dependend addresses and fee parameter\",\"params\":{\"_pancakeFactory\":\"address of the pancake factory\"}},\"getNumLocksForToken(address)\":{\"params\":{\"_lpToken\":\"address of token to get amount of locks for\"}},\"getUserLockForTokenAtIndex(address,address,uint256)\":{\"params\":{\"_index\":\"position of the token lock in the users token lock set for specific LP\",\"_lpToken\":\"address of LP token\",\"_user\":\"address of the user\"}},\"getUserLockedTokenAtIndex(address,uint256)\":{\"params\":{\"_index\":\"position of LP token in users lockedTokens set\",\"_user\":\"address of the user\"}},\"getUserNumLockedTokens(address)\":{\"params\":{\"_user\":\"address of user to be checked\"}},\"getUserNumLocksForToken(address,address)\":{\"params\":{\"_lpToken\":\"address of LP token\",\"_user\":\"address of the user\"}},\"getUserWhitelistStatus(address)\":{\"params\":{\"_user\":\"users address to be checked\"}},\"getWhitelistedUserAtIndex(uint256)\":{\"params\":{\"_index\":\"position of the user in the whitelist\"}},\"incrementLock(address,uint256,uint256,uint256)\":{\"params\":{\"_amount\":\"additional LP amount to be locked\",\"_index\":\"position of the lock in the user locks for specific LP token set\",\"_lockID\":\"unique identifier of the token lock\",\"_lpToken\":\"address of the LP token to increment lock\"}},\"lockLPToken(address,uint256,uint256,address,bool,address)\":{\"details\":\"fees are calculated if caller is not whitelisted\",\"params\":{\"_amount\":\"total amount of LP tokens to be locked\",\"_feeInGlmr\":\"bool indicating if base token is BNB\",\"_lpToken\":\"address of the LP token to be locked\",\"_referral\":\"address of referrer for token locking\",\"_unlockDate\":\"unix timestamp when withdrawer is allowed to unlock LP tokens\",\"_withdrawer\":\"address which is allowed to unlock lock LP tokens after unlock date\"}},\"migrate(address,uint256,uint256,uint256)\":{\"params\":{\"_amount\":\"amount of locked LP token to be migrated\",\"_index\":\"position of the lock in the user locks for specific LP token set\",\"_lockID\":\"unique identifier of the token lock to be split up\",\"_lpToken\":\"address of the LP token to migrate the lock for\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"relock(address,uint256,uint256,uint256)\":{\"params\":{\"_index\":\"position of the lock in the user locks for specific LP token set\",\"_lockID\":\"unique identifier of the token lock\",\"_lpToken\":\"address of the LP token to be relocked\",\"_unlockDate\":\"unix timestamp when withdrawer is allowed to unlock LP tokens\"}},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"setDev(address)\":{\"params\":{\"_devaddr\":\"fee receiver address\"}},\"setFees(uint256,uint256,uint256,uint256,uint256,uint256)\":{\"params\":{\"_bnbFee\":\"BNB fee charged on lock creation for BNB base tokens\",\"_liquidityFee\":\"fee on LP tokens\",\"_referralDiscount\":\"relative discount fee in parts per 1000\",\"_referralPercent\":\"relative referral fee in parts per 1000\",\"_secondaryTokenDiscount\":\"discount on liquidity fee\",\"_secondaryTokenFee\":\"fee charged on locking non BNB base token\"}},\"setMigrator(address)\":{\"params\":{\"_migrator\":\"address of the new migrator contract\"}},\"setReferralTokenAndHold(address,uint256)\":{\"params\":{\"_hold\":\"amount of referral token a referrer has to hold\",\"_referralToken\":\"address of burnable ERC20 token\"}},\"setSecondaryFeeToken(address)\":{\"params\":{\"_secondaryFeeToken\":\"address of burnable ERC20 token\"}},\"splitLock(address,uint256,uint256,uint256)\":{\"details\":\"a fee in BNB (bnbFee) is required to be sent by calling to create a new lock\",\"params\":{\"_amount\":\"LP amount to create a new lock with\",\"_index\":\"position of the lock in the user locks for specific LP token set\",\"_lockID\":\"unique identifier of the token lock to be split up\",\"_lpToken\":\"address of the LP token to be split up\"}},\"transferLockOwnership(address,uint256,uint256,address)\":{\"params\":{\"_index\":\"position of the lock in the user locks for specific LP token set\",\"_lockID\":\"unique identifier of the token lock to be split up\",\"_lpToken\":\"address of the LP token to transfer the ownership of the lock for\",\"_newOwner\":\"address of the new lock owner\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"},\"whitelistFeeAccount(address,bool)\":{\"params\":{\"_add\":\"bool if the given user should be added to (=true) or removed from (=false) whitelist\",\"_user\":\"address of the user to whitelist\"}},\"withdraw(address,uint256,uint256,uint256)\":{\"params\":{\"_amount\":\"amount to be withdrawn from the lock\",\"_index\":\"position of the lock in the user locks for specific LP token set\",\"_lockID\":\"unique identifier of the token lock\",\"_lpToken\":\"address of the LP token to be withdrawn\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getLockedTokenAtIndex(uint256)\":{\"notice\":\"returns address of a LP token at a specific index of the set\"},\"getNumLockedTokens()\":{\"notice\":\"returns the total number of different locked lp tokens\"},\"getNumLocksForToken(address)\":{\"notice\":\"returns the total number of locks for given token\"},\"getUserLockForTokenAtIndex(address,address,uint256)\":{\"notice\":\"returns the token lock of a given position in the users lp token lock set\"},\"getUserLockedTokenAtIndex(address,uint256)\":{\"notice\":\"returns the LP token address at a given index of the users set\"},\"getUserNumLockedTokens(address)\":{\"notice\":\"returns the amount of different locked LP tokens for a given user\"},\"getUserNumLocksForToken(address,address)\":{\"notice\":\"returns the amount of users locks for a specific LP token\"},\"getUserWhitelistStatus(address)\":{\"notice\":\"returns if the given user is whitelisted\"},\"getWhitelistedUserAtIndex(uint256)\":{\"notice\":\"returns the address of the user at a given index of the whitelist set\"},\"getWhitelistedUsersLength()\":{\"notice\":\"returns the total amout of whitelisted users\"},\"incrementLock(address,uint256,uint256,uint256)\":{\"notice\":\"increments the locked LP tokens amount by lock owner. A liquidity fee is charged on sending additional tokens to the locking contract.\"},\"lockLPToken(address,uint256,uint256,address,bool,address)\":{\"notice\":\"locks specific amount of LP tokens for a given period of time\"},\"migrate(address,uint256,uint256,uint256)\":{\"notice\":\"migrates a existing lock to an other contract with help of migrator\"},\"relock(address,uint256,uint256,uint256)\":{\"notice\":\"relocks the locked LP token by lock owner. A liquidity fee is calculated on the locking amount. The new locking amount is old locking amount minus liquidity fee.\"},\"setDev(address)\":{\"notice\":\"set the dev address for receiving fees by owner\"},\"setFees(uint256,uint256,uint256,uint256,uint256,uint256)\":{\"notice\":\"set the fees and fee tokens by owner\"},\"setMigrator(address)\":{\"notice\":\"set migrator by owner\"},\"setReferralTokenAndHold(address,uint256)\":{\"notice\":\"set the referral token and amount to hold by a referrer\"},\"setSecondaryFeeToken(address)\":{\"notice\":\"set secondary fee token as option to bnb as fee by owner\"},\"splitLock(address,uint256,uint256,uint256)\":{\"notice\":\"splits up a specific token lock and creates an other new token lock with the given amount. The existing token lock is reduced by the equivalent amount.\"},\"transferLockOwnership(address,uint256,uint256,address)\":{\"notice\":\"transfers the lock owner ship to a new owner by the current owner\"},\"whitelistFeeAccount(address,bool)\":{\"notice\":\"whitelists a user by owner\"},\"withdraw(address,uint256,uint256,uint256)\":{\"notice\":\"withdraws the desired amount of locked token by lock owner. Unlock timestamp has to be met.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/PancakeLocker.sol\":\"PancakeLocker\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x15e2d5bd4c28a88548074c54d220e8086f638a71ed07e6b3ba5a70066fcf458d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://90faf5851c02f9bd42c5bfb54d4f0421a2612f50ab80b2c4fa24fa3792071cc2\",\"dweb:/ipfs/QmRGM4F2PcGVF85aTfaA9YBhCHHDqrMhRjyp6fGeBTtirb\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0xcc78a17dd88fa5a2edc60c8489e2f405c0913b377216a5b26b35656b2d0dab52\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://526dc85e1f9b9b45830e202568d267d93dde7a4fcccf4ad7798dadcd92304d3c\",\"dweb:/ipfs/QmaoXMB972J3cSDLtBq3xBo4jLwqD2uzXTwujtSPqkYVhR\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0x1562cd9922fbf739edfb979f506809e2743789cbde3177515542161c3d04b164\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4580d57781513d98870d9738c7d39094336e0a70cdb90d68dad549c6ced466ec\",\"dweb:/ipfs/Qmf9YZzzRFuvMnav9dgmeRUpdYMMECiZX8w25sHWVbA18V\"]},\"@openzeppelin/contracts/utils/ReentrancyGuard.sol\":{\"keccak256\":\"0x8bbbc2f5c10065ee272592ae0a7a6ceb23de2fbd81564ee0bb015ecf404d5f61\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b95e56c1640d0ef789fc5c16269e141e992f6c8ac97cc6d377bd3825e9cab182\",\"dweb:/ipfs/QmVzaxJZY51EhagrcNnkxoU6Uq17RhATe7aHvtkC6wUkgK\"]},\"project:/contracts/PancakeLocker.sol\":{\"keccak256\":\"0x9362ccce06c30368bf8a9d0f2f9f3882e94cb1fb6fc667f0e2a8786353e6e1ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0c0cdac2fcdad8d68c6d09ba32458e8db6aa91743b50601abfea0a0f3e1371a7\",\"dweb:/ipfs/QmaN7o52eSYGjQ7ERRbqdF5WFR8q1TKMChp2zZbi4LNPGw\"]},\"project:/contracts/TransferHelper.sol\":{\"keccak256\":\"0x9cee4913122849ff2fd8f530bcc19c20b869f71076f8cdcade9416b3b9cb7d89\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4f157eae1b719b38c3f87ac56433014ce11a49bb66a90613f87890dfbbfe7cc3\",\"dweb:/ipfs/QmSPca8GA7rX8wd3ATUSLqoWQJbJm2S9SV4MZTAUUaQnBo\"]},\"project:/interfaces/IERC20Burn.sol\":{\"keccak256\":\"0x1d42b94792f72cc775563a8363eb8d042af91b21eb17edd7f146d88d075afbbf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://902e3e8dd2b9694967c2815646c1d7aa51535f53bc432634575be442fd046c32\",\"dweb:/ipfs/QmaUxb8e9GDy3KFyiaTEH6hZhExWB6iWnEGXkxVm7SXtec\"]},\"project:/interfaces/IMigrator.sol\":{\"keccak256\":\"0xe5b70797ccaba3b87bc0198b65b611e2474183f19774d2ad1b2e7798736fc4b1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f3f97e21a449c1885a9c15f931358e165772293fa24a625566a07f0905e65873\",\"dweb:/ipfs/QmXbCKJ96VCcKjGfQmWEfgeHJZEpcpJmQ5PSc5wXhKrEUA\"]},\"project:/interfaces/IPancakeLocker.sol\":{\"keccak256\":\"0x21533325b0cbcf8d43d79bbfbdf86d4d39592603697e5aba1d7cb5a5e32b49ea\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://664b828763c88176cb93857b2bb54c18d8e3593f6b153fdcfbd069723222b736\",\"dweb:/ipfs/QmUzB831gJbo1ZLzJKRmaSpCcwUPBhDqtPZWfPSLk4yP15\"]},\"project:/interfaces/pancake/IPancakeFactory.sol\":{\"keccak256\":\"0x30ca1dc3e636d7b173667a009b997dff086d3d1a146adc745fe050e7f5f8284e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://043c59cfd6c27bb1ab314a54eea9805989c68a13f29e9ad0276b6ada3cf239d3\",\"dweb:/ipfs/QmWWjm52S7PMwZ7zFc8gy1WNToXzQucWhKdTjwb65WsSdj\"]},\"project:/interfaces/pancake/IPancakePair.sol\":{\"keccak256\":\"0x82b05be63a1f08c78a73d76fcdc12325bb66fc52948e22be8c3204a8a64c2de0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c4205305dcc44d8bbc49532baec308449cce66d9e9e5da6db7fa0d3db0c7a0e7\",\"dweb:/ipfs/QmajsBsf5RzHn2oDQdkrvpQcu7X6zjWAVcGJgi6629osiP\"]}},\"version\":1}",
@@ -50418,17 +50400,9 @@
     "name": "solc",
     "version": "0.6.12+commit.27d51765.Emscripten.clang"
   },
-  "networks": {
-    "1656316344188": {
-      "events": {},
-      "links": {},
-      "address": "0xC09F3876109CB5Fbcf5b4B541f75f85f5B9a603C",
-      "transactionHash": "0x920a2c09c796013fbbcf7c9f0ec360928afb3908e8c7ceccc29175a757ae2aad"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-06-27T08:01:27.368Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-06-27T11:34:28.772Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

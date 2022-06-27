@@ -1,7 +1,7 @@
 import { MockProvider } from "ethereum-waffle";
 import { BigNumber, Contract, Signer, constants } from "ethers";
 
-import Launchpad from "../../build/Launchpad.json";
+import Launchpad from "../../build/contracts/Launchpad.json";
 
 export function expandTo18Decimals(n: number): BigNumber {
   return BigNumber.from(n).mul(BigNumber.from(10).pow(18));

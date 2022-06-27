@@ -16,8 +16,8 @@ import {
   timeTravel,
 } from "./shared/utils";
 
-import Launchpad from "../build/Launchpad.json";
-import BurnToken from "../build/ERC20Burn.json";
+import Launchpad from "../build/contracts/Launchpad.json";
+import BurnToken from "../build/contracts/ERC20Burn.json";
 
 chai.use(solidity);
 
@@ -196,7 +196,7 @@ describe("Launchpad Decimals", () => {
         await baseToken
           .connect(buyerWallet)
           .approve(launchpad.address, depositAmount);
-        await launchpad.connect(buyerWallet).userDeposit(depositAmount, {
+        await launchpad.connect(buyerWallet).userDeposit(depositAmount, [],{
           ...gasLimit,
         });
         const buyerInfo = await launchpad.buyers(buyer);
@@ -221,7 +221,7 @@ describe("Launchpad Decimals", () => {
         await baseToken
           .connect(buyerWallet)
           .approve(launchpad.address, depositAmount);
-        await launchpad.connect(buyerWallet).userDeposit(depositAmount, {
+        await launchpad.connect(buyerWallet).userDeposit(depositAmount,[], {
           ...gasLimit,
         });
 
@@ -275,7 +275,7 @@ describe("Launchpad Decimals", () => {
         await baseToken
           .connect(buyerWallet)
           .approve(launchpad.address, depositAmount);
-        await launchpad.connect(buyerWallet).userDeposit(depositAmount, {
+        await launchpad.connect(buyerWallet).userDeposit(depositAmount, [],{
           ...gasLimit,
         });
 
@@ -319,7 +319,7 @@ describe("Launchpad Decimals", () => {
         await baseToken
           .connect(buyerWallet)
           .approve(launchpad.address, depositAmount);
-        await launchpad.connect(buyerWallet).userDeposit(depositAmount, {
+        await launchpad.connect(buyerWallet).userDeposit(depositAmount, [],{
           ...gasLimit,
         });
 
