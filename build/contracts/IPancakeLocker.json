@@ -1,0 +1,604 @@
+{
+  "contractName": "IPancakeLocker",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_lpToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_unlockDate",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address payable",
+          "name": "_referral",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "_feeInGlmr",
+          "type": "bool"
+        },
+        {
+          "internalType": "address payable",
+          "name": "_withdrawer",
+          "type": "address"
+        }
+      ],
+      "name": "lockLPToken",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_unlockDate\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"_referral\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_feeInGlmr\",\"type\":\"bool\"},{\"internalType\":\"address payable\",\"name\":\"_withdrawer\",\"type\":\"address\"}],\"name\":\"lockLPToken\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"lockLPToken(address,uint256,uint256,address,bool,address)\":{\"details\":\"fees are calculated if caller is not whitelisted\",\"params\":{\"_amount\":\"total amount of LP tokens to be locked\",\"_feeInGlmr\":\"bool indicating if base token is BNB\",\"_lpToken\":\"address of the LP token to be locked\",\"_referral\":\"address of referrer for token locking\",\"_unlockDate\":\"unix timestamp when withdrawer is allowed to unlock LP tokens\",\"_withdrawer\":\"address which is allowed to unlock lock LP tokens after unlock date\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"lockLPToken(address,uint256,uint256,address,bool,address)\":{\"notice\":\"locks specific amount of LP tokens for a given period of time\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/IPancakeLocker.sol\":\"IPancakeLocker\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/IPancakeLocker.sol\":{\"keccak256\":\"0x21533325b0cbcf8d43d79bbfbdf86d4d39592603697e5aba1d7cb5a5e32b49ea\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://664b828763c88176cb93857b2bb54c18d8e3593f6b153fdcfbd069723222b736\",\"dweb:/ipfs/QmUzB831gJbo1ZLzJKRmaSpCcwUPBhDqtPZWfPSLk4yP15\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\n/**\n * @title Locker Interface of Pancake launchpad enviroment\n * @dev This Interface holds a function to lock LP token with the PancakeLocker contract.\n * This function is called from LaunchpadLockForwarder to lock LP tokens.\n */\npragma solidity 0.6.12;\n\ninterface IPancakeLocker {\n    /**\n     * @notice locks specific amount of LP tokens for a given period of time\n     * @dev fees are calculated if caller is not whitelisted\n     * @param _lpToken address of the LP token to be locked\n     * @param _amount total amount of LP tokens to be locked\n     * @param _unlockDate unix timestamp when withdrawer is allowed to unlock LP tokens\n     * @param _referral address of referrer for token locking\n     * @param _feeInGlmr bool indicating if base token is BNB\n     * @param _withdrawer address which is allowed to unlock lock LP tokens after unlock date\n     */\n    function lockLPToken(\n        address _lpToken,\n        uint256 _amount,\n        uint256 _unlockDate,\n        address payable _referral,\n        bool _feeInGlmr,\n        address payable _withdrawer\n    ) external payable;\n}\n",
+  "sourcePath": "/Users/apple/Desktop/datacpoy/BlockChain/kinko-contracts/interfaces/IPancakeLocker.sol",
+  "ast": {
+    "absolutePath": "project:/interfaces/IPancakeLocker.sol",
+    "exportedSymbols": {
+      "IPancakeLocker": [
+        9874
+      ]
+    },
+    "id": 9875,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9857,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "264:23:23"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 9874,
+        "linearizedBaseContracts": [
+          9874
+        ],
+        "name": "IPancakeLocker",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 9858,
+              "nodeType": "StructuredDocumentation",
+              "src": "320:576:23",
+              "text": " @notice locks specific amount of LP tokens for a given period of time\n @dev fees are calculated if caller is not whitelisted\n @param _lpToken address of the LP token to be locked\n @param _amount total amount of LP tokens to be locked\n @param _unlockDate unix timestamp when withdrawer is allowed to unlock LP tokens\n @param _referral address of referrer for token locking\n @param _feeInGlmr bool indicating if base token is BNB\n @param _withdrawer address which is allowed to unlock lock LP tokens after unlock date"
+            },
+            "functionSelector": "8af416f6",
+            "id": 9873,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lockLPToken",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9871,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9860,
+                  "mutability": "mutable",
+                  "name": "_lpToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9873,
+                  "src": "931:16:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9859,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "931:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9862,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9873,
+                  "src": "957:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9861,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "957:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9864,
+                  "mutability": "mutable",
+                  "name": "_unlockDate",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9873,
+                  "src": "982:19:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9863,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "982:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9866,
+                  "mutability": "mutable",
+                  "name": "_referral",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9873,
+                  "src": "1011:25:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 9865,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1011:15:23",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9868,
+                  "mutability": "mutable",
+                  "name": "_feeInGlmr",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9873,
+                  "src": "1046:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 9867,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1046:4:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 9870,
+                  "mutability": "mutable",
+                  "name": "_withdrawer",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9873,
+                  "src": "1071:27:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 9869,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1071:15:23",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "921:183:23"
+            },
+            "returnParameters": {
+              "id": 9872,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1121:0:23"
+            },
+            "scope": 9874,
+            "src": "901:221:23",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 9875,
+        "src": "289:835:23"
+      }
+    ],
+    "src": "264:861:23"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/interfaces/IPancakeLocker.sol",
+      "exportedSymbols": {
+        "IPancakeLocker": [
+          9874
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 9857,
+        "name": "PragmaDirective",
+        "src": "264:23:23"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            9874
+          ],
+          "name": "IPancakeLocker",
+          "scope": 9875
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "8af416f6",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "lockLPToken",
+              "overrides": null,
+              "scope": 9874,
+              "stateMutability": "payable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice locks specific amount of LP tokens for a given period of time\n @dev fees are calculated if caller is not whitelisted\n @param _lpToken address of the LP token to be locked\n @param _amount total amount of LP tokens to be locked\n @param _unlockDate unix timestamp when withdrawer is allowed to unlock LP tokens\n @param _referral address of referrer for token locking\n @param _feeInGlmr bool indicating if base token is BNB\n @param _withdrawer address which is allowed to unlock lock LP tokens after unlock date"
+                },
+                "id": 9858,
+                "name": "StructuredDocumentation",
+                "src": "320:576:23"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_lpToken",
+                      "overrides": null,
+                      "scope": 9873,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9859,
+                        "name": "ElementaryTypeName",
+                        "src": "931:7:23"
+                      }
+                    ],
+                    "id": 9860,
+                    "name": "VariableDeclaration",
+                    "src": "931:16:23"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_amount",
+                      "overrides": null,
+                      "scope": 9873,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 9861,
+                        "name": "ElementaryTypeName",
+                        "src": "957:7:23"
+                      }
+                    ],
+                    "id": 9862,
+                    "name": "VariableDeclaration",
+                    "src": "957:15:23"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_unlockDate",
+                      "overrides": null,
+                      "scope": 9873,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 9863,
+                        "name": "ElementaryTypeName",
+                        "src": "982:7:23"
+                      }
+                    ],
+                    "id": 9864,
+                    "name": "VariableDeclaration",
+                    "src": "982:19:23"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_referral",
+                      "overrides": null,
+                      "scope": 9873,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address payable",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "payable",
+                          "type": "address payable"
+                        },
+                        "id": 9865,
+                        "name": "ElementaryTypeName",
+                        "src": "1011:15:23"
+                      }
+                    ],
+                    "id": 9866,
+                    "name": "VariableDeclaration",
+                    "src": "1011:25:23"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_feeInGlmr",
+                      "overrides": null,
+                      "scope": 9873,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 9867,
+                        "name": "ElementaryTypeName",
+                        "src": "1046:4:23"
+                      }
+                    ],
+                    "id": 9868,
+                    "name": "VariableDeclaration",
+                    "src": "1046:15:23"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_withdrawer",
+                      "overrides": null,
+                      "scope": 9873,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address payable",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "payable",
+                          "type": "address payable"
+                        },
+                        "id": 9869,
+                        "name": "ElementaryTypeName",
+                        "src": "1071:15:23"
+                      }
+                    ],
+                    "id": 9870,
+                    "name": "VariableDeclaration",
+                    "src": "1071:27:23"
+                  }
+                ],
+                "id": 9871,
+                "name": "ParameterList",
+                "src": "921:183:23"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9872,
+                "name": "ParameterList",
+                "src": "1121:0:23"
+              }
+            ],
+            "id": 9873,
+            "name": "FunctionDefinition",
+            "src": "901:221:23"
+          }
+        ],
+        "id": 9874,
+        "name": "ContractDefinition",
+        "src": "289:835:23"
+      }
+    ],
+    "id": 9875,
+    "name": "SourceUnit",
+    "src": "264:861:23"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.6",
+  "updatedAt": "2022-06-27T08:00:32.272Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "lockLPToken(address,uint256,uint256,address,bool,address)": {
+        "details": "fees are calculated if caller is not whitelisted",
+        "params": {
+          "_amount": "total amount of LP tokens to be locked",
+          "_feeInGlmr": "bool indicating if base token is BNB",
+          "_lpToken": "address of the LP token to be locked",
+          "_referral": "address of referrer for token locking",
+          "_unlockDate": "unix timestamp when withdrawer is allowed to unlock LP tokens",
+          "_withdrawer": "address which is allowed to unlock lock LP tokens after unlock date"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "lockLPToken(address,uint256,uint256,address,bool,address)": {
+        "notice": "locks specific amount of LP tokens for a given period of time"
+      }
+    },
+    "version": 1
+  }
+}

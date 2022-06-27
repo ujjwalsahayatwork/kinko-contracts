@@ -29,7 +29,7 @@ describe("Launchpad", () => {
   let lockForwarder: Contract;
   let wbnb: Contract;
   let saleToken: Contract;
-  let energyFiFactory: Contract;
+  let pancakeFactory: Contract;
   let wallet: Signer;
   let otherWallet: Signer;
   let buyerWallet: Signer;
@@ -80,7 +80,7 @@ describe("Launchpad", () => {
     launchpadFactory = fixture.launchpadFactory;
     launchpadSettings = fixture.launchpadSettings;
     lockForwarder = fixture.launchpadLockForwarder;
-    energyFiFactory = fixture.energyFiFactory;
+    pancakeFactory = fixture.pancakeFactory;
     wbnb = fixture.wbnb;
     wallet = fixture.wallet;
     otherWallet = fixture.otherWallet;
@@ -195,7 +195,7 @@ describe("Launchpad", () => {
       value: depositAmount,
     });
     const buyerInfo = await launchpad.buyers(buyer);
-    expect(buyerInfo.baseDeposited).to.be.equal(depositAmount);
+    expect(buyerInfo.baseDeposited).to.be.equal(depositAmount, [addeess(0,)]);
     expect(buyerInfo.tokensOwed).to.be.equal(
       depositAmount
         .mul(
@@ -229,6 +229,10 @@ describe("Launchpad", () => {
         value: additionalAmount,
       })
     ).to.be.revertedWith("ZERO TOKENS");
+  });
+
+  it("should be able to giver rewards additionalAmount",async () => {
+    
   });
 
   it("should revert user deposit if hardcap is met", async () => {
@@ -464,7 +468,7 @@ describe("Launchpad", () => {
       );
 
       // check if expected sale token liquidity is sent to the pool
-      const pair = await energyFiFactory.getPair(
+      const pair = await pancakeFactory.getPair(
         wbnb.address,
         saleToken.address
       );
@@ -606,7 +610,7 @@ describe("Launchpad", () => {
       );
 
       // check if expected sale token liquidity is sent to the pool
-      const pair = await energyFiFactory.getPair(
+      const pair = await pancakeFactory.getPair(
         wbnb.address,
         saleToken.address
       );

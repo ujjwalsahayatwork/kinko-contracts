@@ -4,8 +4,8 @@ pragma solidity 0.6.12;
 /**
  *@title Interface of Pancake factory
  *@notice This is an interface of the PancakeSwap factory
- *@dev A parital interface of the energyFi factory. The original code can be found on
- *https://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol
+ *@dev A parital interface of the pancake factory. The original code can be found on
+ *https://github.com/pancakeswap/pancake-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol
  */
 interface IPancakeFactory {
     /**

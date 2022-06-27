@@ -14,8 +14,8 @@ import BurnToken from "../build/ERC20Burn.json";
 chai.use(solidity);
 
 describe("LockForwarder", () => {
-  let energyFiFactory: Contract;
-  let energyFiLocker: Contract;
+  let pancakeFactory: Contract;
+  let pancakeLocker: Contract;
   let launchpadFactory: Contract;
   let lockForwarder: Contract;
   let wbnb: Contract;
@@ -32,8 +32,8 @@ describe("LockForwarder", () => {
     const loadFixture = createFixtureLoader(provider.getWallets(), provider);
     const fixture = await loadFixture(generalFixture);
 
-    energyFiFactory = fixture.energyFiFactory;
-    energyFiLocker = fixture.energyFiLocker;
+    pancakeFactory = fixture.pancakeFactory;
+    pancakeLocker = fixture.pancakeLocker;
     launchpadFactory = fixture.launchpadFactory;
     lockForwarder = fixture.launchpadLockForwarder;
     wbnb = fixture.wbnb;
@@ -49,59 +49,59 @@ describe("LockForwarder", () => {
       launchpadFactory.address
     );
     expect(await lockForwarder.KINKO_LOCKER()).to.be.equal(
-      energyFiLocker.address
+      pancakeLocker.address
     );
     expect(await lockForwarder.KINKO_FACTORY()).to.be.equal(
-      energyFiFactory.address
+      pancakeFactory.address
     );
   });
 
   describe("should ckeck for initilized pair", async () => {
-    it("energyFi pair does not exists", async () => {
-      const energyFiPair = await energyFiFactory.getPair(
+    it("pancake pair does not exists", async () => {
+      const pancakePair = await pancakeFactory.getPair(
         saleToken.address,
         wbnb.address
       );
-      const pairInitilized = await lockForwarder.energyFiswapPairIsInitialised(
+      const pairInitilized = await lockForwarder.pancakeswapPairIsInitialised(
         saleToken.address,
         wbnb.address
       );
-      expect(energyFiPair).to.be.equal(constants.AddressZero);
+      expect(pancakePair).to.be.equal(constants.AddressZero);
       expect(pairInitilized).to.be.false;
     });
 
-    it("energyFi pair has no liquidity", async () => {
-      // create energyFi pair
-      await energyFiFactory.createPair(saleToken.address, wbnb.address);
-      const energyFiPair = await energyFiFactory.getPair(
+    it("pancake pair has no liquidity", async () => {
+      // create pancake pair
+      await pancakeFactory.createPair(saleToken.address, wbnb.address);
+      const pancakePair = await pancakeFactory.getPair(
         saleToken.address,
         wbnb.address
       );
 
-      const pairInitilized = await lockForwarder.energyFiswapPairIsInitialised(
+      const pairInitilized = await lockForwarder.pancakeswapPairIsInitialised(
         saleToken.address,
         wbnb.address
       );
-      expect(energyFiPair).to.be.not.equal(constants.AddressZero);
-      expect(await saleToken.balanceOf(energyFiPair)).to.be.equal(0);
+      expect(pancakePair).to.be.not.equal(constants.AddressZero);
+      expect(await saleToken.balanceOf(pancakePair)).to.be.equal(0);
       expect(pairInitilized).to.be.false;
     });
 
-    it("energyFi pair is initilized", async () => {
-      // create energyFi pair and send liquidity
-      await energyFiFactory.createPair(saleToken.address, wbnb.address);
-      const energyFiPair = await energyFiFactory.getPair(
+    it("pancake pair is initilized", async () => {
+      // create pancake pair and send liquidity
+      await pancakeFactory.createPair(saleToken.address, wbnb.address);
+      const pancakePair = await pancakeFactory.getPair(
         saleToken.address,
         wbnb.address
       );
-      await saleToken.transfer(energyFiPair, 10000);
+      await saleToken.transfer(pancakePair, 10000);
 
-      const pairInitilized = await lockForwarder.energyFiswapPairIsInitialised(
+      const pairInitilized = await lockForwarder.pancakeswapPairIsInitialised(
         saleToken.address,
         wbnb.address
       );
-      expect(energyFiPair).to.be.not.equal(constants.AddressZero);
-      expect(await saleToken.balanceOf(energyFiPair)).to.be.equal(10000);
+      expect(pancakePair).to.be.not.equal(constants.AddressZero);
+      expect(await saleToken.balanceOf(pancakePair)).to.be.equal(10000);
       expect(pairInitilized).to.be.true;
     });
   });
@@ -113,11 +113,11 @@ describe("LockForwarder", () => {
     await launchpadFactory.registerLaunchpad(walletAddress, gasLimit);
 
     // check for pair address before
-    let energyFiPair = await energyFiFactory.getPair(
+    let pancakePair = await pancakeFactory.getPair(
       saleToken.address,
       wbnb.address
     );
-    expect(energyFiPair).to.be.equal(constants.AddressZero);
+    expect(pancakePair).to.be.equal(constants.AddressZero);
 
     // define locking amounts
     const saleAmount = 100000;
@@ -140,12 +140,12 @@ describe("LockForwarder", () => {
     );
 
     // check for pair address after
-    energyFiPair = await energyFiFactory.getPair(saleToken.address, wbnb.address);
-    expect(energyFiPair).to.be.not.equal(constants.AddressZero);
+    pancakePair = await pancakeFactory.getPair(saleToken.address, wbnb.address);
+    expect(pancakePair).to.be.not.equal(constants.AddressZero);
 
     // check LP supply
     const lp = new Contract(
-      energyFiPair,
+      pancakePair,
       JSON.stringify(BurnToken.abi),
       provider
     ).connect(wallet);
@@ -153,7 +153,7 @@ describe("LockForwarder", () => {
 
     // check locker balance after fees
     expect(await lp.balanceOf(lockForwarder.address)).to.be.equal(0);
-    expect(await lp.balanceOf(energyFiLocker.address)).to.be.equal(30316);
+    expect(await lp.balanceOf(pancakeLocker.address)).to.be.equal(30316);
   });
 
   it("Should use existing pair on locking liquidity", async () => {
@@ -162,17 +162,17 @@ describe("LockForwarder", () => {
     await launchpadFactory.adminAllowLaunchpadGenerator(walletAddress, true);
     await launchpadFactory.registerLaunchpad(walletAddress, gasLimit);
 
-    // create new energyFi pair
-    await energyFiFactory.createPair(saleToken.address, wbnb.address);
-    const energyFiPair = await energyFiFactory.getPair(
+    // create new pancake pair
+    await pancakeFactory.createPair(saleToken.address, wbnb.address);
+    const pancakePair = await pancakeFactory.getPair(
       saleToken.address,
       wbnb.address
     );
-    expect(energyFiPair).to.be.not.equal(constants.AddressZero);
+    expect(pancakePair).to.be.not.equal(constants.AddressZero);
 
     // check LP supply
     const lp = new Contract(
-      energyFiPair,
+      pancakePair,
       JSON.stringify(BurnToken.abi),
       provider
     ).connect(wallet);
@@ -203,7 +203,7 @@ describe("LockForwarder", () => {
 
     // check locker balance after fees
     expect(await lp.balanceOf(lockForwarder.address)).to.be.equal(0);
-    expect(await lp.balanceOf(energyFiLocker.address)).to.be.equal(30316);
+    expect(await lp.balanceOf(pancakeLocker.address)).to.be.equal(30316);
   });
 
   it("Should fail locking with insufficient tokens", async () => {

@@ -4,13 +4,13 @@ pragma solidity 0.6.12;
 /**
  *@title Interface of Pancake pair
  *@notice This is an interface of the PancakeSwap pair
- *@dev A parital interface of the energyFi pair to get token and factory addresses. The original code can be found on
- *https://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakePair.sol
+ *@dev A parital interface of the pancake pair to get token and factory addresses. The original code can be found on
+ *https://github.com/pancakeswap/pancake-swap-core/blob/master/contracts/interfaces/IPancakePair.sol
  */
 interface IPancakePair {
     /**
-     *@notice Returns the address of the pairs energyFi factory
-     *@return address of the related energyFi factory
+     *@notice Returns the address of the pairs pancake factory
+     *@return address of the related pancake factory
      */
     function factory() external view returns (address);
 

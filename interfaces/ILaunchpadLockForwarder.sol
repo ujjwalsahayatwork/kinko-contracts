@@ -4,7 +4,7 @@ pragma solidity 0.6.12;
 /**
  * @title LockForwarder Interface of the Pancake launchpad enviroment
  * @dev This interface describes the LaunchpadLockForwarder. It holds functions for interacting
- * with the energyFiswap factory for getting LP information and creating a LP on locking liquidity.
+ * with the pancakeswap factory for getting LP information and creating a LP on locking liquidity.
  * The locked liquidity amount is forwarded to PancakeLocker contract.
  */
 
@@ -32,11 +32,11 @@ interface ILaunchpadLockForwarder {
     ) external;
 
     /**
-     * @notice checks if a energyFi pair with liquidity exists on energyFiswap for the given tokens
-     * @param _token0 one address of the energyFi pair base tokens
-     * @param _token1 the other address of the energyFi pair base tokens
+     * @notice checks if a pancake pair with liquidity exists on pancakeswap for the given tokens
+     * @param _token0 one address of the pancake pair base tokens
+     * @param _token1 the other address of the pancake pair base tokens
      */
-    function energyFiswapPairIsInitialised(address _token0, address _token1)
+    function pancakeswapPairIsInitialised(address _token0, address _token1)
         external
         view
         returns (bool);

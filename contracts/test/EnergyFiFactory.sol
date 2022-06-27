@@ -415,7 +415,7 @@ interface IERC20 {
 pragma solidity 0.6.12;
 
 interface IPancakeCallee {
-    function energyFiCall(
+    function pancakeCall(
         address sender,
         uint256 amount0,
         uint256 amount1,
@@ -656,7 +656,7 @@ contract PancakePair is IPancakePair, PancakeERC20 {
             if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // optimistically transfer tokens
             if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // optimistically transfer tokens
             if (data.length > 0)
-                IPancakeCallee(to).energyFiCall(
+                IPancakeCallee(to).pancakeCall(
                     msg.sender,
                     amount0Out,
                     amount1Out,

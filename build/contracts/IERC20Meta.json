@@ -205,36 +205,36 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.12;\n\nimport \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\n\n/**\n *@title Interface of a burnable ERC20 token\n *@dev This interface describes a burnable ERC20 token providing a burn function.\n */\ninterface IERC20Meta is IERC20 {\n    /**\n     * @dev Returns the number of decimals of an ERC20 token.\n     */\n    function decimals() external view returns (uint8);\n}\n",
-  "sourcePath": "/Users/apple/Downloads/kinko-ilo-contracts-main/interfaces/IERC20Meta.sol",
+  "sourcePath": "/Users/apple/Desktop/datacpoy/BlockChain/kinko-contracts/interfaces/IERC20Meta.sol",
   "ast": {
     "absolutePath": "project:/interfaces/IERC20Meta.sol",
     "exportedSymbols": {
       "IERC20Meta": [
-        9623
+        9696
       ]
     },
-    "id": 9624,
+    "id": 9697,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9612,
+        "id": 9685,
         "literals": [
           "solidity",
           "0.6",
           ".12"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:23:19"
+        "src": "32:23:18"
       },
       {
         "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-        "id": 9613,
+        "id": 9686,
         "nodeType": "ImportDirective",
-        "scope": 9624,
+        "scope": 9697,
         "sourceUnit": 543,
-        "src": "57:56:19",
+        "src": "57:56:18",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -245,19 +245,19 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 9615,
+              "id": 9688,
               "name": "IERC20",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 542,
-              "src": "274:6:19",
+              "src": "274:6:18",
               "typeDescriptions": {
                 "typeIdentifier": "t_contract$_IERC20_$542",
                 "typeString": "contract IERC20"
               }
             },
-            "id": 9616,
+            "id": 9689,
             "nodeType": "InheritanceSpecifier",
-            "src": "274:6:19"
+            "src": "274:6:18"
           }
         ],
         "contractDependencies": [
@@ -265,15 +265,15 @@
         ],
         "contractKind": "interface",
         "documentation": {
-          "id": 9614,
+          "id": 9687,
           "nodeType": "StructuredDocumentation",
-          "src": "115:134:19",
+          "src": "115:134:18",
           "text": "@title Interface of a burnable ERC20 token\n@dev This interface describes a burnable ERC20 token providing a burn function."
         },
         "fullyImplemented": false,
-        "id": 9623,
+        "id": 9696,
         "linearizedBaseContracts": [
-          9623,
+          9696,
           542
         ],
         "name": "IERC20Meta",
@@ -282,13 +282,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9617,
+              "id": 9690,
               "nodeType": "StructuredDocumentation",
-              "src": "287:73:19",
+              "src": "287:73:18",
               "text": " @dev Returns the number of decimals of an ERC20 token."
             },
             "functionSelector": "313ce567",
-            "id": 9622,
+            "id": 9695,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -296,24 +296,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9618,
+              "id": 9691,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "382:2:19"
+              "src": "382:2:18"
             },
             "returnParameters": {
-              "id": 9621,
+              "id": 9694,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9620,
+                  "id": 9693,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9622,
-                  "src": "408:5:19",
+                  "scope": 9695,
+                  "src": "408:5:18",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -321,10 +321,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 9619,
+                    "id": 9692,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-                    "src": "408:5:19",
+                    "src": "408:5:18",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -334,27 +334,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "407:7:19"
+              "src": "407:7:18"
             },
-            "scope": 9623,
-            "src": "365:50:19",
+            "scope": 9696,
+            "src": "365:50:18",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 9624,
-        "src": "250:167:19"
+        "scope": 9697,
+        "src": "250:167:18"
       }
     ],
-    "src": "32:386:19"
+    "src": "32:386:18"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/interfaces/IERC20Meta.sol",
       "exportedSymbols": {
         "IERC20Meta": [
-          9623
+          9696
         ]
       },
       "license": "MIT"
@@ -368,24 +368,24 @@
             ".12"
           ]
         },
-        "id": 9612,
+        "id": 9685,
         "name": "PragmaDirective",
-        "src": "32:23:19"
+        "src": "32:23:18"
       },
       {
         "attributes": {
           "SourceUnit": 543,
           "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
           "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
-          "scope": 9624,
+          "scope": 9697,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 9613,
+        "id": 9686,
         "name": "ImportDirective",
-        "src": "57:56:19"
+        "src": "57:56:18"
       },
       {
         "attributes": {
@@ -396,20 +396,20 @@
           "contractKind": "interface",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            9623,
+            9696,
             542
           ],
           "name": "IERC20Meta",
-          "scope": 9624
+          "scope": 9697
         },
         "children": [
           {
             "attributes": {
               "text": "@title Interface of a burnable ERC20 token\n@dev This interface describes a burnable ERC20 token providing a burn function."
             },
-            "id": 9614,
+            "id": 9687,
             "name": "StructuredDocumentation",
-            "src": "115:134:19"
+            "src": "115:134:18"
           },
           {
             "attributes": {
@@ -423,14 +423,14 @@
                   "referencedDeclaration": 542,
                   "type": "contract IERC20"
                 },
-                "id": 9615,
+                "id": 9688,
                 "name": "UserDefinedTypeName",
-                "src": "274:6:19"
+                "src": "274:6:18"
               }
             ],
-            "id": 9616,
+            "id": 9689,
             "name": "InheritanceSpecifier",
-            "src": "274:6:19"
+            "src": "274:6:18"
           },
           {
             "attributes": {
@@ -444,7 +444,7 @@
               ],
               "name": "decimals",
               "overrides": null,
-              "scope": 9623,
+              "scope": 9696,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -454,9 +454,9 @@
                 "attributes": {
                   "text": " @dev Returns the number of decimals of an ERC20 token."
                 },
-                "id": 9617,
+                "id": 9690,
                 "name": "StructuredDocumentation",
-                "src": "287:73:19"
+                "src": "287:73:18"
               },
               {
                 "attributes": {
@@ -465,9 +465,9 @@
                   ]
                 },
                 "children": [],
-                "id": 9618,
+                "id": 9691,
                 "name": "ParameterList",
-                "src": "382:2:19"
+                "src": "382:2:18"
               },
               {
                 "children": [
@@ -477,7 +477,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 9622,
+                      "scope": 9695,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint8",
@@ -490,34 +490,34 @@
                           "name": "uint8",
                           "type": "uint8"
                         },
-                        "id": 9619,
+                        "id": 9692,
                         "name": "ElementaryTypeName",
-                        "src": "408:5:19"
+                        "src": "408:5:18"
                       }
                     ],
-                    "id": 9620,
+                    "id": 9693,
                     "name": "VariableDeclaration",
-                    "src": "408:5:19"
+                    "src": "408:5:18"
                   }
                 ],
-                "id": 9621,
+                "id": 9694,
                 "name": "ParameterList",
-                "src": "407:7:19"
+                "src": "407:7:18"
               }
             ],
-            "id": 9622,
+            "id": 9695,
             "name": "FunctionDefinition",
-            "src": "365:50:19"
+            "src": "365:50:18"
           }
         ],
-        "id": 9623,
+        "id": 9696,
         "name": "ContractDefinition",
-        "src": "250:167:19"
+        "src": "250:167:18"
       }
     ],
-    "id": 9624,
+    "id": 9697,
     "name": "SourceUnit",
-    "src": "32:386:19"
+    "src": "32:386:18"
   },
   "compiler": {
     "name": "solc",
@@ -525,7 +525,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-05-02T08:04:48.329Z",
+  "updatedAt": "2022-06-27T08:00:32.263Z",
   "devdoc": {
     "details": "This interface describes a burnable ERC20 token providing a burn function.",
     "kind": "dev",

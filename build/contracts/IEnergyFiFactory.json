@@ -50,16 +50,16 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenA\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenB\",\"type\":\"address\"}],\"name\":\"createPair\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"pair\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenA\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenB\",\"type\":\"address\"}],\"name\":\"getPair\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"pair\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"A parital interface of the energyFi factory. The original code can be found on https://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol\",\"kind\":\"dev\",\"methods\":{\"createPair(address,address)\":{\"params\":{\"tokenA\":\"The first token of the pair\",\"tokenB\":\"The second token of the pair\"},\"returns\":{\"pair\":\"address of the created pair\"}},\"getPair(address,address)\":{\"params\":{\"tokenA\":\"The first token of the pair\",\"tokenB\":\"The second token of the pair\"},\"returns\":{\"pair\":\"address of the created pair\"}}},\"title\":\"Interface of Pancake factory\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"createPair(address,address)\":{\"notice\":\"Creates a new pair of two tokens known as liquidity pool\"},\"getPair(address,address)\":{\"notice\":\"Returns the pair address of two given tokens\"}},\"notice\":\"This is an interface of the PancakeSwap factory\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/energyFi/IPancakeFactory.sol\":\"IPancakeFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/energyFi/IPancakeFactory.sol\":{\"keccak256\":\"0x7ae596428d106abd9f4b470d874357d4ff35a152648b5a758dac2dd7fb567119\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://80845876f31ee071f09906a3d93bff52556c450cf20f641970226196e8ce8298\",\"dweb:/ipfs/QmcvCsc6qt6hTNWM1px4jbAy73uXWrxHMq1gghJzCeSJZ7\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenA\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenB\",\"type\":\"address\"}],\"name\":\"createPair\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"pair\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenA\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenB\",\"type\":\"address\"}],\"name\":\"getPair\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"pair\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"A parital interface of the pancake factory. The original code can be found on https://github.com/pancakeswap/pancake-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol\",\"kind\":\"dev\",\"methods\":{\"createPair(address,address)\":{\"params\":{\"tokenA\":\"The first token of the pair\",\"tokenB\":\"The second token of the pair\"},\"returns\":{\"pair\":\"address of the created pair\"}},\"getPair(address,address)\":{\"params\":{\"tokenA\":\"The first token of the pair\",\"tokenB\":\"The second token of the pair\"},\"returns\":{\"pair\":\"address of the created pair\"}}},\"title\":\"Interface of Pancake factory\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"createPair(address,address)\":{\"notice\":\"Creates a new pair of two tokens known as liquidity pool\"},\"getPair(address,address)\":{\"notice\":\"Returns the pair address of two given tokens\"}},\"notice\":\"This is an interface of the PancakeSwap factory\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/pancake/IPancakeFactory.sol\":\"IPancakeFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/pancake/IPancakeFactory.sol\":{\"keccak256\":\"0x7ae596428d106abd9f4b470d874357d4ff35a152648b5a758dac2dd7fb567119\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://80845876f31ee071f09906a3d93bff52556c450cf20f641970226196e8ce8298\",\"dweb:/ipfs/QmcvCsc6qt6hTNWM1px4jbAy73uXWrxHMq1gghJzCeSJZ7\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.12;\n\n/**\n *@title Interface of Pancake factory\n *@notice This is an interface of the PancakeSwap factory\n *@dev A parital interface of the energyFi factory. The original code can be found on\n *https://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol\n */\ninterface IPancakeFactory {\n    /**\n     *@notice Creates a new pair of two tokens known as liquidity pool\n     *@param tokenA The first token of the pair\n     *@param tokenB The second token of the pair\n     *@return pair address of the created pair\n     */\n    function createPair(address tokenA, address tokenB)\n        external\n        returns (address pair);\n\n    /**\n     *@notice Returns the pair address of two given tokens\n     *@param tokenA The first token of the pair\n     *@param tokenB The second token of the pair\n     *@return pair address of the created pair\n     */\n    function getPair(address tokenA, address tokenB)\n        external\n        view\n        returns (address pair);\n}\n",
-  "sourcePath": "/Users/apple/Downloads/kinko-ilo-contracts-main/interfaces/energyFi/IPancakeFactory.sol",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.12;\n\n/**\n *@title Interface of Pancake factory\n *@notice This is an interface of the PancakeSwap factory\n *@dev A parital interface of the pancake factory. The original code can be found on\n *https://github.com/pancakeswap/pancake-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol\n */\ninterface IPancakeFactory {\n    /**\n     *@notice Creates a new pair of two tokens known as liquidity pool\n     *@param tokenA The first token of the pair\n     *@param tokenB The second token of the pair\n     *@return pair address of the created pair\n     */\n    function createPair(address tokenA, address tokenB)\n        external\n        returns (address pair);\n\n    /**\n     *@notice Returns the pair address of two given tokens\n     *@param tokenA The first token of the pair\n     *@param tokenB The second token of the pair\n     *@return pair address of the created pair\n     */\n    function getPair(address tokenA, address tokenB)\n        external\n        view\n        returns (address pair);\n}\n",
+  "sourcePath": "/Users/apple/Downloads/kinko-ilo-contracts-main/interfaces/pancake/IPancakeFactory.sol",
   "ast": {
-    "absolutePath": "project:/interfaces/energyFi/IPancakeFactory.sol",
+    "absolutePath": "project:/interfaces/pancake/IPancakeFactory.sol",
     "exportedSymbols": {
       "IPancakeFactory": [
         9849
@@ -88,7 +88,7 @@
           "id": 9828,
           "nodeType": "StructuredDocumentation",
           "src": "57:298:26",
-          "text": "@title Interface of Pancake factory\n@notice This is an interface of the PancakeSwap factory\n@dev A parital interface of the energyFi factory. The original code can be found on\nhttps://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol"
+          "text": "@title Interface of Pancake factory\n@notice This is an interface of the PancakeSwap factory\n@dev A parital interface of the pancake factory. The original code can be found on\nhttps://github.com/pancakeswap/pancake-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol"
         },
         "fullyImplemented": false,
         "id": 9849,
@@ -353,7 +353,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "project:/interfaces/energyFi/IPancakeFactory.sol",
+      "absolutePath": "project:/interfaces/pancake/IPancakeFactory.sol",
       "exportedSymbols": {
         "IPancakeFactory": [
           9849
@@ -394,7 +394,7 @@
         "children": [
           {
             "attributes": {
-              "text": "@title Interface of Pancake factory\n@notice This is an interface of the PancakeSwap factory\n@dev A parital interface of the energyFi factory. The original code can be found on\nhttps://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol"
+              "text": "@title Interface of Pancake factory\n@notice This is an interface of the PancakeSwap factory\n@dev A parital interface of the pancake factory. The original code can be found on\nhttps://github.com/pancakeswap/pancake-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol"
             },
             "id": 9828,
             "name": "StructuredDocumentation",
@@ -682,7 +682,7 @@
   "schemaVersion": "3.4.6",
   "updatedAt": "2022-05-02T08:04:48.280Z",
   "devdoc": {
-    "details": "A parital interface of the energyFi factory. The original code can be found on https://github.com/energyFiswap/energyFi-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol",
+    "details": "A parital interface of the pancake factory. The original code can be found on https://github.com/pancakeswap/pancake-swap-core/blob/master/contracts/interfaces/IPancakeFactory.sol",
     "kind": "dev",
     "methods": {
       "createPair(address,address)": {

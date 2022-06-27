@@ -15,8 +15,8 @@ import PancakePair from "../build/PancakePair.json";
 chai.use(solidity);
 
 describe("PancakeLocker", () => {
-  let energyFiLocker: Contract;
-  let energyFiFactory: Contract;
+  let pancakeLocker: Contract;
+  let pancakeFactory: Contract;
   let wbnb: Contract;
   let saleToken: Contract;
   let wallet: Signer;
@@ -31,8 +31,8 @@ describe("PancakeLocker", () => {
     const loadFixture = createFixtureLoader(provider.getWallets(), provider);
     const fixture = await loadFixture(generalFixture);
 
-    energyFiLocker = fixture.energyFiLocker;
-    energyFiFactory = fixture.energyFiFactory;
+    pancakeLocker = fixture.pancakeLocker;
+    pancakeFactory = fixture.pancakeFactory;
     wbnb = fixture.wbnb;
     wallet = fixture.wallet;
     otherWallet = fixture.otherWallet;
@@ -42,14 +42,14 @@ describe("PancakeLocker", () => {
     it("should initilize variables on creation", async () => {
       const walletAddress = await wallet.getAddress();
       // check addresses
-      expect(await energyFiLocker.devaddr()).to.be.equal(walletAddress);
-      expect(await energyFiLocker.migrator()).to.be.equal(constants.AddressZero);
-      expect(await energyFiLocker.KINKO_FACTORY()).to.be.equal(
-        energyFiFactory.address
+      expect(await pancakeLocker.devaddr()).to.be.equal(walletAddress);
+      expect(await pancakeLocker.migrator()).to.be.equal(constants.AddressZero);
+      expect(await pancakeLocker.KINKO_FACTORY()).to.be.equal(
+        pancakeFactory.address
       );
 
       // check fees
-      const gFees = await energyFiLocker.fees();
+      const gFees = await pancakeLocker.fees();
       expect(gFees.referralPercent).to.be.equal(250);
       expect(gFees.bnbFee).to.be.equal(expandTo18Decimals(1));
       expect(gFees.secondaryTokenFee).to.be.eq(expandTo18Decimals(100));
@@ -58,15 +58,15 @@ describe("PancakeLocker", () => {
       expect(gFees.referralHold).to.be.eq(expandTo18Decimals(10));
       expect(gFees.referralDiscount).to.be.equal(100);
 
-      expect(await energyFiLocker.getNumLockedTokens()).to.be.equal(
+      expect(await pancakeLocker.getNumLockedTokens()).to.be.equal(
         constants.Zero
       );
       expect(
-        await energyFiLocker.getUserNumLockedTokens(walletAddress)
+        await pancakeLocker.getUserNumLockedTokens(walletAddress)
       ).to.be.equal(constants.Zero);
-      expect(await energyFiLocker.getUserWhitelistStatus(walletAddress)).to.be
+      expect(await pancakeLocker.getUserWhitelistStatus(walletAddress)).to.be
         .false;
-      expect(await energyFiLocker.getWhitelistedUsersLength()).to.be.equal(
+      expect(await pancakeLocker.getWhitelistedUsersLength()).to.be.equal(
         constants.One
       );
     });
@@ -82,7 +82,7 @@ describe("PancakeLocker", () => {
         const secondaryTokenDiscount = 99;
         const liquidityFee = 187;
 
-        await energyFiLocker.setFees(
+        await pancakeLocker.setFees(
           referralPercent,
           referralDiscount,
           bnbFee,
@@ -91,7 +91,7 @@ describe("PancakeLocker", () => {
           liquidityFee
         );
 
-        const gFees = await energyFiLocker.fees();
+        const gFees = await pancakeLocker.fees();
         expect(gFees.referralPercent).to.be.equal(5);
         expect(gFees.bnbFee).to.be.equal(expandTo18Decimals(7));
         expect(gFees.secondaryTokenFee).to.be.eq(3);
@@ -102,52 +102,52 @@ describe("PancakeLocker", () => {
       });
 
       it("should set migrator", async () => {
-        await energyFiLocker.setMigrator(testAddress);
-        expect(await energyFiLocker.migrator()).to.be.equal(testAddress);
+        await pancakeLocker.setMigrator(testAddress);
+        expect(await pancakeLocker.migrator()).to.be.equal(testAddress);
       });
 
       it("should set token", async () => {
-        await energyFiLocker.setReferralTokenAndHold(testAddress, 999);
-        await energyFiLocker.setSecondaryFeeToken(testAddress);
+        await pancakeLocker.setReferralTokenAndHold(testAddress, 999);
+        await pancakeLocker.setSecondaryFeeToken(testAddress);
 
-        const fees = await energyFiLocker.fees();
+        const fees = await pancakeLocker.fees();
         expect(fees.referralToken).to.be.equal(testAddress);
         expect(fees.referralHold).to.be.equal(999);
         expect(fees.secondaryFeeToken).to.be.equal(testAddress);
       });
 
       it("should set dev address", async () => {
-        await energyFiLocker.setDev(testAddress);
-        expect(await energyFiLocker.devaddr()).to.be.equal(testAddress);
+        await pancakeLocker.setDev(testAddress);
+        expect(await pancakeLocker.devaddr()).to.be.equal(testAddress);
       });
 
       it("should edit whitelist", async () => {
         const listLengthBefore =
-          await energyFiLocker.getWhitelistedUsersLength();
+          await pancakeLocker.getWhitelistedUsersLength();
 
         // add to whitelist
-        await energyFiLocker.whitelistFeeAccount(testAddress, true);
+        await pancakeLocker.whitelistFeeAccount(testAddress, true);
         const listLengthAfterAdd =
-          await energyFiLocker.getWhitelistedUsersLength();
+          await pancakeLocker.getWhitelistedUsersLength();
 
         // check if added successfully
         expect(listLengthAfterAdd).to.be.equal(
           listLengthBefore.add(constants.One)
         );
         expect(
-          await energyFiLocker.getWhitelistedUserAtIndex(listLengthBefore)
+          await pancakeLocker.getWhitelistedUserAtIndex(listLengthBefore)
         ).to.be.equal(testAddress);
-        expect(await energyFiLocker.getUserWhitelistStatus(testAddress)).to.be
+        expect(await pancakeLocker.getUserWhitelistStatus(testAddress)).to.be
           .true;
 
         // remove from whitelist
-        await energyFiLocker.whitelistFeeAccount(testAddress, false);
+        await pancakeLocker.whitelistFeeAccount(testAddress, false);
         const listLengthAfterRemove =
-          await energyFiLocker.getWhitelistedUsersLength();
+          await pancakeLocker.getWhitelistedUsersLength();
 
         // check if removed successfully
         expect(listLengthAfterRemove).to.be.equal(listLengthBefore);
-        expect(await energyFiLocker.getUserWhitelistStatus(testAddress)).to.be
+        expect(await pancakeLocker.getUserWhitelistStatus(testAddress)).to.be
           .false;
       });
     });
@@ -164,7 +164,7 @@ describe("PancakeLocker", () => {
         const liquidityFee = 187;
 
         await expect(
-          energyFiLocker
+          pancakeLocker
             .connect(otherWallet)
             .setFees(
               referralPercent,
@@ -179,38 +179,38 @@ describe("PancakeLocker", () => {
 
       it("should revert setting migrator", async () => {
         await expect(
-          energyFiLocker.connect(otherWallet).setMigrator(testAddress)
+          pancakeLocker.connect(otherWallet).setMigrator(testAddress)
         ).to.be.revertedWith("Ownable: caller is not the owner");
       });
 
       it("should revert setting token", async () => {
         await expect(
-          energyFiLocker
+          pancakeLocker
             .connect(otherWallet)
             .setReferralTokenAndHold(testAddress, 999)
         ).to.be.revertedWith("Ownable: caller is not the owner");
 
         await expect(
-          energyFiLocker.connect(otherWallet).setSecondaryFeeToken(testAddress)
+          pancakeLocker.connect(otherWallet).setSecondaryFeeToken(testAddress)
         ).to.be.revertedWith("Ownable: caller is not the owner");
       });
 
       it("should revert setting dev address", async () => {
         await expect(
-          energyFiLocker.connect(otherWallet).setDev(testAddress)
+          pancakeLocker.connect(otherWallet).setDev(testAddress)
         ).to.be.revertedWith("Ownable: caller is not the owner");
       });
 
       it("should revert editting whitelist", async () => {
         // add to whitelist
         await expect(
-          energyFiLocker
+          pancakeLocker
             .connect(otherWallet)
             .whitelistFeeAccount(testAddress, true)
         ).to.be.revertedWith("Ownable: caller is not the owner");
         // remove from whitelist
         await expect(
-          energyFiLocker
+          pancakeLocker
             .connect(otherWallet)
             .whitelistFeeAccount(testAddress, false)
         ).to.be.revertedWith("Ownable: caller is not the owner");
@@ -220,14 +220,14 @@ describe("PancakeLocker", () => {
     describe("lock lp token", async () => {
       let walletAddress: string;
 
-      // helper function to create a energyFi pair with liquidity
+      // helper function to create a pancake pair with liquidity
       const createPancakePair = async (
         baseAmount: number,
         saleAmount: number
       ): Promise<Contract> => {
-        await energyFiFactory.createPair(saleToken.address, wbnb.address);
+        await pancakeFactory.createPair(saleToken.address, wbnb.address);
         await wbnb.deposit({ value: baseAmount });
-        const pairAddress = await energyFiFactory.getPair(
+        const pairAddress = await pancakeFactory.getPair(
           saleToken.address,
           wbnb.address
         );
@@ -255,7 +255,7 @@ describe("PancakeLocker", () => {
 
       it("should revert with non lp token", async () => {
         await expect(
-          energyFiLocker.lockLPToken(
+          pancakeLocker.lockLPToken(
             saleToken.address, // token address
             2000, // amount
             10000, // unlock date
@@ -268,7 +268,7 @@ describe("PancakeLocker", () => {
 
       it("should revert with invalid timestamp", async () => {
         await expect(
-          energyFiLocker.lockLPToken(
+          pancakeLocker.lockLPToken(
             saleToken.address, // token address
             2000, // amount
             10000000001, // unlock date
@@ -281,7 +281,7 @@ describe("PancakeLocker", () => {
 
       it("should revert with invalid amount", async () => {
         await expect(
-          energyFiLocker.lockLPToken(
+          pancakeLocker.lockLPToken(
             saleToken.address, // token address
             0, // amount
             1000, // unlock date
@@ -294,18 +294,18 @@ describe("PancakeLocker", () => {
 
       it("should lock with whitelisted user", async () => {
         // whitelist caller
-        await energyFiLocker.whitelistFeeAccount(walletAddress, true);
+        await pancakeLocker.whitelistFeeAccount(walletAddress, true);
 
-        // create energyFi pair
+        // create pancake pair
         const pair = await createPancakePair(10000, 1000);
 
         // approve lock with lp token amount
         const lockAmount = 1000;
-        await pair.approve(energyFiLocker.address, constants.MaxUint256);
+        await pair.approve(pancakeLocker.address, constants.MaxUint256);
 
         // check event on function call
         await expect(
-          energyFiLocker.lockLPToken(
+          pancakeLocker.lockLPToken(
             pair.address, // lp token
             lockAmount,
             1000000, // unlock date
@@ -314,7 +314,7 @@ describe("PancakeLocker", () => {
             walletAddress, // withdrawer
             gasLimit
           )
-        ).to.emit(energyFiLocker, "onDeposit");
+        ).to.emit(pancakeLocker, "onDeposit");
       });
     });
   });

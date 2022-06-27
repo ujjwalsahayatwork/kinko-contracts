@@ -3,7 +3,7 @@
 /**
  * @title Migrator Interface of the Pancake launchpad enviroment
  * @dev This interface describes the Migrator which is responsible for migrating locks.
- * It is called from the energyFiLocker contract to migrate a lock to an other contract.
+ * It is called from the pancakeLocker contract to migrate a lock to an other contract.
  */
 
 pragma solidity 0.6.12;

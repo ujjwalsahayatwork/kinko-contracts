@@ -52,7 +52,7 @@
           "type": "address"
         }
       ],
-      "name": "energyFiswapPairIsInitialised",
+      "name": "pancakeswapPairIsInitialised",
       "outputs": [
         {
           "internalType": "bool",
@@ -64,43 +64,43 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_token1\",\"type\":\"address\"}],\"name\":\"energyFiswapPairIsInitialised\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IERC20Meta\",\"name\":\"_baseToken\",\"type\":\"address\"},{\"internalType\":\"contract IERC20\",\"name\":\"_saleToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_baseAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_saleAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_unlockDate\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"_withdrawer\",\"type\":\"address\"}],\"name\":\"lockLiquidity\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"energyFiswapPairIsInitialised(address,address)\":{\"params\":{\"_token0\":\"one address of the energyFi pair base tokens\",\"_token1\":\"the other address of the energyFi pair base tokens\"}},\"lockLiquidity(address,address,uint256,uint256,uint256,address)\":{\"params\":{\"_baseAmount\":\"amount of base tokens to be locked\",\"_baseToken\":\"token received for sold launchpad token\",\"_saleAmount\":\"amount of sale tokens to be locked\",\"_saleToken\":\"token sold in launchpad\",\"_unlockDate\":\"timestamp to unlock the locked lp token\",\"_withdrawer\":\"address allowed to withdraw token after unlock date\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"energyFiswapPairIsInitialised(address,address)\":{\"notice\":\"checks if a energyFi pair with liquidity exists on energyFiswap for the given tokens\"},\"lockLiquidity(address,address,uint256,uint256,uint256,address)\":{\"notice\":\"locks iquidity by creating a liquidity pair (LP) with base and sale token, sending liquidity amount of both tokens to the LP and locks the minted LP token with PancakeLocker contract.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/ILaunchpadLockForwarder.sol\":\"ILaunchpadLockForwarder\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]},\"project:/interfaces/IERC20Meta.sol\":{\"keccak256\":\"0x99a6d912c17872d57b701fbc08c2eaf69ad94ab20b9400b759bdd644511fd90d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://38ec60c4690e8d76e89c8c59f89a57823af48aac2101f9ad9277253dfe3d9ab6\",\"dweb:/ipfs/QmPHhyf58yY9s84DdGVZg5Z3cHwjJoJ1oWyX327A23xzFe\"]},\"project:/interfaces/ILaunchpadLockForwarder.sol\":{\"keccak256\":\"0x66c141bd58fb54233ed97d11eb9eebbfd66852700e6256c95324b47cbe547667\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2822b28603c8d254f585fa651bd50a8f446cb57a6d57911ea8b79e411840799d\",\"dweb:/ipfs/QmZGYhoKuJ9EvEbW1fDL1gqteW87k4PrzhfQ5TaTyT4uWx\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IERC20Meta\",\"name\":\"_baseToken\",\"type\":\"address\"},{\"internalType\":\"contract IERC20\",\"name\":\"_saleToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_baseAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_saleAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_unlockDate\",\"type\":\"uint256\"},{\"internalType\":\"address payable\",\"name\":\"_withdrawer\",\"type\":\"address\"}],\"name\":\"lockLiquidity\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_token1\",\"type\":\"address\"}],\"name\":\"pancakeswapPairIsInitialised\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"lockLiquidity(address,address,uint256,uint256,uint256,address)\":{\"params\":{\"_baseAmount\":\"amount of base tokens to be locked\",\"_baseToken\":\"token received for sold launchpad token\",\"_saleAmount\":\"amount of sale tokens to be locked\",\"_saleToken\":\"token sold in launchpad\",\"_unlockDate\":\"timestamp to unlock the locked lp token\",\"_withdrawer\":\"address allowed to withdraw token after unlock date\"}},\"pancakeswapPairIsInitialised(address,address)\":{\"params\":{\"_token0\":\"one address of the pancake pair base tokens\",\"_token1\":\"the other address of the pancake pair base tokens\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"lockLiquidity(address,address,uint256,uint256,uint256,address)\":{\"notice\":\"locks iquidity by creating a liquidity pair (LP) with base and sale token, sending liquidity amount of both tokens to the LP and locks the minted LP token with PancakeLocker contract.\"},\"pancakeswapPairIsInitialised(address,address)\":{\"notice\":\"checks if a pancake pair with liquidity exists on pancakeswap for the given tokens\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/ILaunchpadLockForwarder.sol\":\"ILaunchpadLockForwarder\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5f02220344881ce43204ae4a6281145a67bc52c2bb1290a791857df3d19d78f5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://24427744bd3e6cb73c17010119af12a318289c0253a4d9acb8576c9fb3797b08\",\"dweb:/ipfs/QmTLDqpKRBuxGxRAmjgXt9AkXyACW3MtKzi7PYjm5iMfGC\"]},\"project:/interfaces/IERC20Meta.sol\":{\"keccak256\":\"0x99a6d912c17872d57b701fbc08c2eaf69ad94ab20b9400b759bdd644511fd90d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://38ec60c4690e8d76e89c8c59f89a57823af48aac2101f9ad9277253dfe3d9ab6\",\"dweb:/ipfs/QmPHhyf58yY9s84DdGVZg5Z3cHwjJoJ1oWyX327A23xzFe\"]},\"project:/interfaces/ILaunchpadLockForwarder.sol\":{\"keccak256\":\"0x5071109e66808da366e1f54d740d795aadc02c38035c97ff9b388cad6e5d7ed9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://07a6ca149f533b3c3174c5f1eef8568f7f96fe637659f183707ca3357d2eb800\",\"dweb:/ipfs/QmTqHBjpjtaxeDj4sJgyjARXVBspNpTr9X7n7nJC225ijK\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.12;\n\n/**\n * @title LockForwarder Interface of the Pancake launchpad enviroment\n * @dev This interface describes the LaunchpadLockForwarder. It holds functions for interacting\n * with the energyFiswap factory for getting LP information and creating a LP on locking liquidity.\n * The locked liquidity amount is forwarded to PancakeLocker contract.\n */\n\nimport \"./IERC20Meta.sol\";\n\ninterface ILaunchpadLockForwarder {\n    /**\n     * @notice locks iquidity by creating a liquidity pair (LP) with base and sale token,\n     * sending liquidity amount of both tokens to the LP and locks the minted LP token\n     * with PancakeLocker contract.\n     * @param _baseToken token received for sold launchpad token\n     * @param _saleToken token sold in launchpad\n     * @param _baseAmount amount of base tokens to be locked\n     * @param _saleAmount amount of sale tokens to be locked\n     * @param _unlockDate timestamp to unlock the locked lp token\n     * @param _withdrawer address allowed to withdraw token after unlock date\n     */\n    function lockLiquidity(\n        IERC20Meta _baseToken,\n        IERC20 _saleToken,\n        uint256 _baseAmount,\n        uint256 _saleAmount,\n        uint256 _unlockDate,\n        address payable _withdrawer\n    ) external;\n\n    /**\n     * @notice checks if a energyFi pair with liquidity exists on energyFiswap for the given tokens\n     * @param _token0 one address of the energyFi pair base tokens\n     * @param _token1 the other address of the energyFi pair base tokens\n     */\n    function energyFiswapPairIsInitialised(address _token0, address _token1)\n        external\n        view\n        returns (bool);\n}\n",
-  "sourcePath": "/Users/apple/Downloads/kinko-ilo-contracts-main/interfaces/ILaunchpadLockForwarder.sol",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.12;\n\n/**\n * @title LockForwarder Interface of the Pancake launchpad enviroment\n * @dev This interface describes the LaunchpadLockForwarder. It holds functions for interacting\n * with the pancakeswap factory for getting LP information and creating a LP on locking liquidity.\n * The locked liquidity amount is forwarded to PancakeLocker contract.\n */\n\nimport \"./IERC20Meta.sol\";\n\ninterface ILaunchpadLockForwarder {\n    /**\n     * @notice locks iquidity by creating a liquidity pair (LP) with base and sale token,\n     * sending liquidity amount of both tokens to the LP and locks the minted LP token\n     * with PancakeLocker contract.\n     * @param _baseToken token received for sold launchpad token\n     * @param _saleToken token sold in launchpad\n     * @param _baseAmount amount of base tokens to be locked\n     * @param _saleAmount amount of sale tokens to be locked\n     * @param _unlockDate timestamp to unlock the locked lp token\n     * @param _withdrawer address allowed to withdraw token after unlock date\n     */\n    function lockLiquidity(\n        IERC20Meta _baseToken,\n        IERC20 _saleToken,\n        uint256 _baseAmount,\n        uint256 _saleAmount,\n        uint256 _unlockDate,\n        address payable _withdrawer\n    ) external;\n\n    /**\n     * @notice checks if a pancake pair with liquidity exists on pancakeswap for the given tokens\n     * @param _token0 one address of the pancake pair base tokens\n     * @param _token1 the other address of the pancake pair base tokens\n     */\n    function pancakeswapPairIsInitialised(address _token0, address _token1)\n        external\n        view\n        returns (bool);\n}\n",
+  "sourcePath": "/Users/apple/Desktop/datacpoy/BlockChain/kinko-contracts/interfaces/ILaunchpadLockForwarder.sol",
   "ast": {
     "absolutePath": "project:/interfaces/ILaunchpadLockForwarder.sol",
     "exportedSymbols": {
       "ILaunchpadLockForwarder": [
-        9717
+        9771
       ]
     },
-    "id": 9718,
+    "id": 9772,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9689,
+        "id": 9743,
         "literals": [
           "solidity",
           "0.6",
           ".12"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:23:22"
+        "src": "32:23:20"
       },
       {
         "absolutePath": "project:/interfaces/IERC20Meta.sol",
         "file": "./IERC20Meta.sol",
-        "id": 9690,
+        "id": 9744,
         "nodeType": "ImportDirective",
-        "scope": 9718,
-        "sourceUnit": 9624,
-        "src": "405:26:22",
+        "scope": 9772,
+        "sourceUnit": 9697,
+        "src": "402:26:20",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -111,9 +111,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 9717,
+        "id": 9771,
         "linearizedBaseContracts": [
-          9717
+          9771
         ],
         "name": "ILaunchpadLockForwarder",
         "nodeType": "ContractDefinition",
@@ -121,13 +121,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9691,
+              "id": 9745,
               "nodeType": "StructuredDocumentation",
-              "src": "473:605:22",
+              "src": "470:604:20",
               "text": " @notice locks iquidity by creating a liquidity pair (LP) with base and sale token,\n sending liquidity amount of both tokens to the LP and locks the minted LP token\n with PancakeLocker contract.\n @param _baseToken token received for sold launchpad token\n @param _saleToken token sold in launchpad\n @param _baseAmount amount of base tokens to be locked\n @param _saleAmount amount of sale tokens to be locked\n @param _unlockDate timestamp to unlock the locked lp token\n @param _withdrawer address allowed to withdraw token after unlock date"
             },
             "functionSelector": "2277d0e3",
-            "id": 9706,
+            "id": 9760,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -135,33 +135,33 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9704,
+              "id": 9758,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9693,
+                  "id": 9747,
                   "mutability": "mutable",
                   "name": "_baseToken",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9706,
-                  "src": "1115:21:22",
+                  "scope": 9760,
+                  "src": "1111:21:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_IERC20Meta_$9623",
+                    "typeIdentifier": "t_contract$_IERC20Meta_$9696",
                     "typeString": "contract IERC20Meta"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 9692,
+                    "id": 9746,
                     "name": "IERC20Meta",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9623,
-                    "src": "1115:10:22",
+                    "referencedDeclaration": 9696,
+                    "src": "1111:10:20",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IERC20Meta_$9623",
+                      "typeIdentifier": "t_contract$_IERC20Meta_$9696",
                       "typeString": "contract IERC20Meta"
                     }
                   },
@@ -170,13 +170,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 9695,
+                  "id": 9749,
                   "mutability": "mutable",
                   "name": "_saleToken",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9706,
-                  "src": "1146:17:22",
+                  "scope": 9760,
+                  "src": "1142:17:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -185,11 +185,11 @@
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 9694,
+                    "id": 9748,
                     "name": "IERC20",
                     "nodeType": "UserDefinedTypeName",
                     "referencedDeclaration": 542,
-                    "src": "1146:6:22",
+                    "src": "1142:6:20",
                     "typeDescriptions": {
                       "typeIdentifier": "t_contract$_IERC20_$542",
                       "typeString": "contract IERC20"
@@ -200,13 +200,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 9697,
+                  "id": 9751,
                   "mutability": "mutable",
                   "name": "_baseAmount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9706,
-                  "src": "1173:19:22",
+                  "scope": 9760,
+                  "src": "1169:19:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -214,10 +214,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9696,
+                    "id": 9750,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1173:7:22",
+                    "src": "1169:7:20",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -228,13 +228,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 9699,
+                  "id": 9753,
                   "mutability": "mutable",
                   "name": "_saleAmount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9706,
-                  "src": "1202:19:22",
+                  "scope": 9760,
+                  "src": "1198:19:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -242,10 +242,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9698,
+                    "id": 9752,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1202:7:22",
+                    "src": "1198:7:20",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -256,13 +256,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 9701,
+                  "id": 9755,
                   "mutability": "mutable",
                   "name": "_unlockDate",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9706,
-                  "src": "1231:19:22",
+                  "scope": 9760,
+                  "src": "1227:19:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -270,10 +270,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9700,
+                    "id": 9754,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1231:7:22",
+                    "src": "1227:7:20",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -284,13 +284,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 9703,
+                  "id": 9757,
                   "mutability": "mutable",
                   "name": "_withdrawer",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9706,
-                  "src": "1260:27:22",
+                  "scope": 9760,
+                  "src": "1256:27:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -298,10 +298,10 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 9702,
+                    "id": 9756,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1260:15:22",
+                    "src": "1256:15:20",
                     "stateMutability": "payable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
@@ -312,16 +312,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1105:188:22"
+              "src": "1101:188:20"
             },
             "returnParameters": {
-              "id": 9705,
+              "id": 9759,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1302:0:22"
+              "src": "1298:0:20"
             },
-            "scope": 9717,
-            "src": "1083:220:22",
+            "scope": 9771,
+            "src": "1079:220:20",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -329,32 +329,32 @@
           {
             "body": null,
             "documentation": {
-              "id": 9707,
+              "id": 9761,
               "nodeType": "StructuredDocumentation",
-              "src": "1309:251:22",
-              "text": " @notice checks if a energyFi pair with liquidity exists on energyFiswap for the given tokens\n @param _token0 one address of the energyFi pair base tokens\n @param _token1 the other address of the energyFi pair base tokens"
+              "src": "1305:247:20",
+              "text": " @notice checks if a pancake pair with liquidity exists on pancakeswap for the given tokens\n @param _token0 one address of the pancake pair base tokens\n @param _token1 the other address of the pancake pair base tokens"
             },
-            "functionSelector": "2bd3b8b3",
-            "id": 9716,
+            "functionSelector": "b2b6d1a5",
+            "id": 9770,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
-            "name": "energyFiswapPairIsInitialised",
+            "name": "pancakeswapPairIsInitialised",
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9712,
+              "id": 9766,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9709,
+                  "id": 9763,
                   "mutability": "mutable",
                   "name": "_token0",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9716,
-                  "src": "1604:15:22",
+                  "scope": 9770,
+                  "src": "1595:15:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -362,10 +362,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9708,
+                    "id": 9762,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1604:7:22",
+                    "src": "1595:7:20",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -377,13 +377,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 9711,
+                  "id": 9765,
                   "mutability": "mutable",
                   "name": "_token1",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9716,
-                  "src": "1621:15:22",
+                  "scope": 9770,
+                  "src": "1612:15:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -391,10 +391,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9710,
+                    "id": 9764,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1621:7:22",
+                    "src": "1612:7:20",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -405,21 +405,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1603:34:22"
+              "src": "1594:34:20"
             },
             "returnParameters": {
-              "id": 9715,
+              "id": 9769,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9714,
+                  "id": 9768,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9716,
-                  "src": "1685:4:22",
+                  "scope": 9770,
+                  "src": "1676:4:20",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -427,10 +427,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9713,
+                    "id": 9767,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1685:4:22",
+                    "src": "1676:4:20",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -440,27 +440,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1684:6:22"
+              "src": "1675:6:20"
             },
-            "scope": 9717,
-            "src": "1565:126:22",
+            "scope": 9771,
+            "src": "1557:125:20",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 9718,
-        "src": "433:1260:22"
+        "scope": 9772,
+        "src": "430:1254:20"
       }
     ],
-    "src": "32:1662:22"
+    "src": "32:1653:20"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/interfaces/ILaunchpadLockForwarder.sol",
       "exportedSymbols": {
         "ILaunchpadLockForwarder": [
-          9717
+          9771
         ]
       },
       "license": "MIT"
@@ -474,24 +474,24 @@
             ".12"
           ]
         },
-        "id": 9689,
+        "id": 9743,
         "name": "PragmaDirective",
-        "src": "32:23:22"
+        "src": "32:23:20"
       },
       {
         "attributes": {
-          "SourceUnit": 9624,
+          "SourceUnit": 9697,
           "absolutePath": "project:/interfaces/IERC20Meta.sol",
           "file": "./IERC20Meta.sol",
-          "scope": 9718,
+          "scope": 9772,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 9690,
+        "id": 9744,
         "name": "ImportDirective",
-        "src": "405:26:22"
+        "src": "402:26:20"
       },
       {
         "attributes": {
@@ -506,10 +506,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            9717
+            9771
           ],
           "name": "ILaunchpadLockForwarder",
-          "scope": 9718
+          "scope": 9772
         },
         "children": [
           {
@@ -524,7 +524,7 @@
               ],
               "name": "lockLiquidity",
               "overrides": null,
-              "scope": 9717,
+              "scope": 9771,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -534,9 +534,9 @@
                 "attributes": {
                   "text": " @notice locks iquidity by creating a liquidity pair (LP) with base and sale token,\n sending liquidity amount of both tokens to the LP and locks the minted LP token\n with PancakeLocker contract.\n @param _baseToken token received for sold launchpad token\n @param _saleToken token sold in launchpad\n @param _baseAmount amount of base tokens to be locked\n @param _saleAmount amount of sale tokens to be locked\n @param _unlockDate timestamp to unlock the locked lp token\n @param _withdrawer address allowed to withdraw token after unlock date"
                 },
-                "id": 9691,
+                "id": 9745,
                 "name": "StructuredDocumentation",
-                "src": "473:605:22"
+                "src": "470:604:20"
               },
               {
                 "children": [
@@ -546,7 +546,7 @@
                       "mutability": "mutable",
                       "name": "_baseToken",
                       "overrides": null,
-                      "scope": 9706,
+                      "scope": 9760,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IERC20Meta",
@@ -558,17 +558,17 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "IERC20Meta",
-                          "referencedDeclaration": 9623,
+                          "referencedDeclaration": 9696,
                           "type": "contract IERC20Meta"
                         },
-                        "id": 9692,
+                        "id": 9746,
                         "name": "UserDefinedTypeName",
-                        "src": "1115:10:22"
+                        "src": "1111:10:20"
                       }
                     ],
-                    "id": 9693,
+                    "id": 9747,
                     "name": "VariableDeclaration",
-                    "src": "1115:21:22"
+                    "src": "1111:21:20"
                   },
                   {
                     "attributes": {
@@ -576,7 +576,7 @@
                       "mutability": "mutable",
                       "name": "_saleToken",
                       "overrides": null,
-                      "scope": 9706,
+                      "scope": 9760,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "contract IERC20",
@@ -591,14 +591,14 @@
                           "referencedDeclaration": 542,
                           "type": "contract IERC20"
                         },
-                        "id": 9694,
+                        "id": 9748,
                         "name": "UserDefinedTypeName",
-                        "src": "1146:6:22"
+                        "src": "1142:6:20"
                       }
                     ],
-                    "id": 9695,
+                    "id": 9749,
                     "name": "VariableDeclaration",
-                    "src": "1146:17:22"
+                    "src": "1142:17:20"
                   },
                   {
                     "attributes": {
@@ -606,7 +606,7 @@
                       "mutability": "mutable",
                       "name": "_baseAmount",
                       "overrides": null,
-                      "scope": 9706,
+                      "scope": 9760,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -619,14 +619,14 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9696,
+                        "id": 9750,
                         "name": "ElementaryTypeName",
-                        "src": "1173:7:22"
+                        "src": "1169:7:20"
                       }
                     ],
-                    "id": 9697,
+                    "id": 9751,
                     "name": "VariableDeclaration",
-                    "src": "1173:19:22"
+                    "src": "1169:19:20"
                   },
                   {
                     "attributes": {
@@ -634,7 +634,7 @@
                       "mutability": "mutable",
                       "name": "_saleAmount",
                       "overrides": null,
-                      "scope": 9706,
+                      "scope": 9760,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -647,14 +647,14 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9698,
+                        "id": 9752,
                         "name": "ElementaryTypeName",
-                        "src": "1202:7:22"
+                        "src": "1198:7:20"
                       }
                     ],
-                    "id": 9699,
+                    "id": 9753,
                     "name": "VariableDeclaration",
-                    "src": "1202:19:22"
+                    "src": "1198:19:20"
                   },
                   {
                     "attributes": {
@@ -662,7 +662,7 @@
                       "mutability": "mutable",
                       "name": "_unlockDate",
                       "overrides": null,
-                      "scope": 9706,
+                      "scope": 9760,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -675,14 +675,14 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9700,
+                        "id": 9754,
                         "name": "ElementaryTypeName",
-                        "src": "1231:7:22"
+                        "src": "1227:7:20"
                       }
                     ],
-                    "id": 9701,
+                    "id": 9755,
                     "name": "VariableDeclaration",
-                    "src": "1231:19:22"
+                    "src": "1227:19:20"
                   },
                   {
                     "attributes": {
@@ -690,7 +690,7 @@
                       "mutability": "mutable",
                       "name": "_withdrawer",
                       "overrides": null,
-                      "scope": 9706,
+                      "scope": 9760,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -704,19 +704,19 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 9702,
+                        "id": 9756,
                         "name": "ElementaryTypeName",
-                        "src": "1260:15:22"
+                        "src": "1256:15:20"
                       }
                     ],
-                    "id": 9703,
+                    "id": 9757,
                     "name": "VariableDeclaration",
-                    "src": "1260:27:22"
+                    "src": "1256:27:20"
                   }
                 ],
-                "id": 9704,
+                "id": 9758,
                 "name": "ParameterList",
-                "src": "1105:188:22"
+                "src": "1101:188:20"
               },
               {
                 "attributes": {
@@ -725,28 +725,28 @@
                   ]
                 },
                 "children": [],
-                "id": 9705,
+                "id": 9759,
                 "name": "ParameterList",
-                "src": "1302:0:22"
+                "src": "1298:0:20"
               }
             ],
-            "id": 9706,
+            "id": 9760,
             "name": "FunctionDefinition",
-            "src": "1083:220:22"
+            "src": "1079:220:20"
           },
           {
             "attributes": {
               "body": null,
-              "functionSelector": "2bd3b8b3",
+              "functionSelector": "b2b6d1a5",
               "implemented": false,
               "isConstructor": false,
               "kind": "function",
               "modifiers": [
                 null
               ],
-              "name": "energyFiswapPairIsInitialised",
+              "name": "pancakeswapPairIsInitialised",
               "overrides": null,
-              "scope": 9717,
+              "scope": 9771,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -754,11 +754,11 @@
             "children": [
               {
                 "attributes": {
-                  "text": " @notice checks if a energyFi pair with liquidity exists on energyFiswap for the given tokens\n @param _token0 one address of the energyFi pair base tokens\n @param _token1 the other address of the energyFi pair base tokens"
+                  "text": " @notice checks if a pancake pair with liquidity exists on pancakeswap for the given tokens\n @param _token0 one address of the pancake pair base tokens\n @param _token1 the other address of the pancake pair base tokens"
                 },
-                "id": 9707,
+                "id": 9761,
                 "name": "StructuredDocumentation",
-                "src": "1309:251:22"
+                "src": "1305:247:20"
               },
               {
                 "children": [
@@ -768,7 +768,7 @@
                       "mutability": "mutable",
                       "name": "_token0",
                       "overrides": null,
-                      "scope": 9716,
+                      "scope": 9770,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -782,14 +782,14 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 9708,
+                        "id": 9762,
                         "name": "ElementaryTypeName",
-                        "src": "1604:7:22"
+                        "src": "1595:7:20"
                       }
                     ],
-                    "id": 9709,
+                    "id": 9763,
                     "name": "VariableDeclaration",
-                    "src": "1604:15:22"
+                    "src": "1595:15:20"
                   },
                   {
                     "attributes": {
@@ -797,7 +797,7 @@
                       "mutability": "mutable",
                       "name": "_token1",
                       "overrides": null,
-                      "scope": 9716,
+                      "scope": 9770,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -811,19 +811,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 9710,
+                        "id": 9764,
                         "name": "ElementaryTypeName",
-                        "src": "1621:7:22"
+                        "src": "1612:7:20"
                       }
                     ],
-                    "id": 9711,
+                    "id": 9765,
                     "name": "VariableDeclaration",
-                    "src": "1621:15:22"
+                    "src": "1612:15:20"
                   }
                 ],
-                "id": 9712,
+                "id": 9766,
                 "name": "ParameterList",
-                "src": "1603:34:22"
+                "src": "1594:34:20"
               },
               {
                 "children": [
@@ -833,7 +833,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 9716,
+                      "scope": 9770,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -846,34 +846,34 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 9713,
+                        "id": 9767,
                         "name": "ElementaryTypeName",
-                        "src": "1685:4:22"
+                        "src": "1676:4:20"
                       }
                     ],
-                    "id": 9714,
+                    "id": 9768,
                     "name": "VariableDeclaration",
-                    "src": "1685:4:22"
+                    "src": "1676:4:20"
                   }
                 ],
-                "id": 9715,
+                "id": 9769,
                 "name": "ParameterList",
-                "src": "1684:6:22"
+                "src": "1675:6:20"
               }
             ],
-            "id": 9716,
+            "id": 9770,
             "name": "FunctionDefinition",
-            "src": "1565:126:22"
+            "src": "1557:125:20"
           }
         ],
-        "id": 9717,
+        "id": 9771,
         "name": "ContractDefinition",
-        "src": "433:1260:22"
+        "src": "430:1254:20"
       }
     ],
-    "id": 9718,
+    "id": 9772,
     "name": "SourceUnit",
-    "src": "32:1662:22"
+    "src": "32:1653:20"
   },
   "compiler": {
     "name": "solc",
@@ -881,16 +881,10 @@
   },
   "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-05-02T08:04:48.331Z",
+  "updatedAt": "2022-06-27T08:00:32.269Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
-      "energyFiswapPairIsInitialised(address,address)": {
-        "params": {
-          "_token0": "one address of the energyFi pair base tokens",
-          "_token1": "the other address of the energyFi pair base tokens"
-        }
-      },
       "lockLiquidity(address,address,uint256,uint256,uint256,address)": {
         "params": {
           "_baseAmount": "amount of base tokens to be locked",
@@ -900,6 +894,12 @@
           "_unlockDate": "timestamp to unlock the locked lp token",
           "_withdrawer": "address allowed to withdraw token after unlock date"
         }
+      },
+      "pancakeswapPairIsInitialised(address,address)": {
+        "params": {
+          "_token0": "one address of the pancake pair base tokens",
+          "_token1": "the other address of the pancake pair base tokens"
+        }
       }
     },
     "version": 1
@@ -907,11 +907,11 @@
   "userdoc": {
     "kind": "user",
     "methods": {
-      "energyFiswapPairIsInitialised(address,address)": {
-        "notice": "checks if a energyFi pair with liquidity exists on energyFiswap for the given tokens"
-      },
       "lockLiquidity(address,address,uint256,uint256,uint256,address)": {
         "notice": "locks iquidity by creating a liquidity pair (LP) with base and sale token, sending liquidity amount of both tokens to the LP and locks the minted LP token with PancakeLocker contract."
+      },
+      "pancakeswapPairIsInitialised(address,address)": {
+        "notice": "checks if a pancake pair with liquidity exists on pancakeswap for the given tokens"
       }
     },
     "version": 1

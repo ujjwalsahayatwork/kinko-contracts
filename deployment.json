@@ -1,10 +1,10 @@
 {
-    "deployer": "0x627306090abaB3A6e1400e9345bC60c78a8BEf57",
-    "energyFiFactory": "0x8CdaF0CD259887258Bc13a92C0a6dA92698644C0",
-    "energyFiLocker": "0x345cA3e014Aaf5dcA488057592ee47305D9B3e10",
-    "wbnb": "0xF12b5dd4EAD5F743C6BaA640B0216200e89B60Da",
-    "launchpadFactory": "0xf25186B5081Ff5cE73482AD761DB0eB0d25abfBF",
-    "launchpadLockForwarder": "0x8f0483125FCb9aaAEFA9209D8E9d7b9C8B9Fb90F",
-    "launchpadSettings": "0x9FBDa871d559710256a2502A2517b794B482Db40",
-    "launchpadGenerator": "0x2C2B9C9a4a25e24B174f26114e8926a9f2128FE4"
+    "deployer": "0xbA6D9190913B84dbb09c6284125303229E31e076",
+    "pancakeFactory": "0x0Dc6d56F781710351f101d6c340fA2d4EE7144EA",
+    "pancakeLocker": "0xC09F3876109CB5Fbcf5b4B541f75f85f5B9a603C",
+    "wbnb": "0x34c720fbc101631E019a1c623913245Dc935140C",
+    "launchpadFactory": "0x43ff6c2214970de26Ea533151f9337C57389AAfE",
+    "launchpadLockForwarder": "0xEDb35edea252C81c3bB243808FA770013ab87Eb8",
+    "launchpadSettings": "0xf839EcC82dEce9036169036f64A99a5066dbd94c",
+    "launchpadGenerator": "0x189c9302A7899745D4b8019E3Bd08a1acF7bf4B1"
 }

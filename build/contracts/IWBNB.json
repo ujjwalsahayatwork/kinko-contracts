@@ -53,27 +53,27 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.12;\n\n/**\n * @title Interface of a wrapped BNB token\n * @dev This interface describes a wrapping ERC20 token for native BNB currency\n */\ninterface IWBNB {\n    /**\n     * @dev Deposits native currency by sending it with the function call and creates\n     * an equivalent amount of ERC20 token known as wrapping. The equivalent amount of\n     * wrapped tokens is added to the senders account.\n     */\n    function deposit() external payable;\n\n    /**\n     * @dev Moves `amount` tokens from the caller's account to `recipient`.\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     */\n    function transfer(address to, uint256 value) external returns (bool);\n\n    /**\n     * @dev Withraws the native currency for the given amount of wrapped token hold\n     * by the function caller. The equivalent amount of native currency is sent to\n     * the function caller.\n     */\n    function withdraw(uint256) external;\n}\n",
-  "sourcePath": "/Users/apple/Downloads/kinko-ilo-contracts-main/interfaces/IWBNB.sol",
+  "sourcePath": "/Users/apple/Desktop/datacpoy/BlockChain/kinko-contracts/interfaces/IWBNB.sol",
   "ast": {
     "absolutePath": "project:/interfaces/IWBNB.sol",
     "exportedSymbols": {
       "IWBNB": [
-        9825
+        9898
       ]
     },
-    "id": 9826,
+    "id": 9899,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9803,
+        "id": 9876,
         "literals": [
           "solidity",
           "0.6",
           ".12"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:23:25"
+        "src": "32:23:24"
       },
       {
         "abstract": false,
@@ -81,15 +81,15 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 9804,
+          "id": 9877,
           "nodeType": "StructuredDocumentation",
-          "src": "57:130:25",
+          "src": "57:130:24",
           "text": " @title Interface of a wrapped BNB token\n @dev This interface describes a wrapping ERC20 token for native BNB currency"
         },
         "fullyImplemented": false,
-        "id": 9825,
+        "id": 9898,
         "linearizedBaseContracts": [
-          9825
+          9898
         ],
         "name": "IWBNB",
         "nodeType": "ContractDefinition",
@@ -97,13 +97,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9805,
+              "id": 9878,
               "nodeType": "StructuredDocumentation",
-              "src": "210:239:25",
+              "src": "210:239:24",
               "text": " @dev Deposits native currency by sending it with the function call and creates\n an equivalent amount of ERC20 token known as wrapping. The equivalent amount of\n wrapped tokens is added to the senders account."
             },
             "functionSelector": "d0e30db0",
-            "id": 9808,
+            "id": 9881,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -111,19 +111,19 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9806,
+              "id": 9879,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "470:2:25"
+              "src": "470:2:24"
             },
             "returnParameters": {
-              "id": 9807,
+              "id": 9880,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "489:0:25"
+              "src": "489:0:24"
             },
-            "scope": 9825,
-            "src": "454:36:25",
+            "scope": 9898,
+            "src": "454:36:24",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
@@ -131,13 +131,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9809,
+              "id": 9882,
               "nodeType": "StructuredDocumentation",
-              "src": "496:209:25",
+              "src": "496:209:24",
               "text": " @dev Moves `amount` tokens from the caller's account to `recipient`.\n Returns a boolean value indicating whether the operation succeeded.\n Emits a {Transfer} event."
             },
             "functionSelector": "a9059cbb",
-            "id": 9818,
+            "id": 9891,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -145,18 +145,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9814,
+              "id": 9887,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9811,
+                  "id": 9884,
                   "mutability": "mutable",
                   "name": "to",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9818,
-                  "src": "728:10:25",
+                  "scope": 9891,
+                  "src": "728:10:24",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -164,10 +164,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9810,
+                    "id": 9883,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "728:7:25",
+                    "src": "728:7:24",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -179,13 +179,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 9813,
+                  "id": 9886,
                   "mutability": "mutable",
                   "name": "value",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9818,
-                  "src": "740:13:25",
+                  "scope": 9891,
+                  "src": "740:13:24",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -193,10 +193,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9812,
+                    "id": 9885,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "740:7:25",
+                    "src": "740:7:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -206,21 +206,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "727:27:25"
+              "src": "727:27:24"
             },
             "returnParameters": {
-              "id": 9817,
+              "id": 9890,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9816,
+                  "id": 9889,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9818,
-                  "src": "773:4:25",
+                  "scope": 9891,
+                  "src": "773:4:24",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -228,10 +228,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9815,
+                    "id": 9888,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "773:4:25",
+                    "src": "773:4:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -241,10 +241,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "772:6:25"
+              "src": "772:6:24"
             },
-            "scope": 9825,
-            "src": "710:69:25",
+            "scope": 9898,
+            "src": "710:69:24",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -252,13 +252,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9819,
+              "id": 9892,
               "nodeType": "StructuredDocumentation",
-              "src": "785:206:25",
+              "src": "785:206:24",
               "text": " @dev Withraws the native currency for the given amount of wrapped token hold\n by the function caller. The equivalent amount of native currency is sent to\n the function caller."
             },
             "functionSelector": "2e1a7d4d",
-            "id": 9824,
+            "id": 9897,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -266,18 +266,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9822,
+              "id": 9895,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9821,
+                  "id": 9894,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9824,
-                  "src": "1014:7:25",
+                  "scope": 9897,
+                  "src": "1014:7:24",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -285,10 +285,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9820,
+                    "id": 9893,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1014:7:25",
+                    "src": "1014:7:24",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -298,33 +298,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1013:9:25"
+              "src": "1013:9:24"
             },
             "returnParameters": {
-              "id": 9823,
+              "id": 9896,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1031:0:25"
+              "src": "1031:0:24"
             },
-            "scope": 9825,
-            "src": "996:36:25",
+            "scope": 9898,
+            "src": "996:36:24",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 9826,
-        "src": "188:846:25"
+        "scope": 9899,
+        "src": "188:846:24"
       }
     ],
-    "src": "32:1003:25"
+    "src": "32:1003:24"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/interfaces/IWBNB.sol",
       "exportedSymbols": {
         "IWBNB": [
-          9825
+          9898
         ]
       },
       "license": "MIT"
@@ -338,9 +338,9 @@
             ".12"
           ]
         },
-        "id": 9803,
+        "id": 9876,
         "name": "PragmaDirective",
-        "src": "32:23:25"
+        "src": "32:23:24"
       },
       {
         "attributes": {
@@ -354,19 +354,19 @@
           "contractKind": "interface",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            9825
+            9898
           ],
           "name": "IWBNB",
-          "scope": 9826
+          "scope": 9899
         },
         "children": [
           {
             "attributes": {
               "text": " @title Interface of a wrapped BNB token\n @dev This interface describes a wrapping ERC20 token for native BNB currency"
             },
-            "id": 9804,
+            "id": 9877,
             "name": "StructuredDocumentation",
-            "src": "57:130:25"
+            "src": "57:130:24"
           },
           {
             "attributes": {
@@ -380,7 +380,7 @@
               ],
               "name": "deposit",
               "overrides": null,
-              "scope": 9825,
+              "scope": 9898,
               "stateMutability": "payable",
               "virtual": false,
               "visibility": "external"
@@ -390,9 +390,9 @@
                 "attributes": {
                   "text": " @dev Deposits native currency by sending it with the function call and creates\n an equivalent amount of ERC20 token known as wrapping. The equivalent amount of\n wrapped tokens is added to the senders account."
                 },
-                "id": 9805,
+                "id": 9878,
                 "name": "StructuredDocumentation",
-                "src": "210:239:25"
+                "src": "210:239:24"
               },
               {
                 "attributes": {
@@ -401,9 +401,9 @@
                   ]
                 },
                 "children": [],
-                "id": 9806,
+                "id": 9879,
                 "name": "ParameterList",
-                "src": "470:2:25"
+                "src": "470:2:24"
               },
               {
                 "attributes": {
@@ -412,14 +412,14 @@
                   ]
                 },
                 "children": [],
-                "id": 9807,
+                "id": 9880,
                 "name": "ParameterList",
-                "src": "489:0:25"
+                "src": "489:0:24"
               }
             ],
-            "id": 9808,
+            "id": 9881,
             "name": "FunctionDefinition",
-            "src": "454:36:25"
+            "src": "454:36:24"
           },
           {
             "attributes": {
@@ -433,7 +433,7 @@
               ],
               "name": "transfer",
               "overrides": null,
-              "scope": 9825,
+              "scope": 9898,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -443,9 +443,9 @@
                 "attributes": {
                   "text": " @dev Moves `amount` tokens from the caller's account to `recipient`.\n Returns a boolean value indicating whether the operation succeeded.\n Emits a {Transfer} event."
                 },
-                "id": 9809,
+                "id": 9882,
                 "name": "StructuredDocumentation",
-                "src": "496:209:25"
+                "src": "496:209:24"
               },
               {
                 "children": [
@@ -455,7 +455,7 @@
                       "mutability": "mutable",
                       "name": "to",
                       "overrides": null,
-                      "scope": 9818,
+                      "scope": 9891,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -469,14 +469,14 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 9810,
+                        "id": 9883,
                         "name": "ElementaryTypeName",
-                        "src": "728:7:25"
+                        "src": "728:7:24"
                       }
                     ],
-                    "id": 9811,
+                    "id": 9884,
                     "name": "VariableDeclaration",
-                    "src": "728:10:25"
+                    "src": "728:10:24"
                   },
                   {
                     "attributes": {
@@ -484,7 +484,7 @@
                       "mutability": "mutable",
                       "name": "value",
                       "overrides": null,
-                      "scope": 9818,
+                      "scope": 9891,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -497,19 +497,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9812,
+                        "id": 9885,
                         "name": "ElementaryTypeName",
-                        "src": "740:7:25"
+                        "src": "740:7:24"
                       }
                     ],
-                    "id": 9813,
+                    "id": 9886,
                     "name": "VariableDeclaration",
-                    "src": "740:13:25"
+                    "src": "740:13:24"
                   }
                 ],
-                "id": 9814,
+                "id": 9887,
                 "name": "ParameterList",
-                "src": "727:27:25"
+                "src": "727:27:24"
               },
               {
                 "children": [
@@ -519,7 +519,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 9818,
+                      "scope": 9891,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -532,24 +532,24 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 9815,
+                        "id": 9888,
                         "name": "ElementaryTypeName",
-                        "src": "773:4:25"
+                        "src": "773:4:24"
                       }
                     ],
-                    "id": 9816,
+                    "id": 9889,
                     "name": "VariableDeclaration",
-                    "src": "773:4:25"
+                    "src": "773:4:24"
                   }
                 ],
-                "id": 9817,
+                "id": 9890,
                 "name": "ParameterList",
-                "src": "772:6:25"
+                "src": "772:6:24"
               }
             ],
-            "id": 9818,
+            "id": 9891,
             "name": "FunctionDefinition",
-            "src": "710:69:25"
+            "src": "710:69:24"
           },
           {
             "attributes": {
@@ -563,7 +563,7 @@
               ],
               "name": "withdraw",
               "overrides": null,
-              "scope": 9825,
+              "scope": 9898,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -573,9 +573,9 @@
                 "attributes": {
                   "text": " @dev Withraws the native currency for the given amount of wrapped token hold\n by the function caller. The equivalent amount of native currency is sent to\n the function caller."
                 },
-                "id": 9819,
+                "id": 9892,
                 "name": "StructuredDocumentation",
-                "src": "785:206:25"
+                "src": "785:206:24"
               },
               {
                 "children": [
@@ -585,7 +585,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 9824,
+                      "scope": 9897,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -598,19 +598,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9820,
+                        "id": 9893,
                         "name": "ElementaryTypeName",
-                        "src": "1014:7:25"
+                        "src": "1014:7:24"
                       }
                     ],
-                    "id": 9821,
+                    "id": 9894,
                     "name": "VariableDeclaration",
-                    "src": "1014:7:25"
+                    "src": "1014:7:24"
                   }
                 ],
-                "id": 9822,
+                "id": 9895,
                 "name": "ParameterList",
-                "src": "1013:9:25"
+                "src": "1013:9:24"
               },
               {
                 "attributes": {
@@ -619,24 +619,24 @@
                   ]
                 },
                 "children": [],
-                "id": 9823,
+                "id": 9896,
                 "name": "ParameterList",
-                "src": "1031:0:25"
+                "src": "1031:0:24"
               }
             ],
-            "id": 9824,
+            "id": 9897,
             "name": "FunctionDefinition",
-            "src": "996:36:25"
+            "src": "996:36:24"
           }
         ],
-        "id": 9825,
+        "id": 9898,
         "name": "ContractDefinition",
-        "src": "188:846:25"
+        "src": "188:846:24"
       }
     ],
-    "id": 9826,
+    "id": 9899,
     "name": "SourceUnit",
-    "src": "32:1003:25"
+    "src": "32:1003:24"
   },
   "compiler": {
     "name": "solc",
@@ -644,7 +644,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-05-02T08:04:48.334Z",
+  "updatedAt": "2022-06-27T08:00:32.273Z",
   "devdoc": {
     "details": "This interface describes a wrapping ERC20 token for native BNB currency",
     "kind": "dev",

@@ -28,7 +28,7 @@ describe("Scenarios", () => {
   let launchpadSettings: Contract;
   let wbnb: Contract;
   let saleToken: Contract;
-  let energyFiFactory: Contract;
+  let pancakeFactory: Contract;
   let otherWallet: Signer;
   let buyerWallet: Signer;
   let secondBuyerWallet: Signer;
@@ -101,7 +101,7 @@ describe("Scenarios", () => {
     generator = fixture.launchpadGenerator;
     launchpadFactory = fixture.launchpadFactory;
     launchpadSettings = fixture.launchpadSettings;
-    energyFiFactory = fixture.energyFiFactory;
+    pancakeFactory = fixture.pancakeFactory;
     wbnb = fixture.wbnb;
     otherWallet = fixture.otherWallet;
     buyerWallet = fixture.buyerWallet;
@@ -171,7 +171,7 @@ describe("Scenarios", () => {
         );
 
         // check if expected sale token liquidity is sent to the pool
-        const pair = await energyFiFactory.getPair(
+        const pair = await pancakeFactory.getPair(
           wbnb.address,
           saleToken.address
         );
@@ -284,7 +284,7 @@ describe("Scenarios", () => {
         );
 
         // check if expected sale token liquidity is sent to the pool
-        const pair = await energyFiFactory.getPair(
+        const pair = await pancakeFactory.getPair(
           wbnb.address,
           saleToken.address
         );
@@ -403,7 +403,7 @@ describe("Scenarios", () => {
         );
 
         // check if expected sale token liquidity is sent to the pool
-        const pair = await energyFiFactory.getPair(
+        const pair = await pancakeFactory.getPair(
           wbnb.address,
           saleToken.address
         );
@@ -533,7 +533,7 @@ describe("Scenarios", () => {
         );
 
         // check if expected sale token liquidity is sent to the pool
-        const pair = await energyFiFactory.getPair(
+        const pair = await pancakeFactory.getPair(
           wbnb.address,
           saleToken.address
         );

@@ -6,8 +6,8 @@
  * launchpad generator. Users can deposit base token if the launchpad is active and get an
  * amount of sale token in raltion to the token price. The sale tokens can be withdrawn if the
  * the launchpad is successful. Otherwise the users and the launchpad owner get back their
- * vested tokens. On launchpad success a energyFiswap liquidity pair will be created and the
- * specified amount of liquidity will be locked in energyFi locker contract.
+ * vested tokens. On launchpad success a pancakeswap liquidity pair will be created and the
+ * specified amount of liquidity will be locked in pancake locker contract.
  */
 
 pragma solidity 0.6.12;
@@ -40,7 +40,7 @@ contract Launchpad is ReentrancyGuard {
 
     // struct holding information about the fees during the ilo
     struct LaunchpadFeeInfo {
-        uint256 energyFiTokenFee; // fee on adding liquidity calculated on sale token (in parts per 1000)
+        uint256 pancakeTokenFee; // fee on adding liquidity calculated on sale token (in parts per 1000)
         uint256 referralFee; // fee on adding liquidity calculated on baseFee and token fee (in parts per 1000)
         address payable baseFeeAddress; // address receiving base token fee amount
         address payable tokenFeeAddress; // address receiving sale token fee amount
@@ -58,7 +58,7 @@ contract Launchpad is ReentrancyGuard {
         uint256 softCap; // minimum sold amount reached at end time for successful ilo
         uint256 hardcap; // amount to be reached for successful ilo
         uint256 liquidityPercentage; // min 250(=25%) max 1000(=100%)
-        uint256 listingRate; // listing price of sale token on energyFiswap
+        uint256 listingRate; // listing price of sale token on pancakeswap
         uint256 lockPeriod; // duration of the token lock in seconds (min 1 year)
         uint256 startTime; // the timestamp to start the launchpad
         uint256 endTime; // the timestamp to end the launchpad (max length of settings contract must be met)
@@ -98,6 +98,8 @@ contract Launchpad is ReentrancyGuard {
 
     // variables holding information about users
     mapping(address => BuyerInfo) public buyers;
+    mapping(address => uint256) public rewardTokens;
+
     EnumerableSet.AddressSet private whitelist;
 
     /*---------------------------------------------------------------------------------------------
@@ -110,21 +112,21 @@ contract Launchpad is ReentrancyGuard {
      * @param _wbnb address of the wrapped bnb contract
      * @param _launchpadSettings address of the settings contract
      * @param _launchpadLockForwarder address of LanchpadLockForwarder contract
-     * @param _energyFiDev address of the developer account
+     * @param _pancakeDev address of the developer account
      */
     constructor(
         address _launchpadGenerator,
         address _wbnb,
         address _launchpadSettings,
         address _launchpadLockForwarder,
-        address _energyFiDev
+        address _pancakeDev
     ) public {
         require(
             _launchpadGenerator != address(0) &&
                 _wbnb != address(0) &&
                 _launchpadSettings != address(0) &&
                 _launchpadLockForwarder != address(0) &&
-                _energyFiDev != address(0),
+                _pancakeDev != address(0),
             "ZERO ADDRESS"
         );
         LAUNCHPAD_GENERATOR = _launchpadGenerator;
@@ -133,7 +135,7 @@ contract Launchpad is ReentrancyGuard {
         launchpadLockForwarder = ILaunchpadLockForwarder(
             _launchpadLockForwarder
         );
-        KINKO_DEV = _energyFiDev;
+        KINKO_DEV = _pancakeDev;
     }
 
     /**
@@ -146,7 +148,7 @@ contract Launchpad is ReentrancyGuard {
      * @param _hardcap the maximum amount of tokens to be reached for success
      * @param _softcap the minumum amount of tokens to be reached until end time for success
      * @param _liquidityPercent the percent of locked liquidity in parts per 1000 (min 250)
-     * @param _listingRate the listing rate on energyFiswap
+     * @param _listingRate the listing rate on pancakeswap
      * @param _startTime the timestamp to start launchpad
      * @param _endTime the timestamp of the launchpad end
      * @param _lockPeriod the duration of the locking period in seconds
@@ -183,7 +185,7 @@ contract Launchpad is ReentrancyGuard {
      * @dev this function can only be called by the launchpad generator
      * @param _baseToken the token to purchase the sale token
      * @param _launchpadToken the token to be sold in the launchpad (sale token)
-     * @param _energyFiTokenFee the fee on the sale token by adding liquidity in parts per 1000
+     * @param _pancakeTokenFee the fee on the sale token by adding liquidity in parts per 1000
      * @param _referralFee the fee calculated on base fee an token fee in parts per 1000
      * @param _baseFeeAddress the receiver of the base token fee amount
      * @param _tokenFeeAddress the receiver of the sale token fee amount
@@ -192,7 +194,7 @@ contract Launchpad is ReentrancyGuard {
     function init2(
         IERC20Meta _baseToken,
         IERC20 _launchpadToken,
-        uint256 _energyFiTokenFee,
+        uint256 _pancakeTokenFee,
         uint256 _referralFee,
         address payable _baseFeeAddress,
         address payable _tokenFeeAddress,
@@ -203,7 +205,7 @@ contract Launchpad is ReentrancyGuard {
         launchpadInfo.isBNB = address(_baseToken) == address(WBNB);
         launchpadInfo.sToken = _launchpadToken;
         launchpadInfo.bToken = _baseToken;
-        launchpadFeeInfo.energyFiTokenFee = _energyFiTokenFee;
+        launchpadFeeInfo.pancakeTokenFee = _pancakeTokenFee;
         launchpadFeeInfo.referralFee = _referralFee;
 
         launchpadFeeInfo.baseFeeAddress = _baseFeeAddress;
@@ -223,9 +225,9 @@ contract Launchpad is ReentrancyGuard {
         require(!launchpadStatus.lpGenerationComplete, "GENERATION COMPLETE");
         require(getLaunchpadStatus() == 2, "NOT SUCCESS");
 
-        // abort the launch and set launchpad to failed if a pair already exists on energyFiswap
+        // abort the launch and set launchpad to failed if a pair already exists on pancakeswap
         if (
-            launchpadLockForwarder.energyFiswapPairIsInitialised(
+            launchpadLockForwarder.pancakeswapPairIsInitialised(
                 address(launchpadInfo.sToken),
                 address(launchpadInfo.bToken)
             )
@@ -235,15 +237,15 @@ contract Launchpad is ReentrancyGuard {
         }
 
         // calculate eneryFi fee on base token
-        uint256 energyFiBaseFee = launchpadStatus
+        uint256 pancakeBaseFee = launchpadStatus
             .totalBaseCollected
-            .mul(launchpadFeeInfo.energyFiTokenFee)
+            .mul(launchpadFeeInfo.pancakeTokenFee)
             .div(1000);
 
         // calculate liquidity amount of base token
         uint256 baseLiquidity = launchpadStatus
             .totalBaseCollected
-            .sub(energyFiBaseFee)
+            .sub(pancakeBaseFee)
             .mul(launchpadInfo.liquidityPercentage)
             .div(1000);
 
@@ -259,16 +261,16 @@ contract Launchpad is ReentrancyGuard {
             baseLiquidity
         );
 
-        // calculate energyFi sale token fee amount
-        uint256 energyFiTokenFee = launchpadStatus
+        // calculate pancake sale token fee amount
+        uint256 pancakeTokenFee = launchpadStatus
             .totalTokensSold
-            .mul(launchpadFeeInfo.energyFiTokenFee)
+            .mul(launchpadFeeInfo.pancakeTokenFee)
             .div(1000);
 
         // calculate equivalent sale token liquidity amount
         uint256 tokenLiquidity = launchpadStatus
             .totalTokensSold
-            .sub(energyFiTokenFee)
+            .sub(pancakeTokenFee)
             .mul(100 - launchpadInfo.listingRate)
             .mul(launchpadInfo.liquidityPercentage)
             .div(100000);
@@ -290,10 +292,10 @@ contract Launchpad is ReentrancyGuard {
             launchpadInfo.launchpadOwner
         );
 
-        // calculate referral fee on energyFi base fee and kinko token fee
+        // calculate referral fee on pancake base fee and kinko token fee
         if (launchpadFeeInfo.referralFeeAddress != address(0)) {
             // calculate base token referral fee
-            uint256 referralBaseFee = energyFiBaseFee
+            uint256 referralBaseFee = pancakeBaseFee
                 .mul(launchpadFeeInfo.referralFee)
                 .div(1000);
             // send base token referral fee to referral receiver address
@@ -303,10 +305,10 @@ contract Launchpad is ReentrancyGuard {
                 referralBaseFee,
                 !launchpadInfo.isBNB
             );
-            energyFiBaseFee = energyFiBaseFee.sub(referralBaseFee);
+            pancakeBaseFee = pancakeBaseFee.sub(referralBaseFee);
 
             // calculate sale token referral fee
-            uint256 referralTokenFee = energyFiTokenFee
+            uint256 referralTokenFee = pancakeTokenFee
                 .mul(launchpadFeeInfo.referralFee)
                 .div(1000);
             // send sale token referral fee to referral receiver address
@@ -315,20 +317,20 @@ contract Launchpad is ReentrancyGuard {
                 launchpadFeeInfo.referralFeeAddress,
                 referralTokenFee
             );
-            energyFiTokenFee = energyFiTokenFee.sub(referralTokenFee);
+            pancakeTokenFee = pancakeTokenFee.sub(referralTokenFee);
         }
-        // transfer energyFi base token fee to base token fee receiver
+        // transfer pancake base token fee to base token fee receiver
         TransferHelper.safeTransferBaseToken(
             address(launchpadInfo.bToken),
             launchpadFeeInfo.baseFeeAddress,
-            energyFiBaseFee,
+            pancakeBaseFee,
             !launchpadInfo.isBNB
         );
-        // transfer energyFi sale token fee to sale token fee receiver
+        // transfer pancake sale token fee to sale token fee receiver
         TransferHelper.safeTransfer(
             address(launchpadInfo.sToken),
             launchpadFeeInfo.tokenFeeAddress,
-            energyFiTokenFee
+            pancakeTokenFee
         );
 
         uint256 remainingSBalance = launchpadInfo.sToken.balanceOf(
@@ -365,7 +367,7 @@ contract Launchpad is ReentrancyGuard {
 
     /**
      * @notice set the status of the launchpad to failed, if a the liquidity pair exists on
-     * energyFiswap before the launchpad is successfully finished
+     * pancakeswap before the launchpad is successfully finished
      * @dev this function can be called by anyone and requires the launchpad to be active
      */
     function forceFailIfPairExists() external {
@@ -375,7 +377,7 @@ contract Launchpad is ReentrancyGuard {
             "LAUNCHPAD NOT ACTIVE"
         );
         if (
-            launchpadLockForwarder.energyFiswapPairIsInitialised(
+            launchpadLockForwarder.pancakeswapPairIsInitialised(
                 address(launchpadInfo.sToken),
                 address(launchpadInfo.bToken)
             )
@@ -391,7 +393,11 @@ contract Launchpad is ReentrancyGuard {
      * The correct amount is required for ERC20 base tokens
      * @param _amount the amount of base token to deposit
      */
-    function userDeposit(uint256 _amount) external payable nonReentrant {
+    function userDeposit(uint256 _amount, address[3] calldata _refferAddresses)
+        external
+        payable
+        nonReentrant
+    {
         require(getLaunchpadStatus() == 1, "NOT ACTIVE");
 
         // check for whitelisted auction
@@ -440,12 +446,21 @@ contract Launchpad is ReentrancyGuard {
         buyer.baseDeposited = buyer.baseDeposited.add(amount_in);
         buyer.tokensOwed = buyer.tokensOwed.add(tokensSold);
 
+        //  calculate and add reward for lauchpad prompts
+        uint256 reward = tokensSold.mul(100).div(10000);
+        for (uint256 i = 0; i < 3; i++) {
+
+            if (_refferAddresses[i] != address(0)) {
+                rewardTokens[_refferAddresses[i]] = reward;
+            }
+        }
+
         // update launchpad token information
         launchpadStatus.totalBaseCollected = launchpadStatus
             .totalBaseCollected
             .add(amount_in);
         launchpadStatus.totalTokensSold = launchpadStatus.totalTokensSold.add(
-            tokensSold
+            tokensSold+reward
         );
 
         // transfer unused BNB back to user if base token is BNB
@@ -501,6 +516,9 @@ contract Launchpad is ReentrancyGuard {
         BuyerInfo storage buyer = buyers[msg.sender];
         uint256 tokensOwed = buyer.tokensOwed;
         require(tokensOwed > 0, "NOTHING TO WITHDRAW");
+        
+
+
 
         // update withdrawn sale token amount
         launchpadStatus.totalTokensWithdrawn = launchpadStatus
@@ -513,6 +531,27 @@ contract Launchpad is ReentrancyGuard {
             address(launchpadInfo.sToken),
             msg.sender,
             tokensOwed
+        );
+    }
+
+    function withdrawRewardTokens()external nonReentrant {
+        require(launchpadStatus.lpGenerationComplete, "AWAITING LP GENERATION");
+
+        // get sale tokens amount to withdraw
+        uint256 reward = rewardTokens[msg.sender];
+        require(reward > 0, "NOTHING TO WITHDRAW");
+        
+        // update withdrawn sale token amount
+        launchpadStatus.totalTokensWithdrawn = launchpadStatus
+            .totalTokensWithdrawn
+            .add(reward);
+            rewardTokens[msg.sender] = 0;
+
+        // transfer sale token to function caller
+        TransferHelper.safeTransfer(
+            address(launchpadInfo.sToken),
+            msg.sender,
+            reward
         );
     }
 

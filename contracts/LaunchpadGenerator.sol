@@ -21,7 +21,7 @@ contract LaunchpadGenerator {
         uint256 hardcap; // amount to be reached for successful ilo
         uint256 softcap; // minimum sold amount reached at end time for successful ilo
         uint256 liquidityPercent; // min 250(=25%) max 1000(=100%)
-        uint256 listingRate; // listing price of sale token on energyFiswap
+        uint256 listingRate; // listing price of sale token on pancakeswap
         uint256 maxSpendPerBuyer; // the maximum amount to be spent by a specific buyer
         uint256 tokenPrice; // the amount of sale tokens for one base token
         uint256 lockPeriod; // min 1 year in seconds
@@ -42,27 +42,27 @@ contract LaunchpadGenerator {
      *@param _launchpadSettings address of the settings contract
      *@param _wbnb address of the wrapped bnb contract
      *@param _launchpadLockForwarder address of LanchpadLockForwarder contract
-     *@param _energyFiDev address of the developer account
+     *@param _pancakeDev address of the developer account
      */
     constructor(
         address _launchpadFactory,
         address _launchpadSettings,
         address _wbnb,
         address _launchpadLockForwarder,
-        address _energyFiDev
+        address _pancakeDev
     ) public {
         require(
             _launchpadFactory != address(0) &&
                 _launchpadSettings != address(0) &&
                 _wbnb != address(0) &&
                 _launchpadLockForwarder != address(0) &&
-                _energyFiDev != address(0),
+                _pancakeDev != address(0),
             "ZERO ADDRESS"
         );
         LAUNCHPAD_FACTORY = _launchpadFactory;
         LAUNCHPAD_SETTINGS = ILaunchpadSettings(_launchpadSettings);
         LAUNCHPAD_LOCK_FORWARDER = _launchpadLockForwarder;
-        KINKO_DEV = _energyFiDev;
+        KINKO_DEV = _pancakeDev;
         WBNB = _wbnb;
     }
 

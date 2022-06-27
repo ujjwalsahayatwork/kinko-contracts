@@ -144,34 +144,34 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getBaseFeeReceiver\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getGlmrCreationFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMaxLaunchpadLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMinLockingDuration\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReferralFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRound1Length\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getSaleFeeReceiver\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTokenFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_referrer\",\"type\":\"address\"}],\"name\":\"referrerIsValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"userHoldsSufficientRound1Token\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"referrerIsValid(address)\":{\"params\":{\"_referrer\":\"address of the checked referrer\"}},\"userHoldsSufficientRound1Token(address)\":{\"params\":{\"_user\":\"address of the user to be checked\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getBaseFeeReceiver()\":{\"notice\":\"returns the address of the base fee receiver\"},\"getGlmrCreationFee()\":{\"notice\":\"returns the absolute fee in BNB for launchpad creation\"},\"getMaxLaunchpadLength()\":{\"notice\":\"returns the maximum duration of a launchpad in seconds\"},\"getMinLockingDuration()\":{\"notice\":\"returns the minimum duration of the lp locking period in seconds\"},\"getReferralFee()\":{\"notice\":\"returns the relative referral fee charged on base and sale token fee in parts per 1000\"},\"getRound1Length()\":{\"notice\":\"returns the duration of round 1 in seconds\"},\"getSaleFeeReceiver()\":{\"notice\":\"returns the sale token fee receiver address\"},\"getTokenFee()\":{\"notice\":\"returns the relative sale token fee in parts per 1000\"},\"referrerIsValid(address)\":{\"notice\":\"returns if a given referrer is valid\"},\"userHoldsSufficientRound1Token(address)\":{\"notice\":\"returns if a given user has sufficient balance of early access tokens registered in the EARLY_ACCESS_TOKENS set to participate in round 1\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/ILaunchpadSettings.sol\":\"ILaunchpadSettings\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/ILaunchpadSettings.sol\":{\"keccak256\":\"0x81c3c9b042c9019c32c5299f870f32825a4ab8618a2fc3d8ec35b9d63da8ef4e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://27f43e2d4ea185b66e56591ea12370ce43268f16362a49d28436acd501b62af1\",\"dweb:/ipfs/QmU7HtNJ85wrK2mxang8HwWd5neQ1GPjw93nFDAhVkAXYu\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getBaseFeeReceiver\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getGlmrCreationFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMaxLaunchpadLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMinLockingDuration\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReferralFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRound1Length\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getSaleFeeReceiver\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTokenFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_referrer\",\"type\":\"address\"}],\"name\":\"referrerIsValid\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"userHoldsSufficientRound1Token\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"referrerIsValid(address)\":{\"params\":{\"_referrer\":\"address of the checked referrer\"}},\"userHoldsSufficientRound1Token(address)\":{\"params\":{\"_user\":\"address of the user to be checked\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getBaseFeeReceiver()\":{\"notice\":\"returns the address of the base fee receiver\"},\"getGlmrCreationFee()\":{\"notice\":\"returns the absolute fee in BNB for launchpad creation\"},\"getMaxLaunchpadLength()\":{\"notice\":\"returns the maximum duration of a launchpad in seconds\"},\"getMinLockingDuration()\":{\"notice\":\"returns the minimum duration of the lp locking period in seconds\"},\"getReferralFee()\":{\"notice\":\"returns the relative referral fee charged on base and sale token fee in parts per 1000\"},\"getRound1Length()\":{\"notice\":\"returns the duration of round 1 in seconds\"},\"getSaleFeeReceiver()\":{\"notice\":\"returns the sale token fee receiver address\"},\"getTokenFee()\":{\"notice\":\"returns the relative sale token fee in parts per 1000\"},\"referrerIsValid(address)\":{\"notice\":\"returns if a given referrer is valid\"},\"userHoldsSufficientRound1Token(address)\":{\"notice\":\"returns if a given user has sufficient balance of early access tokens registered in the EARLY_ACCESS_TOKENS set to participate in round 1\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/ILaunchpadSettings.sol\":\"ILaunchpadSettings\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/ILaunchpadSettings.sol\":{\"keccak256\":\"0x765722e926da9b3c48d510dcdf1b5542fe60e10bff8af3e0faea4822ea73e73e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a3eaf49a14c0082512eb7f43ec3a12d905703edb5adcf58da9ea3f56d0bb59b0\",\"dweb:/ipfs/QmU2AHmpdPPLTXCQnwZThwJ86HRaZUKXw6hkkmc48F2nDA\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\n/**\n * @title Settings Interface of Pancake launchpad enviroment\n * @dev This Interface holds getter functions for getting the current general settings\n * of the launchpad. General settings are fees, fee receiver, launchpad length limitations,\n * allowed referrers and early access token to participate on round 1.\n */\n\npragma solidity 0.6.12;\n\ninterface ILaunchpadSettings {\n    /**\n     * @notice returns the address of the base fee receiver\n     */\n    function getBaseFeeReceiver() external view returns (address payable);\n\n    /**\n     * @notice returns the absolute fee in BNB for launchpad creation\n     */\n    function getGlmrCreationFee() external view returns (uint256);\n\n    /**\n     * @notice returns the maximum duration of a launchpad in seconds\n     */\n    function getMaxLaunchpadLength() external view returns (uint256);\n\n    /**\n     * @notice returns the minimum duration of the lp locking period in seconds\n     */\n    function getMinLockingDuration() external view returns (uint256);\n\n    /**\n     * @notice returns the relative referral fee charged on base and sale token fee in parts per 1000\n     */\n    function getReferralFee() external view returns (uint256);\n\n    /**\n     * @notice returns the duration of round 1 in seconds\n     */\n    function getRound1Length() external view returns (uint256);\n\n    /**\n     * @notice returns the sale token fee receiver address\n     */\n    function getSaleFeeReceiver() external view returns (address payable);\n\n    /**\n     * @notice returns the relative sale token fee in parts per 1000\n     */\n    function getTokenFee() external view returns (uint256);\n\n    /**\n     * @notice returns if a given referrer is valid\n     * @param _referrer address of the checked referrer\n     */\n    function referrerIsValid(address _referrer) external view returns (bool);\n\n    /**\n     * @notice returns if a given user has sufficient balance of early access tokens\n     * registered in the EARLY_ACCESS_TOKENS set to participate in round 1\n     * @param _user address of the user to be checked\n     */\n    function userHoldsSufficientRound1Token(address _user)\n        external\n        view\n        returns (bool);\n}\n",
-  "sourcePath": "/Users/apple/Downloads/kinko-ilo-contracts-main/interfaces/ILaunchpadSettings.sol",
+  "sourcePath": "/Users/apple/Desktop/datacpoy/BlockChain/kinko-contracts/interfaces/ILaunchpadSettings.sol",
   "ast": {
     "absolutePath": "project:/interfaces/ILaunchpadSettings.sol",
     "exportedSymbols": {
       "ILaunchpadSettings": [
-        6257
+        9838
       ]
     },
-    "id": 6258,
+    "id": 9839,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 6192,
+        "id": 9773,
         "literals": [
           "solidity",
           "0.6",
           ".12"
         ],
         "nodeType": "PragmaDirective",
-        "src": "354:23:18"
+        "src": "353:23:21"
       },
       {
         "abstract": false,
@@ -180,9 +180,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 6257,
+        "id": 9838,
         "linearizedBaseContracts": [
-          6257
+          9838
         ],
         "name": "ILaunchpadSettings",
         "nodeType": "ContractDefinition",
@@ -190,13 +190,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 6193,
+              "id": 9774,
               "nodeType": "StructuredDocumentation",
-              "src": "414:71:18",
+              "src": "413:71:21",
               "text": " @notice returns the address of the base fee receiver"
             },
             "functionSelector": "146c4be7",
-            "id": 6198,
+            "id": 9779,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -204,24 +204,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 6194,
+              "id": 9775,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "517:2:18"
+              "src": "516:2:21"
             },
             "returnParameters": {
-              "id": 6197,
+              "id": 9778,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6196,
+                  "id": 9777,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6198,
-                  "src": "543:15:18",
+                  "scope": 9779,
+                  "src": "542:15:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -229,10 +229,10 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 6195,
+                    "id": 9776,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "543:15:18",
+                    "src": "542:15:21",
                     "stateMutability": "payable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
@@ -243,10 +243,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "542:17:18"
+              "src": "541:17:21"
             },
-            "scope": 6257,
-            "src": "490:70:18",
+            "scope": 9838,
+            "src": "489:70:21",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -254,13 +254,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 6199,
+              "id": 9780,
               "nodeType": "StructuredDocumentation",
-              "src": "566:82:18",
+              "src": "565:81:21",
               "text": " @notice returns the absolute fee in BNB for launchpad creation"
             },
             "functionSelector": "3b107d97",
-            "id": 6204,
+            "id": 9785,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -268,24 +268,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 6200,
+              "id": 9781,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "680:2:18"
+              "src": "678:2:21"
             },
             "returnParameters": {
-              "id": 6203,
+              "id": 9784,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6202,
+                  "id": 9783,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6204,
-                  "src": "706:7:18",
+                  "scope": 9785,
+                  "src": "704:7:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -293,10 +293,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6201,
+                    "id": 9782,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "706:7:18",
+                    "src": "704:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -306,10 +306,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "705:9:18"
+              "src": "703:9:21"
             },
-            "scope": 6257,
-            "src": "653:62:18",
+            "scope": 9838,
+            "src": "651:62:21",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -317,13 +317,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 6205,
+              "id": 9786,
               "nodeType": "StructuredDocumentation",
-              "src": "721:81:18",
+              "src": "719:81:21",
               "text": " @notice returns the maximum duration of a launchpad in seconds"
             },
             "functionSelector": "cef6fc0b",
-            "id": 6210,
+            "id": 9791,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -331,24 +331,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 6206,
+              "id": 9787,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "837:2:18"
+              "src": "835:2:21"
             },
             "returnParameters": {
-              "id": 6209,
+              "id": 9790,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6208,
+                  "id": 9789,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6210,
-                  "src": "863:7:18",
+                  "scope": 9791,
+                  "src": "861:7:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -356,10 +356,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6207,
+                    "id": 9788,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "863:7:18",
+                    "src": "861:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -369,10 +369,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "862:9:18"
+              "src": "860:9:21"
             },
-            "scope": 6257,
-            "src": "807:65:18",
+            "scope": 9838,
+            "src": "805:65:21",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -380,13 +380,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 6211,
+              "id": 9792,
               "nodeType": "StructuredDocumentation",
-              "src": "878:91:18",
+              "src": "876:91:21",
               "text": " @notice returns the minimum duration of the lp locking period in seconds"
             },
             "functionSelector": "be413054",
-            "id": 6216,
+            "id": 9797,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -394,24 +394,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 6212,
+              "id": 9793,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1004:2:18"
+              "src": "1002:2:21"
             },
             "returnParameters": {
-              "id": 6215,
+              "id": 9796,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6214,
+                  "id": 9795,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6216,
-                  "src": "1030:7:18",
+                  "scope": 9797,
+                  "src": "1028:7:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -419,10 +419,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6213,
+                    "id": 9794,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1030:7:18",
+                    "src": "1028:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -432,10 +432,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1029:9:18"
+              "src": "1027:9:21"
             },
-            "scope": 6257,
-            "src": "974:65:18",
+            "scope": 9838,
+            "src": "972:65:21",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -443,13 +443,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 6217,
+              "id": 9798,
               "nodeType": "StructuredDocumentation",
-              "src": "1045:113:18",
+              "src": "1043:113:21",
               "text": " @notice returns the relative referral fee charged on base and sale token fee in parts per 1000"
             },
             "functionSelector": "f6c0812f",
-            "id": 6222,
+            "id": 9803,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -457,24 +457,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 6218,
+              "id": 9799,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1186:2:18"
+              "src": "1184:2:21"
             },
             "returnParameters": {
-              "id": 6221,
+              "id": 9802,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6220,
+                  "id": 9801,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6222,
-                  "src": "1212:7:18",
+                  "scope": 9803,
+                  "src": "1210:7:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -482,10 +482,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6219,
+                    "id": 9800,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1212:7:18",
+                    "src": "1210:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -495,10 +495,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1211:9:18"
+              "src": "1209:9:21"
             },
-            "scope": 6257,
-            "src": "1163:58:18",
+            "scope": 9838,
+            "src": "1161:58:21",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -506,13 +506,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 6223,
+              "id": 9804,
               "nodeType": "StructuredDocumentation",
-              "src": "1227:69:18",
+              "src": "1225:69:21",
               "text": " @notice returns the duration of round 1 in seconds"
             },
             "functionSelector": "aac91216",
-            "id": 6228,
+            "id": 9809,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -520,24 +520,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 6224,
+              "id": 9805,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1325:2:18"
+              "src": "1323:2:21"
             },
             "returnParameters": {
-              "id": 6227,
+              "id": 9808,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6226,
+                  "id": 9807,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6228,
-                  "src": "1351:7:18",
+                  "scope": 9809,
+                  "src": "1349:7:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -545,10 +545,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6225,
+                    "id": 9806,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1351:7:18",
+                    "src": "1349:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -558,10 +558,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1350:9:18"
+              "src": "1348:9:21"
             },
-            "scope": 6257,
-            "src": "1301:59:18",
+            "scope": 9838,
+            "src": "1299:59:21",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -569,13 +569,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 6229,
+              "id": 9810,
               "nodeType": "StructuredDocumentation",
-              "src": "1366:70:18",
+              "src": "1364:70:21",
               "text": " @notice returns the sale token fee receiver address"
             },
             "functionSelector": "47a2085f",
-            "id": 6234,
+            "id": 9815,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -583,24 +583,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 6230,
+              "id": 9811,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1468:2:18"
+              "src": "1466:2:21"
             },
             "returnParameters": {
-              "id": 6233,
+              "id": 9814,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6232,
+                  "id": 9813,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6234,
-                  "src": "1494:15:18",
+                  "scope": 9815,
+                  "src": "1492:15:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -608,10 +608,10 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 6231,
+                    "id": 9812,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1494:15:18",
+                    "src": "1492:15:21",
                     "stateMutability": "payable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
@@ -622,10 +622,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1493:17:18"
+              "src": "1491:17:21"
             },
-            "scope": 6257,
-            "src": "1441:70:18",
+            "scope": 9838,
+            "src": "1439:70:21",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -633,13 +633,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 6235,
+              "id": 9816,
               "nodeType": "StructuredDocumentation",
-              "src": "1517:80:18",
+              "src": "1515:80:21",
               "text": " @notice returns the relative sale token fee in parts per 1000"
             },
             "functionSelector": "35546850",
-            "id": 6240,
+            "id": 9821,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -647,24 +647,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 6236,
+              "id": 9817,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1622:2:18"
+              "src": "1620:2:21"
             },
             "returnParameters": {
-              "id": 6239,
+              "id": 9820,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6238,
+                  "id": 9819,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6240,
-                  "src": "1648:7:18",
+                  "scope": 9821,
+                  "src": "1646:7:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -672,10 +672,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 6237,
+                    "id": 9818,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1648:7:18",
+                    "src": "1646:7:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -685,10 +685,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1647:9:18"
+              "src": "1645:9:21"
             },
-            "scope": 6257,
-            "src": "1602:55:18",
+            "scope": 9838,
+            "src": "1600:55:21",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -696,13 +696,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 6241,
+              "id": 9822,
               "nodeType": "StructuredDocumentation",
-              "src": "1663:119:18",
+              "src": "1661:119:21",
               "text": " @notice returns if a given referrer is valid\n @param _referrer address of the checked referrer"
             },
             "functionSelector": "0b9714ca",
-            "id": 6248,
+            "id": 9829,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -710,18 +710,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 6244,
+              "id": 9825,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6243,
+                  "id": 9824,
                   "mutability": "mutable",
                   "name": "_referrer",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6248,
-                  "src": "1812:17:18",
+                  "scope": 9829,
+                  "src": "1810:17:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -729,10 +729,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6242,
+                    "id": 9823,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1812:7:18",
+                    "src": "1810:7:21",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -743,21 +743,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1811:19:18"
+              "src": "1809:19:21"
             },
             "returnParameters": {
-              "id": 6247,
+              "id": 9828,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6246,
+                  "id": 9827,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6248,
-                  "src": "1854:4:18",
+                  "scope": 9829,
+                  "src": "1852:4:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -765,10 +765,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 6245,
+                    "id": 9826,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1854:4:18",
+                    "src": "1852:4:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -778,10 +778,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1853:6:18"
+              "src": "1851:6:21"
             },
-            "scope": 6257,
-            "src": "1787:73:18",
+            "scope": 9838,
+            "src": "1785:73:21",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -789,13 +789,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 6249,
+              "id": 9830,
               "nodeType": "StructuredDocumentation",
-              "src": "1866:225:18",
+              "src": "1864:225:21",
               "text": " @notice returns if a given user has sufficient balance of early access tokens\n registered in the EARLY_ACCESS_TOKENS set to participate in round 1\n @param _user address of the user to be checked"
             },
             "functionSelector": "4a6da481",
-            "id": 6256,
+            "id": 9837,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -803,18 +803,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 6252,
+              "id": 9833,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6251,
+                  "id": 9832,
                   "mutability": "mutable",
                   "name": "_user",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6256,
-                  "src": "2136:13:18",
+                  "scope": 9837,
+                  "src": "2134:13:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -822,10 +822,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 6250,
+                    "id": 9831,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2136:7:18",
+                    "src": "2134:7:21",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -836,21 +836,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2135:15:18"
+              "src": "2133:15:21"
             },
             "returnParameters": {
-              "id": 6255,
+              "id": 9836,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6254,
+                  "id": 9835,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 6256,
-                  "src": "2198:4:18",
+                  "scope": 9837,
+                  "src": "2196:4:21",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -858,10 +858,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 6253,
+                    "id": 9834,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2198:4:18",
+                    "src": "2196:4:21",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -871,27 +871,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2197:6:18"
+              "src": "2195:6:21"
             },
-            "scope": 6257,
-            "src": "2096:108:18",
+            "scope": 9838,
+            "src": "2094:108:21",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 6258,
-        "src": "379:1827:18"
+        "scope": 9839,
+        "src": "378:1826:21"
       }
     ],
-    "src": "354:1853:18"
+    "src": "353:1852:21"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/interfaces/ILaunchpadSettings.sol",
       "exportedSymbols": {
         "ILaunchpadSettings": [
-          6257
+          9838
         ]
       },
       "license": "MIT"
@@ -905,9 +905,9 @@
             ".12"
           ]
         },
-        "id": 6192,
+        "id": 9773,
         "name": "PragmaDirective",
-        "src": "354:23:18"
+        "src": "353:23:21"
       },
       {
         "attributes": {
@@ -922,10 +922,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            6257
+            9838
           ],
           "name": "ILaunchpadSettings",
-          "scope": 6258
+          "scope": 9839
         },
         "children": [
           {
@@ -940,7 +940,7 @@
               ],
               "name": "getBaseFeeReceiver",
               "overrides": null,
-              "scope": 6257,
+              "scope": 9838,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -950,9 +950,9 @@
                 "attributes": {
                   "text": " @notice returns the address of the base fee receiver"
                 },
-                "id": 6193,
+                "id": 9774,
                 "name": "StructuredDocumentation",
-                "src": "414:71:18"
+                "src": "413:71:21"
               },
               {
                 "attributes": {
@@ -961,9 +961,9 @@
                   ]
                 },
                 "children": [],
-                "id": 6194,
+                "id": 9775,
                 "name": "ParameterList",
-                "src": "517:2:18"
+                "src": "516:2:21"
               },
               {
                 "children": [
@@ -973,7 +973,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 6198,
+                      "scope": 9779,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -987,24 +987,24 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 6195,
+                        "id": 9776,
                         "name": "ElementaryTypeName",
-                        "src": "543:15:18"
+                        "src": "542:15:21"
                       }
                     ],
-                    "id": 6196,
+                    "id": 9777,
                     "name": "VariableDeclaration",
-                    "src": "543:15:18"
+                    "src": "542:15:21"
                   }
                 ],
-                "id": 6197,
+                "id": 9778,
                 "name": "ParameterList",
-                "src": "542:17:18"
+                "src": "541:17:21"
               }
             ],
-            "id": 6198,
+            "id": 9779,
             "name": "FunctionDefinition",
-            "src": "490:70:18"
+            "src": "489:70:21"
           },
           {
             "attributes": {
@@ -1018,7 +1018,7 @@
               ],
               "name": "getGlmrCreationFee",
               "overrides": null,
-              "scope": 6257,
+              "scope": 9838,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1028,9 +1028,9 @@
                 "attributes": {
                   "text": " @notice returns the absolute fee in BNB for launchpad creation"
                 },
-                "id": 6199,
+                "id": 9780,
                 "name": "StructuredDocumentation",
-                "src": "566:82:18"
+                "src": "565:81:21"
               },
               {
                 "attributes": {
@@ -1039,9 +1039,9 @@
                   ]
                 },
                 "children": [],
-                "id": 6200,
+                "id": 9781,
                 "name": "ParameterList",
-                "src": "680:2:18"
+                "src": "678:2:21"
               },
               {
                 "children": [
@@ -1051,7 +1051,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 6204,
+                      "scope": 9785,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1064,24 +1064,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 6201,
+                        "id": 9782,
                         "name": "ElementaryTypeName",
-                        "src": "706:7:18"
+                        "src": "704:7:21"
                       }
                     ],
-                    "id": 6202,
+                    "id": 9783,
                     "name": "VariableDeclaration",
-                    "src": "706:7:18"
+                    "src": "704:7:21"
                   }
                 ],
-                "id": 6203,
+                "id": 9784,
                 "name": "ParameterList",
-                "src": "705:9:18"
+                "src": "703:9:21"
               }
             ],
-            "id": 6204,
+            "id": 9785,
             "name": "FunctionDefinition",
-            "src": "653:62:18"
+            "src": "651:62:21"
           },
           {
             "attributes": {
@@ -1095,7 +1095,7 @@
               ],
               "name": "getMaxLaunchpadLength",
               "overrides": null,
-              "scope": 6257,
+              "scope": 9838,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1105,9 +1105,9 @@
                 "attributes": {
                   "text": " @notice returns the maximum duration of a launchpad in seconds"
                 },
-                "id": 6205,
+                "id": 9786,
                 "name": "StructuredDocumentation",
-                "src": "721:81:18"
+                "src": "719:81:21"
               },
               {
                 "attributes": {
@@ -1116,9 +1116,9 @@
                   ]
                 },
                 "children": [],
-                "id": 6206,
+                "id": 9787,
                 "name": "ParameterList",
-                "src": "837:2:18"
+                "src": "835:2:21"
               },
               {
                 "children": [
@@ -1128,7 +1128,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 6210,
+                      "scope": 9791,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1141,24 +1141,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 6207,
+                        "id": 9788,
                         "name": "ElementaryTypeName",
-                        "src": "863:7:18"
+                        "src": "861:7:21"
                       }
                     ],
-                    "id": 6208,
+                    "id": 9789,
                     "name": "VariableDeclaration",
-                    "src": "863:7:18"
+                    "src": "861:7:21"
                   }
                 ],
-                "id": 6209,
+                "id": 9790,
                 "name": "ParameterList",
-                "src": "862:9:18"
+                "src": "860:9:21"
               }
             ],
-            "id": 6210,
+            "id": 9791,
             "name": "FunctionDefinition",
-            "src": "807:65:18"
+            "src": "805:65:21"
           },
           {
             "attributes": {
@@ -1172,7 +1172,7 @@
               ],
               "name": "getMinLockingDuration",
               "overrides": null,
-              "scope": 6257,
+              "scope": 9838,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1182,9 +1182,9 @@
                 "attributes": {
                   "text": " @notice returns the minimum duration of the lp locking period in seconds"
                 },
-                "id": 6211,
+                "id": 9792,
                 "name": "StructuredDocumentation",
-                "src": "878:91:18"
+                "src": "876:91:21"
               },
               {
                 "attributes": {
@@ -1193,9 +1193,9 @@
                   ]
                 },
                 "children": [],
-                "id": 6212,
+                "id": 9793,
                 "name": "ParameterList",
-                "src": "1004:2:18"
+                "src": "1002:2:21"
               },
               {
                 "children": [
@@ -1205,7 +1205,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 6216,
+                      "scope": 9797,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1218,24 +1218,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 6213,
+                        "id": 9794,
                         "name": "ElementaryTypeName",
-                        "src": "1030:7:18"
+                        "src": "1028:7:21"
                       }
                     ],
-                    "id": 6214,
+                    "id": 9795,
                     "name": "VariableDeclaration",
-                    "src": "1030:7:18"
+                    "src": "1028:7:21"
                   }
                 ],
-                "id": 6215,
+                "id": 9796,
                 "name": "ParameterList",
-                "src": "1029:9:18"
+                "src": "1027:9:21"
               }
             ],
-            "id": 6216,
+            "id": 9797,
             "name": "FunctionDefinition",
-            "src": "974:65:18"
+            "src": "972:65:21"
           },
           {
             "attributes": {
@@ -1249,7 +1249,7 @@
               ],
               "name": "getReferralFee",
               "overrides": null,
-              "scope": 6257,
+              "scope": 9838,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1259,9 +1259,9 @@
                 "attributes": {
                   "text": " @notice returns the relative referral fee charged on base and sale token fee in parts per 1000"
                 },
-                "id": 6217,
+                "id": 9798,
                 "name": "StructuredDocumentation",
-                "src": "1045:113:18"
+                "src": "1043:113:21"
               },
               {
                 "attributes": {
@@ -1270,9 +1270,9 @@
                   ]
                 },
                 "children": [],
-                "id": 6218,
+                "id": 9799,
                 "name": "ParameterList",
-                "src": "1186:2:18"
+                "src": "1184:2:21"
               },
               {
                 "children": [
@@ -1282,7 +1282,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 6222,
+                      "scope": 9803,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1295,24 +1295,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 6219,
+                        "id": 9800,
                         "name": "ElementaryTypeName",
-                        "src": "1212:7:18"
+                        "src": "1210:7:21"
                       }
                     ],
-                    "id": 6220,
+                    "id": 9801,
                     "name": "VariableDeclaration",
-                    "src": "1212:7:18"
+                    "src": "1210:7:21"
                   }
                 ],
-                "id": 6221,
+                "id": 9802,
                 "name": "ParameterList",
-                "src": "1211:9:18"
+                "src": "1209:9:21"
               }
             ],
-            "id": 6222,
+            "id": 9803,
             "name": "FunctionDefinition",
-            "src": "1163:58:18"
+            "src": "1161:58:21"
           },
           {
             "attributes": {
@@ -1326,7 +1326,7 @@
               ],
               "name": "getRound1Length",
               "overrides": null,
-              "scope": 6257,
+              "scope": 9838,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1336,9 +1336,9 @@
                 "attributes": {
                   "text": " @notice returns the duration of round 1 in seconds"
                 },
-                "id": 6223,
+                "id": 9804,
                 "name": "StructuredDocumentation",
-                "src": "1227:69:18"
+                "src": "1225:69:21"
               },
               {
                 "attributes": {
@@ -1347,9 +1347,9 @@
                   ]
                 },
                 "children": [],
-                "id": 6224,
+                "id": 9805,
                 "name": "ParameterList",
-                "src": "1325:2:18"
+                "src": "1323:2:21"
               },
               {
                 "children": [
@@ -1359,7 +1359,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 6228,
+                      "scope": 9809,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1372,24 +1372,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 6225,
+                        "id": 9806,
                         "name": "ElementaryTypeName",
-                        "src": "1351:7:18"
+                        "src": "1349:7:21"
                       }
                     ],
-                    "id": 6226,
+                    "id": 9807,
                     "name": "VariableDeclaration",
-                    "src": "1351:7:18"
+                    "src": "1349:7:21"
                   }
                 ],
-                "id": 6227,
+                "id": 9808,
                 "name": "ParameterList",
-                "src": "1350:9:18"
+                "src": "1348:9:21"
               }
             ],
-            "id": 6228,
+            "id": 9809,
             "name": "FunctionDefinition",
-            "src": "1301:59:18"
+            "src": "1299:59:21"
           },
           {
             "attributes": {
@@ -1403,7 +1403,7 @@
               ],
               "name": "getSaleFeeReceiver",
               "overrides": null,
-              "scope": 6257,
+              "scope": 9838,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1413,9 +1413,9 @@
                 "attributes": {
                   "text": " @notice returns the sale token fee receiver address"
                 },
-                "id": 6229,
+                "id": 9810,
                 "name": "StructuredDocumentation",
-                "src": "1366:70:18"
+                "src": "1364:70:21"
               },
               {
                 "attributes": {
@@ -1424,9 +1424,9 @@
                   ]
                 },
                 "children": [],
-                "id": 6230,
+                "id": 9811,
                 "name": "ParameterList",
-                "src": "1468:2:18"
+                "src": "1466:2:21"
               },
               {
                 "children": [
@@ -1436,7 +1436,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 6234,
+                      "scope": 9815,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -1450,24 +1450,24 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 6231,
+                        "id": 9812,
                         "name": "ElementaryTypeName",
-                        "src": "1494:15:18"
+                        "src": "1492:15:21"
                       }
                     ],
-                    "id": 6232,
+                    "id": 9813,
                     "name": "VariableDeclaration",
-                    "src": "1494:15:18"
+                    "src": "1492:15:21"
                   }
                 ],
-                "id": 6233,
+                "id": 9814,
                 "name": "ParameterList",
-                "src": "1493:17:18"
+                "src": "1491:17:21"
               }
             ],
-            "id": 6234,
+            "id": 9815,
             "name": "FunctionDefinition",
-            "src": "1441:70:18"
+            "src": "1439:70:21"
           },
           {
             "attributes": {
@@ -1481,7 +1481,7 @@
               ],
               "name": "getTokenFee",
               "overrides": null,
-              "scope": 6257,
+              "scope": 9838,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1491,9 +1491,9 @@
                 "attributes": {
                   "text": " @notice returns the relative sale token fee in parts per 1000"
                 },
-                "id": 6235,
+                "id": 9816,
                 "name": "StructuredDocumentation",
-                "src": "1517:80:18"
+                "src": "1515:80:21"
               },
               {
                 "attributes": {
@@ -1502,9 +1502,9 @@
                   ]
                 },
                 "children": [],
-                "id": 6236,
+                "id": 9817,
                 "name": "ParameterList",
-                "src": "1622:2:18"
+                "src": "1620:2:21"
               },
               {
                 "children": [
@@ -1514,7 +1514,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 6240,
+                      "scope": 9821,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1527,24 +1527,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 6237,
+                        "id": 9818,
                         "name": "ElementaryTypeName",
-                        "src": "1648:7:18"
+                        "src": "1646:7:21"
                       }
                     ],
-                    "id": 6238,
+                    "id": 9819,
                     "name": "VariableDeclaration",
-                    "src": "1648:7:18"
+                    "src": "1646:7:21"
                   }
                 ],
-                "id": 6239,
+                "id": 9820,
                 "name": "ParameterList",
-                "src": "1647:9:18"
+                "src": "1645:9:21"
               }
             ],
-            "id": 6240,
+            "id": 9821,
             "name": "FunctionDefinition",
-            "src": "1602:55:18"
+            "src": "1600:55:21"
           },
           {
             "attributes": {
@@ -1558,7 +1558,7 @@
               ],
               "name": "referrerIsValid",
               "overrides": null,
-              "scope": 6257,
+              "scope": 9838,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1568,9 +1568,9 @@
                 "attributes": {
                   "text": " @notice returns if a given referrer is valid\n @param _referrer address of the checked referrer"
                 },
-                "id": 6241,
+                "id": 9822,
                 "name": "StructuredDocumentation",
-                "src": "1663:119:18"
+                "src": "1661:119:21"
               },
               {
                 "children": [
@@ -1580,7 +1580,7 @@
                       "mutability": "mutable",
                       "name": "_referrer",
                       "overrides": null,
-                      "scope": 6248,
+                      "scope": 9829,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1594,19 +1594,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6242,
+                        "id": 9823,
                         "name": "ElementaryTypeName",
-                        "src": "1812:7:18"
+                        "src": "1810:7:21"
                       }
                     ],
-                    "id": 6243,
+                    "id": 9824,
                     "name": "VariableDeclaration",
-                    "src": "1812:17:18"
+                    "src": "1810:17:21"
                   }
                 ],
-                "id": 6244,
+                "id": 9825,
                 "name": "ParameterList",
-                "src": "1811:19:18"
+                "src": "1809:19:21"
               },
               {
                 "children": [
@@ -1616,7 +1616,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 6248,
+                      "scope": 9829,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1629,24 +1629,24 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 6245,
+                        "id": 9826,
                         "name": "ElementaryTypeName",
-                        "src": "1854:4:18"
+                        "src": "1852:4:21"
                       }
                     ],
-                    "id": 6246,
+                    "id": 9827,
                     "name": "VariableDeclaration",
-                    "src": "1854:4:18"
+                    "src": "1852:4:21"
                   }
                 ],
-                "id": 6247,
+                "id": 9828,
                 "name": "ParameterList",
-                "src": "1853:6:18"
+                "src": "1851:6:21"
               }
             ],
-            "id": 6248,
+            "id": 9829,
             "name": "FunctionDefinition",
-            "src": "1787:73:18"
+            "src": "1785:73:21"
           },
           {
             "attributes": {
@@ -1660,7 +1660,7 @@
               ],
               "name": "userHoldsSufficientRound1Token",
               "overrides": null,
-              "scope": 6257,
+              "scope": 9838,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1670,9 +1670,9 @@
                 "attributes": {
                   "text": " @notice returns if a given user has sufficient balance of early access tokens\n registered in the EARLY_ACCESS_TOKENS set to participate in round 1\n @param _user address of the user to be checked"
                 },
-                "id": 6249,
+                "id": 9830,
                 "name": "StructuredDocumentation",
-                "src": "1866:225:18"
+                "src": "1864:225:21"
               },
               {
                 "children": [
@@ -1682,7 +1682,7 @@
                       "mutability": "mutable",
                       "name": "_user",
                       "overrides": null,
-                      "scope": 6256,
+                      "scope": 9837,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1696,19 +1696,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 6250,
+                        "id": 9831,
                         "name": "ElementaryTypeName",
-                        "src": "2136:7:18"
+                        "src": "2134:7:21"
                       }
                     ],
-                    "id": 6251,
+                    "id": 9832,
                     "name": "VariableDeclaration",
-                    "src": "2136:13:18"
+                    "src": "2134:13:21"
                   }
                 ],
-                "id": 6252,
+                "id": 9833,
                 "name": "ParameterList",
-                "src": "2135:15:18"
+                "src": "2133:15:21"
               },
               {
                 "children": [
@@ -1718,7 +1718,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 6256,
+                      "scope": 9837,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1731,34 +1731,34 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 6253,
+                        "id": 9834,
                         "name": "ElementaryTypeName",
-                        "src": "2198:4:18"
+                        "src": "2196:4:21"
                       }
                     ],
-                    "id": 6254,
+                    "id": 9835,
                     "name": "VariableDeclaration",
-                    "src": "2198:4:18"
+                    "src": "2196:4:21"
                   }
                 ],
-                "id": 6255,
+                "id": 9836,
                 "name": "ParameterList",
-                "src": "2197:6:18"
+                "src": "2195:6:21"
               }
             ],
-            "id": 6256,
+            "id": 9837,
             "name": "FunctionDefinition",
-            "src": "2096:108:18"
+            "src": "2094:108:21"
           }
         ],
-        "id": 6257,
+        "id": 9838,
         "name": "ContractDefinition",
-        "src": "379:1827:18"
+        "src": "378:1826:21"
       }
     ],
-    "id": 6258,
+    "id": 9839,
     "name": "SourceUnit",
-    "src": "354:1853:18"
+    "src": "353:1852:21"
   },
   "compiler": {
     "name": "solc",
@@ -1766,7 +1766,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-06-25T06:55:47.765Z",
+  "updatedAt": "2022-06-27T08:00:32.270Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

@@ -36,34 +36,34 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"unlockDate\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"migrate\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"migrate(address,uint256,uint256,address)\":{\"details\":\"is called from PancakeLocker contract\",\"params\":{\"amount\":\"total amount to be migrated\",\"lpToken\":\"address of the LP token to be migrated\",\"owner\":\"address of the lock owner\",\"unlockDate\":\"unix timestamp of the date to unlock locked LP tokens\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"migrate(address,uint256,uint256,address)\":{\"notice\":\"migrates an existing lock\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/IMigrator.sol\":\"IMigrator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/IMigrator.sol\":{\"keccak256\":\"0xcc8f7de1eb196c9e7490c4e404d8ffed730c77090114fa3d513f59adf70820af\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ccae753a3aa36d55b091fea8528e7fee5ba6b47be9920206a8f95740dcc6415b\",\"dweb:/ipfs/QmTwPnUQ2CkCVa6QvzE5TjpYp9YR4GvdwesuUpNn96525Q\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"lpToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"unlockDate\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"migrate\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"migrate(address,uint256,uint256,address)\":{\"details\":\"is called from PancakeLocker contract\",\"params\":{\"amount\":\"total amount to be migrated\",\"lpToken\":\"address of the LP token to be migrated\",\"owner\":\"address of the lock owner\",\"unlockDate\":\"unix timestamp of the date to unlock locked LP tokens\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"migrate(address,uint256,uint256,address)\":{\"notice\":\"migrates an existing lock\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/IMigrator.sol\":\"IMigrator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/IMigrator.sol\":{\"keccak256\":\"0xe5b70797ccaba3b87bc0198b65b611e2474183f19774d2ad1b2e7798736fc4b1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f3f97e21a449c1885a9c15f931358e165772293fa24a625566a07f0905e65873\",\"dweb:/ipfs/QmXbCKJ96VCcKjGfQmWEfgeHJZEpcpJmQ5PSc5wXhKrEUA\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\n\n/**\n * @title Migrator Interface of the Pancake launchpad enviroment\n * @dev This interface describes the Migrator which is responsible for migrating locks.\n * It is called from the energyFiLocker contract to migrate a lock to an other contract.\n */\n\npragma solidity 0.6.12;\n\ninterface IMigrator {\n    /**\n     * @notice migrates an existing lock\n     * @dev is called from PancakeLocker contract\n     * @param lpToken address of the LP token to be migrated\n     * @param amount total amount to be migrated\n     * @param unlockDate unix timestamp of the date to unlock locked LP tokens\n     * @param owner address of the lock owner\n     */\n    function migrate(\n        address lpToken,\n        uint256 amount,\n        uint256 unlockDate,\n        address owner\n    ) external returns (bool);\n}\n",
-  "sourcePath": "/Users/apple/Downloads/kinko-ilo-contracts-main/interfaces/IMigrator.sol",
+  "source": "// SPDX-License-Identifier: MIT\n\n/**\n * @title Migrator Interface of the Pancake launchpad enviroment\n * @dev This interface describes the Migrator which is responsible for migrating locks.\n * It is called from the pancakeLocker contract to migrate a lock to an other contract.\n */\n\npragma solidity 0.6.12;\n\ninterface IMigrator {\n    /**\n     * @notice migrates an existing lock\n     * @dev is called from PancakeLocker contract\n     * @param lpToken address of the LP token to be migrated\n     * @param amount total amount to be migrated\n     * @param unlockDate unix timestamp of the date to unlock locked LP tokens\n     * @param owner address of the lock owner\n     */\n    function migrate(\n        address lpToken,\n        uint256 amount,\n        uint256 unlockDate,\n        address owner\n    ) external returns (bool);\n}\n",
+  "sourcePath": "/Users/apple/Desktop/datacpoy/BlockChain/kinko-contracts/interfaces/IMigrator.sol",
   "ast": {
     "absolutePath": "project:/interfaces/IMigrator.sol",
     "exportedSymbols": {
       "IMigrator": [
-        9801
+        9855
       ]
     },
-    "id": 9802,
+    "id": 9856,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9786,
+        "id": 9840,
         "literals": [
           "solidity",
           "0.6",
           ".12"
         ],
         "nodeType": "PragmaDirective",
-        "src": "285:23:24"
+        "src": "283:23:22"
       },
       {
         "abstract": false,
@@ -72,9 +72,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 9801,
+        "id": 9855,
         "linearizedBaseContracts": [
-          9801
+          9855
         ],
         "name": "IMigrator",
         "nodeType": "ContractDefinition",
@@ -82,13 +82,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9787,
+              "id": 9841,
               "nodeType": "StructuredDocumentation",
-              "src": "336:338:24",
+              "src": "334:337:22",
               "text": " @notice migrates an existing lock\n @dev is called from PancakeLocker contract\n @param lpToken address of the LP token to be migrated\n @param amount total amount to be migrated\n @param unlockDate unix timestamp of the date to unlock locked LP tokens\n @param owner address of the lock owner"
             },
             "functionSelector": "db5ecd3f",
-            "id": 9800,
+            "id": 9854,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -96,18 +96,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9796,
+              "id": 9850,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9789,
+                  "id": 9843,
                   "mutability": "mutable",
                   "name": "lpToken",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9800,
-                  "src": "705:15:24",
+                  "scope": 9854,
+                  "src": "702:15:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -115,10 +115,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9788,
+                    "id": 9842,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "705:7:24",
+                    "src": "702:7:22",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -130,13 +130,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 9791,
+                  "id": 9845,
                   "mutability": "mutable",
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9800,
-                  "src": "730:14:24",
+                  "scope": 9854,
+                  "src": "727:14:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -144,10 +144,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9790,
+                    "id": 9844,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "730:7:24",
+                    "src": "727:7:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -158,13 +158,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 9793,
+                  "id": 9847,
                   "mutability": "mutable",
                   "name": "unlockDate",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9800,
-                  "src": "754:18:24",
+                  "scope": 9854,
+                  "src": "751:18:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -172,10 +172,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9792,
+                    "id": 9846,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "754:7:24",
+                    "src": "751:7:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -186,13 +186,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 9795,
+                  "id": 9849,
                   "mutability": "mutable",
                   "name": "owner",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9800,
-                  "src": "782:13:24",
+                  "scope": 9854,
+                  "src": "779:13:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -200,10 +200,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9794,
+                    "id": 9848,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "782:7:24",
+                    "src": "779:7:22",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -214,21 +214,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "695:106:24"
+              "src": "692:106:22"
             },
             "returnParameters": {
-              "id": 9799,
+              "id": 9853,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9798,
+                  "id": 9852,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9800,
-                  "src": "820:4:24",
+                  "scope": 9854,
+                  "src": "817:4:22",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -236,10 +236,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9797,
+                    "id": 9851,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "820:4:24",
+                    "src": "817:4:22",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -249,27 +249,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "819:6:24"
+              "src": "816:6:22"
             },
-            "scope": 9801,
-            "src": "679:147:24",
+            "scope": 9855,
+            "src": "676:147:22",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 9802,
-        "src": "310:518:24"
+        "scope": 9856,
+        "src": "308:517:22"
       }
     ],
-    "src": "285:544:24"
+    "src": "283:543:22"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/interfaces/IMigrator.sol",
       "exportedSymbols": {
         "IMigrator": [
-          9801
+          9855
         ]
       },
       "license": "MIT"
@@ -283,9 +283,9 @@
             ".12"
           ]
         },
-        "id": 9786,
+        "id": 9840,
         "name": "PragmaDirective",
-        "src": "285:23:24"
+        "src": "283:23:22"
       },
       {
         "attributes": {
@@ -300,10 +300,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            9801
+            9855
           ],
           "name": "IMigrator",
-          "scope": 9802
+          "scope": 9856
         },
         "children": [
           {
@@ -318,7 +318,7 @@
               ],
               "name": "migrate",
               "overrides": null,
-              "scope": 9801,
+              "scope": 9855,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -328,9 +328,9 @@
                 "attributes": {
                   "text": " @notice migrates an existing lock\n @dev is called from PancakeLocker contract\n @param lpToken address of the LP token to be migrated\n @param amount total amount to be migrated\n @param unlockDate unix timestamp of the date to unlock locked LP tokens\n @param owner address of the lock owner"
                 },
-                "id": 9787,
+                "id": 9841,
                 "name": "StructuredDocumentation",
-                "src": "336:338:24"
+                "src": "334:337:22"
               },
               {
                 "children": [
@@ -340,7 +340,7 @@
                       "mutability": "mutable",
                       "name": "lpToken",
                       "overrides": null,
-                      "scope": 9800,
+                      "scope": 9854,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -354,14 +354,14 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 9788,
+                        "id": 9842,
                         "name": "ElementaryTypeName",
-                        "src": "705:7:24"
+                        "src": "702:7:22"
                       }
                     ],
-                    "id": 9789,
+                    "id": 9843,
                     "name": "VariableDeclaration",
-                    "src": "705:15:24"
+                    "src": "702:15:22"
                   },
                   {
                     "attributes": {
@@ -369,7 +369,7 @@
                       "mutability": "mutable",
                       "name": "amount",
                       "overrides": null,
-                      "scope": 9800,
+                      "scope": 9854,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -382,14 +382,14 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9790,
+                        "id": 9844,
                         "name": "ElementaryTypeName",
-                        "src": "730:7:24"
+                        "src": "727:7:22"
                       }
                     ],
-                    "id": 9791,
+                    "id": 9845,
                     "name": "VariableDeclaration",
-                    "src": "730:14:24"
+                    "src": "727:14:22"
                   },
                   {
                     "attributes": {
@@ -397,7 +397,7 @@
                       "mutability": "mutable",
                       "name": "unlockDate",
                       "overrides": null,
-                      "scope": 9800,
+                      "scope": 9854,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -410,14 +410,14 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9792,
+                        "id": 9846,
                         "name": "ElementaryTypeName",
-                        "src": "754:7:24"
+                        "src": "751:7:22"
                       }
                     ],
-                    "id": 9793,
+                    "id": 9847,
                     "name": "VariableDeclaration",
-                    "src": "754:18:24"
+                    "src": "751:18:22"
                   },
                   {
                     "attributes": {
@@ -425,7 +425,7 @@
                       "mutability": "mutable",
                       "name": "owner",
                       "overrides": null,
-                      "scope": 9800,
+                      "scope": 9854,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -439,19 +439,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 9794,
+                        "id": 9848,
                         "name": "ElementaryTypeName",
-                        "src": "782:7:24"
+                        "src": "779:7:22"
                       }
                     ],
-                    "id": 9795,
+                    "id": 9849,
                     "name": "VariableDeclaration",
-                    "src": "782:13:24"
+                    "src": "779:13:22"
                   }
                 ],
-                "id": 9796,
+                "id": 9850,
                 "name": "ParameterList",
-                "src": "695:106:24"
+                "src": "692:106:22"
               },
               {
                 "children": [
@@ -461,7 +461,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 9800,
+                      "scope": 9854,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -474,34 +474,34 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 9797,
+                        "id": 9851,
                         "name": "ElementaryTypeName",
-                        "src": "820:4:24"
+                        "src": "817:4:22"
                       }
                     ],
-                    "id": 9798,
+                    "id": 9852,
                     "name": "VariableDeclaration",
-                    "src": "820:4:24"
+                    "src": "817:4:22"
                   }
                 ],
-                "id": 9799,
+                "id": 9853,
                 "name": "ParameterList",
-                "src": "819:6:24"
+                "src": "816:6:22"
               }
             ],
-            "id": 9800,
+            "id": 9854,
             "name": "FunctionDefinition",
-            "src": "679:147:24"
+            "src": "676:147:22"
           }
         ],
-        "id": 9801,
+        "id": 9855,
         "name": "ContractDefinition",
-        "src": "310:518:24"
+        "src": "308:517:22"
       }
     ],
-    "id": 9802,
+    "id": 9856,
     "name": "SourceUnit",
-    "src": "285:544:24"
+    "src": "283:543:22"
   },
   "compiler": {
     "name": "solc",
@@ -509,7 +509,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-05-02T08:04:48.333Z",
+  "updatedAt": "2022-06-27T08:00:32.271Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

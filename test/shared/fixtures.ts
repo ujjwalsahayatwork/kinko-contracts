@@ -11,8 +11,8 @@ import LaunchpadGenerator from "../../build/LaunchpadGenerator.json";
 import WBNB from "../../build/WBNB.json";
 
 interface Fixture {
-  energyFiFactory: Contract;
-  energyFiLocker: Contract;
+  pancakeFactory: Contract;
+  pancakeLocker: Contract;
   wbnb: Contract;
   launchpadFactory: Contract;
   launchpadLockForwarder: Contract;
@@ -28,13 +28,13 @@ export async function generalFixture(wallets: Signer[]): Promise<Fixture> {
   const [wallet, otherWallet, buyerWallet, secondBuyerWallet] = wallets;
   const deployerAddress = await wallet.getAddress();
 
-  // deploy energyFi locker contract with dependend energyFi factory
-  const energyFiFactory = await deployContract(wallet, PancakeFactory, [
+  // deploy pancake locker contract with dependend pancake factory
+  const pancakeFactory = await deployContract(wallet, PancakeFactory, [
     deployerAddress,
   ]);
 
-  const energyFiLocker = await deployContract(wallet, PancakeLocker, [
-    energyFiFactory.address,
+  const pancakeLocker = await deployContract(wallet, PancakeLocker, [
+    pancakeFactory.address,
   ]);
 
   //deploy launchpad generator with dependencies
@@ -44,7 +44,7 @@ export async function generalFixture(wallets: Signer[]): Promise<Fixture> {
   const launchpadLockForwarder = await deployContract(
     wallet,
     LaunchpadLockForwarder,
-    [launchpadFactory.address, energyFiFactory.address, energyFiLocker.address]
+    [launchpadFactory.address, pancakeFactory.address, pancakeLocker.address]
   );
   const launchpadSettings = await deployContract(wallet, LaunchpadSettings, []);
   const launchpadGenerator = await deployContract(wallet, LaunchpadGenerator, [
@@ -62,11 +62,11 @@ export async function generalFixture(wallets: Signer[]): Promise<Fixture> {
   );
 
   // whitelist launchpadLockForwarder in PancakeLocker
-  await energyFiLocker.whitelistFeeAccount(launchpadLockForwarder.address, true);
+  await pancakeLocker.whitelistFeeAccount(launchpadLockForwarder.address, true);
 
   return {
-    energyFiFactory,
-    energyFiLocker,
+    pancakeFactory,
+    pancakeLocker,
     wbnb,
     launchpadFactory,
     launchpadLockForwarder,

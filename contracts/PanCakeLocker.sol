@@ -2,7 +2,7 @@
 
 /**
  * @title Locker of Pancake launchpad enviroment
- * @dev This contract manages locks of energyFiswap LP tokens. LP tokens can be locked for
+ * @dev This contract manages locks of pancakeswap LP tokens. LP tokens can be locked for
  * a specific time, locks can be incremented, split up into multiple locks, relocked and
  * withdrawn by owner if the unlock date is met.
  */
@@ -14,8 +14,8 @@ import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-import "../interfaces/energyFi/IPancakePair.sol";
-import "../interfaces/energyFi/IPancakeFactory.sol";
+import "../interfaces/pancake/IPancakePair.sol";
+import "../interfaces/pancake/IPancakeFactory.sol";
 import "../interfaces/IERC20Burn.sol";
 import "../interfaces/IMigrator.sol";
 import "../interfaces/IPancakeLocker.sol";
@@ -85,11 +85,11 @@ contract PancakeLocker is IPancakeLocker, Ownable, ReentrancyGuard {
 
     /**
      * @dev sets initially contract dependend addresses and fee parameter
-     * @param _energyFiFactory address of the energyFi factory
+     * @param _pancakeFactory address of the pancake factory
      */
-    constructor(address _energyFiFactory) public {
-        require(_energyFiFactory != address(0), "ZERO ADDRESS");
-        KINKO_FACTORY = IPancakeFactory(_energyFiFactory);
+    constructor(address _pancakeFactory) public {
+        require(_pancakeFactory != address(0), "ZERO ADDRESS");
+        KINKO_FACTORY = IPancakeFactory(_pancakeFactory);
         devaddr = msg.sender;
 
         fees.referralPercent = 250; // 250/1000 => 25%
@@ -122,7 +122,7 @@ contract PancakeLocker is IPancakeLocker, Ownable, ReentrancyGuard {
         require(_unlockDate < 10000000000, "TIMESTAMP INVALID");
         require(_amount > 0, "INSUFFICIENT");
 
-        // get LP from energyFi factory
+        // get LP from pancake factory
         IPancakePair lpair = IPancakePair(address(_lpToken));
         address factoryPairAddress = KINKO_FACTORY.getPair(
             lpair.token0(),
@@ -130,7 +130,7 @@ contract PancakeLocker is IPancakeLocker, Ownable, ReentrancyGuard {
         );
         require(factoryPairAddress == address(_lpToken), "NOT CAKE");
 
-        // transfer lock amount to energyFi locker
+        // transfer lock amount to pancake locker
         TransferHelper.safeTransferFrom(
             _lpToken,
             address(msg.sender),

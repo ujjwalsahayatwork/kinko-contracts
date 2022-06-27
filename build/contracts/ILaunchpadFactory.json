@@ -98,34 +98,34 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"launchpadAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"launchpadGeneratorAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"launchpadGeneratorsLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_launchpadAddress\",\"type\":\"address\"}],\"name\":\"launchpadIsRegistered\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"launchpadsLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_launchpadAddress\",\"type\":\"address\"}],\"name\":\"registerLaunchpad\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"launchpadAtIndex(uint256)\":{\"params\":{\"_index\":\"index of the launchpads address set\"}},\"launchpadGeneratorAtIndex(uint256)\":{\"params\":{\"_index\":\"index of the launchpad generator address set\"}},\"launchpadIsRegistered(address)\":{\"params\":{\"_launchpadAddress\":\"address of the lauchpad to be checked\"}},\"registerLaunchpad(address)\":{\"params\":{\"_launchpadAddress\":\"address of the launchpad to be added\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"launchpadAtIndex(uint256)\":{\"notice\":\"returns the address of a launchpad at a given index\"},\"launchpadGeneratorAtIndex(uint256)\":{\"notice\":\"returns the address of a launchpad generator at a given index\"},\"launchpadGeneratorsLength()\":{\"notice\":\"returns the total number of registered launchpad generators\"},\"launchpadIsRegistered(address)\":{\"notice\":\"returns if a given address is registered as a launchpad\"},\"launchpadsLength()\":{\"notice\":\"returns the total number of registered launchpads\"},\"registerLaunchpad(address)\":{\"notice\":\"adds a launchpad to factory by generator\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/ILaunchpadFactory.sol\":\"ILaunchpadFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/ILaunchpadFactory.sol\":{\"keccak256\":\"0xa8819882825d3add3d640e2ffed436e1438b42c3aa4c220f2e7a5ec53a932bb7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://78433d67ee6fd641a1e4133d9bb7f5d51bc853686582cb3099221cde55633eed\",\"dweb:/ipfs/QmfK5jt8hrJgcqqdVemF8TBv1fVHSg2iGLCTXkFFdNZW5P\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"launchpadAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"launchpadGeneratorAtIndex\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"launchpadGeneratorsLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_launchpadAddress\",\"type\":\"address\"}],\"name\":\"launchpadIsRegistered\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"launchpadsLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_launchpadAddress\",\"type\":\"address\"}],\"name\":\"registerLaunchpad\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"launchpadAtIndex(uint256)\":{\"params\":{\"_index\":\"index of the launchpads address set\"}},\"launchpadGeneratorAtIndex(uint256)\":{\"params\":{\"_index\":\"index of the launchpad generator address set\"}},\"launchpadIsRegistered(address)\":{\"params\":{\"_launchpadAddress\":\"address of the lauchpad to be checked\"}},\"registerLaunchpad(address)\":{\"params\":{\"_launchpadAddress\":\"address of the launchpad to be added\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"launchpadAtIndex(uint256)\":{\"notice\":\"returns the address of a launchpad at a given index\"},\"launchpadGeneratorAtIndex(uint256)\":{\"notice\":\"returns the address of a launchpad generator at a given index\"},\"launchpadGeneratorsLength()\":{\"notice\":\"returns the total number of registered launchpad generators\"},\"launchpadIsRegistered(address)\":{\"notice\":\"returns if a given address is registered as a launchpad\"},\"launchpadsLength()\":{\"notice\":\"returns the total number of registered launchpads\"},\"registerLaunchpad(address)\":{\"notice\":\"adds a launchpad to factory by generator\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/interfaces/ILaunchpadFactory.sol\":\"ILaunchpadFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/interfaces/ILaunchpadFactory.sol\":{\"keccak256\":\"0x09b598980892b4f983b812ad7ee5e529b323e6abd5315f96a4bd024d868e478c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a4c25debe545a2ddfe15ed704a1db5e593e2119a6a7a49797eed071085ac12f\",\"dweb:/ipfs/Qmbd4FSTEAHQuNBRicVAo4JKMQ92WdECzp9DnoxdoCErWG\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\n/**\n * @title Factory interface of Pancake launchpad enviroment\n * @dev This interface holds functions for registering launchpads and get information about\n * registered launchpads and launchpad generators.\n */\n\npragma solidity 0.6.12;\n\ninterface ILaunchpadFactory {\n    /**\n     * @notice adds a launchpad to factory by generator\n     * @param _launchpadAddress address of the launchpad to be added\n     */\n    function registerLaunchpad(address _launchpadAddress) external;\n\n    /**\n     * @notice returns the address of a launchpad at a given index\n     * @param _index index of the launchpads address set\n     */\n    function launchpadAtIndex(uint256 _index) external view returns (address);\n\n    /**\n     * @notice returns the address of a launchpad generator at a given index\n     * @param _index index of the launchpad generator address set\n     */\n    function launchpadGeneratorAtIndex(uint256 _index)\n        external\n        view\n        returns (address);\n\n    /**\n     * @notice returns the total number of registered launchpad generators\n     */\n    function launchpadGeneratorsLength() external view returns (uint256);\n\n    /**\n     * @notice returns if a given address is registered as a launchpad\n     * @param _launchpadAddress address of the lauchpad to be checked\n     */\n    function launchpadIsRegistered(address _launchpadAddress)\n        external\n        view\n        returns (bool);\n\n    /**\n     * @notice returns the total number of registered launchpads\n     */\n    function launchpadsLength() external view returns (uint256);\n}\n",
-  "sourcePath": "/Users/apple/Downloads/kinko-ilo-contracts-main/interfaces/ILaunchpadFactory.sol",
+  "sourcePath": "/Users/apple/Desktop/datacpoy/BlockChain/kinko-contracts/interfaces/ILaunchpadFactory.sol",
   "ast": {
     "absolutePath": "project:/interfaces/ILaunchpadFactory.sol",
     "exportedSymbols": {
       "ILaunchpadFactory": [
-        9687
+        9741
       ]
     },
-    "id": 9688,
+    "id": 9742,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9644,
+        "id": 9698,
         "literals": [
           "solidity",
           "0.6",
           ".12"
         ],
         "nodeType": "PragmaDirective",
-        "src": "246:23:21"
+        "src": "245:23:19"
       },
       {
         "abstract": false,
@@ -134,9 +134,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 9687,
+        "id": 9741,
         "linearizedBaseContracts": [
-          9687
+          9741
         ],
         "name": "ILaunchpadFactory",
         "nodeType": "ContractDefinition",
@@ -144,13 +144,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9645,
+              "id": 9699,
               "nodeType": "StructuredDocumentation",
-              "src": "305:136:21",
+              "src": "304:136:19",
               "text": " @notice adds a launchpad to factory by generator\n @param _launchpadAddress address of the launchpad to be added"
             },
             "functionSelector": "77eb877c",
-            "id": 9650,
+            "id": 9704,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -158,18 +158,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9648,
+              "id": 9702,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9647,
+                  "id": 9701,
                   "mutability": "mutable",
                   "name": "_launchpadAddress",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9650,
-                  "src": "473:25:21",
+                  "scope": 9704,
+                  "src": "472:25:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -177,10 +177,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9646,
+                    "id": 9700,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "473:7:21",
+                    "src": "472:7:19",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -191,16 +191,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "472:27:21"
+              "src": "471:27:19"
             },
             "returnParameters": {
-              "id": 9649,
+              "id": 9703,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "508:0:21"
+              "src": "507:0:19"
             },
-            "scope": 9687,
-            "src": "446:63:21",
+            "scope": 9741,
+            "src": "445:63:19",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -208,13 +208,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9651,
+              "id": 9705,
               "nodeType": "StructuredDocumentation",
-              "src": "515:135:21",
+              "src": "514:135:19",
               "text": " @notice returns the address of a launchpad at a given index\n @param _index index of the launchpads address set"
             },
             "functionSelector": "b61609ab",
-            "id": 9658,
+            "id": 9712,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -222,18 +222,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9654,
+              "id": 9708,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9653,
+                  "id": 9707,
                   "mutability": "mutable",
                   "name": "_index",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9658,
-                  "src": "681:14:21",
+                  "scope": 9712,
+                  "src": "680:14:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -241,10 +241,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9652,
+                    "id": 9706,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "681:7:21",
+                    "src": "680:7:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -254,21 +254,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "680:16:21"
+              "src": "679:16:19"
             },
             "returnParameters": {
-              "id": 9657,
+              "id": 9711,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9656,
+                  "id": 9710,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9658,
-                  "src": "720:7:21",
+                  "scope": 9712,
+                  "src": "719:7:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -276,10 +276,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9655,
+                    "id": 9709,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "720:7:21",
+                    "src": "719:7:19",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -290,10 +290,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "719:9:21"
+              "src": "718:9:19"
             },
-            "scope": 9687,
-            "src": "655:74:21",
+            "scope": 9741,
+            "src": "654:74:19",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -301,13 +301,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9659,
+              "id": 9713,
               "nodeType": "StructuredDocumentation",
-              "src": "735:154:21",
+              "src": "734:154:19",
               "text": " @notice returns the address of a launchpad generator at a given index\n @param _index index of the launchpad generator address set"
             },
             "functionSelector": "b83b48f3",
-            "id": 9666,
+            "id": 9720,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -315,18 +315,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9662,
+              "id": 9716,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9661,
+                  "id": 9715,
                   "mutability": "mutable",
                   "name": "_index",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9666,
-                  "src": "929:14:21",
+                  "scope": 9720,
+                  "src": "928:14:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -334,10 +334,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9660,
+                    "id": 9714,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "929:7:21",
+                    "src": "928:7:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -347,21 +347,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "928:16:21"
+              "src": "927:16:19"
             },
             "returnParameters": {
-              "id": 9665,
+              "id": 9719,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9664,
+                  "id": 9718,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9666,
-                  "src": "992:7:21",
+                  "scope": 9720,
+                  "src": "991:7:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -369,10 +369,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9663,
+                    "id": 9717,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "992:7:21",
+                    "src": "991:7:19",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -383,10 +383,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "991:9:21"
+              "src": "990:9:19"
             },
-            "scope": 9687,
-            "src": "894:107:21",
+            "scope": 9741,
+            "src": "893:107:19",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -394,13 +394,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9667,
+              "id": 9721,
               "nodeType": "StructuredDocumentation",
-              "src": "1007:86:21",
+              "src": "1006:86:19",
               "text": " @notice returns the total number of registered launchpad generators"
             },
             "functionSelector": "2751ed26",
-            "id": 9672,
+            "id": 9726,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -408,24 +408,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9668,
+              "id": 9722,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1132:2:21"
+              "src": "1131:2:19"
             },
             "returnParameters": {
-              "id": 9671,
+              "id": 9725,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9670,
+                  "id": 9724,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9672,
-                  "src": "1158:7:21",
+                  "scope": 9726,
+                  "src": "1157:7:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -433,10 +433,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9669,
+                    "id": 9723,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1158:7:21",
+                    "src": "1157:7:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -446,10 +446,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1157:9:21"
+              "src": "1156:9:19"
             },
-            "scope": 9687,
-            "src": "1098:69:21",
+            "scope": 9741,
+            "src": "1097:69:19",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -457,13 +457,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9673,
+              "id": 9727,
               "nodeType": "StructuredDocumentation",
-              "src": "1173:152:21",
+              "src": "1172:152:19",
               "text": " @notice returns if a given address is registered as a launchpad\n @param _launchpadAddress address of the lauchpad to be checked"
             },
             "functionSelector": "ba888c29",
-            "id": 9680,
+            "id": 9734,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -471,18 +471,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9676,
+              "id": 9730,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9675,
+                  "id": 9729,
                   "mutability": "mutable",
                   "name": "_launchpadAddress",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9680,
-                  "src": "1361:25:21",
+                  "scope": 9734,
+                  "src": "1360:25:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -490,10 +490,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9674,
+                    "id": 9728,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1361:7:21",
+                    "src": "1360:7:19",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -504,21 +504,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1360:27:21"
+              "src": "1359:27:19"
             },
             "returnParameters": {
-              "id": 9679,
+              "id": 9733,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9678,
+                  "id": 9732,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9680,
-                  "src": "1435:4:21",
+                  "scope": 9734,
+                  "src": "1434:4:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -526,10 +526,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 9677,
+                    "id": 9731,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1435:4:21",
+                    "src": "1434:4:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -539,10 +539,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1434:6:21"
+              "src": "1433:6:19"
             },
-            "scope": 9687,
-            "src": "1330:111:21",
+            "scope": 9741,
+            "src": "1329:111:19",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -550,13 +550,13 @@
           {
             "body": null,
             "documentation": {
-              "id": 9681,
+              "id": 9735,
               "nodeType": "StructuredDocumentation",
-              "src": "1447:76:21",
+              "src": "1446:76:19",
               "text": " @notice returns the total number of registered launchpads"
             },
             "functionSelector": "44081ed6",
-            "id": 9686,
+            "id": 9740,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
@@ -564,24 +564,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 9682,
+              "id": 9736,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1553:2:21"
+              "src": "1552:2:19"
             },
             "returnParameters": {
-              "id": 9685,
+              "id": 9739,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9684,
+                  "id": 9738,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 9686,
-                  "src": "1579:7:21",
+                  "scope": 9740,
+                  "src": "1578:7:19",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -589,10 +589,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 9683,
+                    "id": 9737,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1579:7:21",
+                    "src": "1578:7:19",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -602,27 +602,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1578:9:21"
+              "src": "1577:9:19"
             },
-            "scope": 9687,
-            "src": "1528:60:21",
+            "scope": 9741,
+            "src": "1527:60:19",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 9688,
-        "src": "271:1319:21"
+        "scope": 9742,
+        "src": "270:1319:19"
       }
     ],
-    "src": "246:1345:21"
+    "src": "245:1345:19"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/interfaces/ILaunchpadFactory.sol",
       "exportedSymbols": {
         "ILaunchpadFactory": [
-          9687
+          9741
         ]
       },
       "license": "MIT"
@@ -636,9 +636,9 @@
             ".12"
           ]
         },
-        "id": 9644,
+        "id": 9698,
         "name": "PragmaDirective",
-        "src": "246:23:21"
+        "src": "245:23:19"
       },
       {
         "attributes": {
@@ -653,10 +653,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            9687
+            9741
           ],
           "name": "ILaunchpadFactory",
-          "scope": 9688
+          "scope": 9742
         },
         "children": [
           {
@@ -671,7 +671,7 @@
               ],
               "name": "registerLaunchpad",
               "overrides": null,
-              "scope": 9687,
+              "scope": 9741,
               "stateMutability": "nonpayable",
               "virtual": false,
               "visibility": "external"
@@ -681,9 +681,9 @@
                 "attributes": {
                   "text": " @notice adds a launchpad to factory by generator\n @param _launchpadAddress address of the launchpad to be added"
                 },
-                "id": 9645,
+                "id": 9699,
                 "name": "StructuredDocumentation",
-                "src": "305:136:21"
+                "src": "304:136:19"
               },
               {
                 "children": [
@@ -693,7 +693,7 @@
                       "mutability": "mutable",
                       "name": "_launchpadAddress",
                       "overrides": null,
-                      "scope": 9650,
+                      "scope": 9704,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -707,19 +707,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 9646,
+                        "id": 9700,
                         "name": "ElementaryTypeName",
-                        "src": "473:7:21"
+                        "src": "472:7:19"
                       }
                     ],
-                    "id": 9647,
+                    "id": 9701,
                     "name": "VariableDeclaration",
-                    "src": "473:25:21"
+                    "src": "472:25:19"
                   }
                 ],
-                "id": 9648,
+                "id": 9702,
                 "name": "ParameterList",
-                "src": "472:27:21"
+                "src": "471:27:19"
               },
               {
                 "attributes": {
@@ -728,14 +728,14 @@
                   ]
                 },
                 "children": [],
-                "id": 9649,
+                "id": 9703,
                 "name": "ParameterList",
-                "src": "508:0:21"
+                "src": "507:0:19"
               }
             ],
-            "id": 9650,
+            "id": 9704,
             "name": "FunctionDefinition",
-            "src": "446:63:21"
+            "src": "445:63:19"
           },
           {
             "attributes": {
@@ -749,7 +749,7 @@
               ],
               "name": "launchpadAtIndex",
               "overrides": null,
-              "scope": 9687,
+              "scope": 9741,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -759,9 +759,9 @@
                 "attributes": {
                   "text": " @notice returns the address of a launchpad at a given index\n @param _index index of the launchpads address set"
                 },
-                "id": 9651,
+                "id": 9705,
                 "name": "StructuredDocumentation",
-                "src": "515:135:21"
+                "src": "514:135:19"
               },
               {
                 "children": [
@@ -771,7 +771,7 @@
                       "mutability": "mutable",
                       "name": "_index",
                       "overrides": null,
-                      "scope": 9658,
+                      "scope": 9712,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -784,19 +784,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9652,
+                        "id": 9706,
                         "name": "ElementaryTypeName",
-                        "src": "681:7:21"
+                        "src": "680:7:19"
                       }
                     ],
-                    "id": 9653,
+                    "id": 9707,
                     "name": "VariableDeclaration",
-                    "src": "681:14:21"
+                    "src": "680:14:19"
                   }
                 ],
-                "id": 9654,
+                "id": 9708,
                 "name": "ParameterList",
-                "src": "680:16:21"
+                "src": "679:16:19"
               },
               {
                 "children": [
@@ -806,7 +806,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 9658,
+                      "scope": 9712,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -820,24 +820,24 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 9655,
+                        "id": 9709,
                         "name": "ElementaryTypeName",
-                        "src": "720:7:21"
+                        "src": "719:7:19"
                       }
                     ],
-                    "id": 9656,
+                    "id": 9710,
                     "name": "VariableDeclaration",
-                    "src": "720:7:21"
+                    "src": "719:7:19"
                   }
                 ],
-                "id": 9657,
+                "id": 9711,
                 "name": "ParameterList",
-                "src": "719:9:21"
+                "src": "718:9:19"
               }
             ],
-            "id": 9658,
+            "id": 9712,
             "name": "FunctionDefinition",
-            "src": "655:74:21"
+            "src": "654:74:19"
           },
           {
             "attributes": {
@@ -851,7 +851,7 @@
               ],
               "name": "launchpadGeneratorAtIndex",
               "overrides": null,
-              "scope": 9687,
+              "scope": 9741,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -861,9 +861,9 @@
                 "attributes": {
                   "text": " @notice returns the address of a launchpad generator at a given index\n @param _index index of the launchpad generator address set"
                 },
-                "id": 9659,
+                "id": 9713,
                 "name": "StructuredDocumentation",
-                "src": "735:154:21"
+                "src": "734:154:19"
               },
               {
                 "children": [
@@ -873,7 +873,7 @@
                       "mutability": "mutable",
                       "name": "_index",
                       "overrides": null,
-                      "scope": 9666,
+                      "scope": 9720,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -886,19 +886,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9660,
+                        "id": 9714,
                         "name": "ElementaryTypeName",
-                        "src": "929:7:21"
+                        "src": "928:7:19"
                       }
                     ],
-                    "id": 9661,
+                    "id": 9715,
                     "name": "VariableDeclaration",
-                    "src": "929:14:21"
+                    "src": "928:14:19"
                   }
                 ],
-                "id": 9662,
+                "id": 9716,
                 "name": "ParameterList",
-                "src": "928:16:21"
+                "src": "927:16:19"
               },
               {
                 "children": [
@@ -908,7 +908,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 9666,
+                      "scope": 9720,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -922,24 +922,24 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 9663,
+                        "id": 9717,
                         "name": "ElementaryTypeName",
-                        "src": "992:7:21"
+                        "src": "991:7:19"
                       }
                     ],
-                    "id": 9664,
+                    "id": 9718,
                     "name": "VariableDeclaration",
-                    "src": "992:7:21"
+                    "src": "991:7:19"
                   }
                 ],
-                "id": 9665,
+                "id": 9719,
                 "name": "ParameterList",
-                "src": "991:9:21"
+                "src": "990:9:19"
               }
             ],
-            "id": 9666,
+            "id": 9720,
             "name": "FunctionDefinition",
-            "src": "894:107:21"
+            "src": "893:107:19"
           },
           {
             "attributes": {
@@ -953,7 +953,7 @@
               ],
               "name": "launchpadGeneratorsLength",
               "overrides": null,
-              "scope": 9687,
+              "scope": 9741,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -963,9 +963,9 @@
                 "attributes": {
                   "text": " @notice returns the total number of registered launchpad generators"
                 },
-                "id": 9667,
+                "id": 9721,
                 "name": "StructuredDocumentation",
-                "src": "1007:86:21"
+                "src": "1006:86:19"
               },
               {
                 "attributes": {
@@ -974,9 +974,9 @@
                   ]
                 },
                 "children": [],
-                "id": 9668,
+                "id": 9722,
                 "name": "ParameterList",
-                "src": "1132:2:21"
+                "src": "1131:2:19"
               },
               {
                 "children": [
@@ -986,7 +986,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 9672,
+                      "scope": 9726,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -999,24 +999,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9669,
+                        "id": 9723,
                         "name": "ElementaryTypeName",
-                        "src": "1158:7:21"
+                        "src": "1157:7:19"
                       }
                     ],
-                    "id": 9670,
+                    "id": 9724,
                     "name": "VariableDeclaration",
-                    "src": "1158:7:21"
+                    "src": "1157:7:19"
                   }
                 ],
-                "id": 9671,
+                "id": 9725,
                 "name": "ParameterList",
-                "src": "1157:9:21"
+                "src": "1156:9:19"
               }
             ],
-            "id": 9672,
+            "id": 9726,
             "name": "FunctionDefinition",
-            "src": "1098:69:21"
+            "src": "1097:69:19"
           },
           {
             "attributes": {
@@ -1030,7 +1030,7 @@
               ],
               "name": "launchpadIsRegistered",
               "overrides": null,
-              "scope": 9687,
+              "scope": 9741,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1040,9 +1040,9 @@
                 "attributes": {
                   "text": " @notice returns if a given address is registered as a launchpad\n @param _launchpadAddress address of the lauchpad to be checked"
                 },
-                "id": 9673,
+                "id": 9727,
                 "name": "StructuredDocumentation",
-                "src": "1173:152:21"
+                "src": "1172:152:19"
               },
               {
                 "children": [
@@ -1052,7 +1052,7 @@
                       "mutability": "mutable",
                       "name": "_launchpadAddress",
                       "overrides": null,
-                      "scope": 9680,
+                      "scope": 9734,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1066,19 +1066,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 9674,
+                        "id": 9728,
                         "name": "ElementaryTypeName",
-                        "src": "1361:7:21"
+                        "src": "1360:7:19"
                       }
                     ],
-                    "id": 9675,
+                    "id": 9729,
                     "name": "VariableDeclaration",
-                    "src": "1361:25:21"
+                    "src": "1360:25:19"
                   }
                 ],
-                "id": 9676,
+                "id": 9730,
                 "name": "ParameterList",
-                "src": "1360:27:21"
+                "src": "1359:27:19"
               },
               {
                 "children": [
@@ -1088,7 +1088,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 9680,
+                      "scope": 9734,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1101,24 +1101,24 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 9677,
+                        "id": 9731,
                         "name": "ElementaryTypeName",
-                        "src": "1435:4:21"
+                        "src": "1434:4:19"
                       }
                     ],
-                    "id": 9678,
+                    "id": 9732,
                     "name": "VariableDeclaration",
-                    "src": "1435:4:21"
+                    "src": "1434:4:19"
                   }
                 ],
-                "id": 9679,
+                "id": 9733,
                 "name": "ParameterList",
-                "src": "1434:6:21"
+                "src": "1433:6:19"
               }
             ],
-            "id": 9680,
+            "id": 9734,
             "name": "FunctionDefinition",
-            "src": "1330:111:21"
+            "src": "1329:111:19"
           },
           {
             "attributes": {
@@ -1132,7 +1132,7 @@
               ],
               "name": "launchpadsLength",
               "overrides": null,
-              "scope": 9687,
+              "scope": 9741,
               "stateMutability": "view",
               "virtual": false,
               "visibility": "external"
@@ -1142,9 +1142,9 @@
                 "attributes": {
                   "text": " @notice returns the total number of registered launchpads"
                 },
-                "id": 9681,
+                "id": 9735,
                 "name": "StructuredDocumentation",
-                "src": "1447:76:21"
+                "src": "1446:76:19"
               },
               {
                 "attributes": {
@@ -1153,9 +1153,9 @@
                   ]
                 },
                 "children": [],
-                "id": 9682,
+                "id": 9736,
                 "name": "ParameterList",
-                "src": "1553:2:21"
+                "src": "1552:2:19"
               },
               {
                 "children": [
@@ -1165,7 +1165,7 @@
                       "mutability": "mutable",
                       "name": "",
                       "overrides": null,
-                      "scope": 9686,
+                      "scope": 9740,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1178,34 +1178,34 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 9683,
+                        "id": 9737,
                         "name": "ElementaryTypeName",
-                        "src": "1579:7:21"
+                        "src": "1578:7:19"
                       }
                     ],
-                    "id": 9684,
+                    "id": 9738,
                     "name": "VariableDeclaration",
-                    "src": "1579:7:21"
+                    "src": "1578:7:19"
                   }
                 ],
-                "id": 9685,
+                "id": 9739,
                 "name": "ParameterList",
-                "src": "1578:9:21"
+                "src": "1577:9:19"
               }
             ],
-            "id": 9686,
+            "id": 9740,
             "name": "FunctionDefinition",
-            "src": "1528:60:21"
+            "src": "1527:60:19"
           }
         ],
-        "id": 9687,
+        "id": 9741,
         "name": "ContractDefinition",
-        "src": "271:1319:21"
+        "src": "270:1319:19"
       }
     ],
-    "id": 9688,
+    "id": 9742,
     "name": "SourceUnit",
-    "src": "246:1345:21"
+    "src": "245:1345:19"
   },
   "compiler": {
     "name": "solc",
@@ -1213,7 +1213,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-05-02T08:04:48.330Z",
+  "updatedAt": "2022-06-27T08:00:32.268Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

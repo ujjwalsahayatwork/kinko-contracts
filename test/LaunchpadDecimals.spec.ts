@@ -25,7 +25,7 @@ describe("Launchpad Decimals", () => {
   let generator: Contract;
   let launchpadFactory: Contract;
   let launchpadSettings: Contract;
-  let energyFiFactory: Contract;
+  let pancakeFactory: Contract;
   let otherWallet: Signer;
   let buyerWallet: Signer;
   let provider: MockProvider;
@@ -105,7 +105,7 @@ describe("Launchpad Decimals", () => {
     generator = fixture.launchpadGenerator;
     launchpadFactory = fixture.launchpadFactory;
     launchpadSettings = fixture.launchpadSettings;
-    energyFiFactory = fixture.energyFiFactory;
+    pancakeFactory = fixture.pancakeFactory;
     otherWallet = fixture.otherWallet;
     buyerWallet = fixture.buyerWallet;
   });
@@ -243,7 +243,7 @@ describe("Launchpad Decimals", () => {
         );
 
         // check if expected sale token liquidity is sent to the pool
-        const pair = await energyFiFactory.getPair(
+        const pair = await pancakeFactory.getPair(
           baseToken.address,
           saleToken.address
         );
