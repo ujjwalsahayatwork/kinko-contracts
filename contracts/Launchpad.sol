@@ -79,6 +79,11 @@ contract Launchpad is ReentrancyGuard {
         uint256 round1Length; // the length of round 1 in seconds
     }
 
+    struct ReffrealDetails {
+        address[3] reffers;
+        bytes32[3] reffersSign;
+    }
+
     /*---------------------------------------------------------------------------------------------
      * --------------------------------------Global Variables--------------------------------------
      */
@@ -99,6 +104,8 @@ contract Launchpad is ReentrancyGuard {
     // variables holding information about users
     mapping(address => BuyerInfo) public buyers;
     mapping(address => uint256) public rewardTokens;
+
+
 
     EnumerableSet.AddressSet private whitelist;
 
@@ -393,7 +400,7 @@ contract Launchpad is ReentrancyGuard {
      * The correct amount is required for ERC20 base tokens
      * @param _amount the amount of base token to deposit
      */
-    function userDeposit(uint256 _amount, address[] calldata _refferAddresses)
+    function userDeposit(uint256 _amount, ReffrealDetails calldata _reffrealDetails)
         external
         payable
         nonReentrant
@@ -416,6 +423,7 @@ contract Launchpad is ReentrancyGuard {
                 "INSUFFICENT ROUND 1 TOKEN BALANCE"
             );
         }
+        require(ver());
 
         // check if user is allowed to spend the desired token and calculate max amount
         BuyerInfo storage buyer = buyers[msg.sender];
@@ -448,15 +456,16 @@ contract Launchpad is ReentrancyGuard {
 
         //  calculate and add reward for lauchpad prompts
         uint256 reward = 0;
-        require(_refferAddresses.length<=3,"reffreal not be more than 3 level");
-        if (_refferAddresses.length != 0) {
-            for (uint256 i = 0; i < _refferAddresses.length; i++) {
+        require(_reffrealDetails.reffers.length<=3,"reffreal not be more than 3 level");
+        if (_reffrealDetails.reffers.length != 0) {
+            for (uint256 i = 0; i < _reffrealDetails.reffers.length; i++) {
                 reward = tokensSold.mul(100).div(10000);
 
-                if (_refferAddresses[i] != address(0)) {
-                    rewardTokens[_refferAddresses[i]] = reward;
+                if (_reffrealDetails.reffers[i] != address(0)) {
+                    rewardTokens[_reffrealDetails.reffers[i]] = reward;
                 }
             }
+            reward = reward.mul(_reffrealDetails.reffers.length);
         }
 
         // update launchpad token information
